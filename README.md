@@ -1,7 +1,7 @@
 # AIndex
 资料导航
 
-版本管理系统 <br/>
+<a href='https://blog.csdn.net/free_wind22/article/details/50967723'>版本管理系统</a> <br/>
 前端 front <br/>
 后台 back <br/>
 数据库 db <br/>
