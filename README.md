@@ -1,8 +1,8 @@
 # AIndex
 资料导航
 
-版本管理系统 
-前端 front
+版本管理系统 <br/>
+前端 front <br/>
 后台 back <br/>
 数据库 db <br/>
 
