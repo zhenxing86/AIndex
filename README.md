@@ -1,7 +1,9 @@
 # AIndex
 资料导航
 
-<a href='https://blog.csdn.net/free_wind22/article/details/50967723' target='_blank' title='版本管理系统'>版本管理系统</a> <br/>
+<a href='https://blog.csdn.net/free_wind22/article/details/50967723' target='_blank' title='版本管理系统'>版本管理系统</a><br/>
+<a href='https://www.cnblogs.com/kevingrace/p/5690241.html'>Git忽略提交规则</a>
+
 前端 front <br/>
 后台 back <br/>
 数据库 db <br/>
