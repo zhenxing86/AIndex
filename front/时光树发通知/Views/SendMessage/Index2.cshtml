@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">  
+    <title>测试发通知</title>
+    <link href="@Url.Content("~/Content/css/style.css?var=8")" rel="stylesheet" />
+</head>
+    
+<script>
+    function textCounteb(maxlimit) {
+        var field = document.getElementById("content");
+        var countfield = document.getElementById("remLenb");
+        if (field.value.length > maxlimit) {
+            field.value = field.value.substring(0, maxlimit);
+            countfield.value = 0;
+        }
+        else {
+            countfield.value = maxlimit - field.value.length;
+        }
+    }
+
+    //var imgCnt = 4;
+    //var imgs = ["http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160415//-3952484384804.jpg", "http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160414//-4419080091893.jpg",
+    //    "http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160415//-3947835233528.jpg", "http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160415//-3941292556165.jpg"];
+    //function deletePic(imgIndex) {
+    //    var url = $("#a_img" + imgIndex+" :first-child").attr("src");
+    //    $("#a_img" + imgIndex).remove();
+    //    var dIndex = $.inArray(url, imgs);
+    //    if (dIndex > -1) {
+    //        imgs.splice(dIndex,1);
+    //    }
+    //    var imgLen = $("#imgContainer a").length;
+    //    if (imgLen == 3) {
+    //        $("#imgMore").addClass("hide");
+    //    }
+    //    else if (imgLen < 3) {
+    //        if (imgs.length >= 3) {
+    //            imgCnt = 0;
+    //            var h = "";
+    //            for (ci = 0; ci < 3; ci++) {
+    //                imgCnt++;
+    //                h += "<a id=\"a_img" + imgCnt + "\" href=\"#\" onclick=\"javascript:deletePic(" + imgCnt + ");\"><img src =\"" + imgs[ci] + "\" /></a>";
+    //            }
+    //            $("#imgContainer").html("").append(h);
+    //            if (imgs.length > 3) {
+    //                $("#imgContainer").append("<span id=\"imgMore\">更多》</span>");
+    //            }
+    //        }
+    //        else {
+    //            $("#imgMore").addClass("hide");
+    //        }
+    //    }
+    //}
+
+    //function addPic(url) {
+    //    imgCnt++;
+    //    imgs.push(url);
+    //    var imgLen = $("#imgContainer a").length;
+    //    if (imgLen < 3) {
+    //        var h = "<a id=\"a_img" + imgCnt + "\" href=\"#\" onclick=\"javascript:deletePic(" + imgCnt + ");\"><img src =\"" + url + "\" /></a>";
+    //        $("#imgContainer").append(h);
+    //    }
+    //    if (imgs.length > 3) {
+    //        if ($("#imgMore").length === 0) {
+    //            $("#imgContainer").append("<span id=\"imgMore\">更多》</span>");
+    //        }
+    //        else {
+    //            if ($("#imgMore").hasClass("hide")) {
+    //                $("#imgMore").removeClass("hide");
+    //            }
+    //        }
+    //    }
+    //}
+
+
+</script>
+<body>
+
+<section class="section">
+	<div class="notice">
+    <dl>
+    <dd class="people">
+    	<p class="p_box"><input id="persons" type="text" placeholder="收件人" ></p>
+        <span id="personcount" class="sum">0人</span>
+        <a href="#" class="add_p"></a>
+    </dd>
+    <dd class="con">
+        <p class="n_title"><input type="text" value="园所通知"></p>
+        <p class="n_text"><textarea id="content" name="content" onkeydown="javascript:textCounteb(63);" onkeyup="javascript:textCounteb(63);"></textarea></p>
+    </dd>
+    <dd class="up_photo">
+    	<a href="#" id="add_img" onclick="javascript:uploadPhoto();" class="add_img"><span class="">上传图片</span></a>
+        <p id="up_img" class="up_img"><img id="up_img_url" src="#" /></p>
+        @*<div id="imgContainer">
+            <a id="a_img1" href="#" onclick="javascript:deletePic(1);"><img src ="http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160415//-3952484384804.jpg" /></a>
+            <a id="a_img2" href="#" onclick="javascript:deletePic(2);"><img src ="http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160414//-4419080091893.jpg" /></a>
+            <a id="a_img3" href="#" onclick="javascript:deletePic(3);"><img src ="http://growthphoto.yp.yeyimg.com/HBAttachsFiles/20160415//-3947835233528.jpg" /></a>
+            <span id="imgMore">更多》</span>
+        </div>*@
+    </dd>
+	<dd class="bz"><p>您还可以输入:<input id="remLenb" name="remLenb" type="text" value="63" size="3" style="border:0; color:#f00; height:16px;text-align:center ">个字符</p></dd>
+    <dd class="option">
+    	<a href="#" >通知模板<span class="arrow_left"></span></a>
+        <a href="#">定时发送<span class="check"></span></a>
+    </dd>
+    </dl>
+    </div>
+
+</section>
+</body>
+
+</html>
+
+
+
+
+
+

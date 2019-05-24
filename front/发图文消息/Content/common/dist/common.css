@@ -1,0 +1,799 @@
+
+/*----------------弹出框CSS-开�?-----------------*/
+.weui-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+/*----------------IOS推出弹出效果-开�?-----------------*/
+.weui-actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 5000;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform .3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+/*----------------android推出弹出效果-开�?-----------------*/
+.weui-skin_android .weui-actionsheet {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: transparent;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform .3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.weui-actionsheet_toggle {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+/*----------------弹出框CSS-结束------------------*/
+/*----------------样式的效�?-----------------*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.weui-animate-slide-up {
+  animation: slideUp ease .3s forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.weui-animate-slide-down {
+  animation: slideDown ease .3s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.weui-animate-fade-in {
+  animation: fadeIn ease .3s forwards;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.weui-animate-fade-out {
+  animation: fadeOut ease .3s forwards;
+}
+.weui-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+.weui-picker {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 5000;
+  backface-visibility: hidden;
+  transform: translate(0, 100%);
+  transition: transform .3s;
+}
+.weui-picker__hd {
+  display: flex;
+  padding: 9px 15px;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+}
+.weui-picker__hd:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #E5E5E5;
+  color: #E5E5E5;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.weui-picker__action {
+  display: block;
+  flex: 1;
+  color: #1AAD19;
+}
+.weui-picker__action:first-child {
+  text-align: left;
+  color: #888;
+}
+.weui-picker__action:last-child {
+  text-align: right;
+}
+.weui-picker__bd {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  height: 238px;
+  overflow: hidden;
+}
+.weui-picker__group {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+.weui-picker__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+  background-position: top, bottom;
+  background-size: 100% 102px;
+  background-repeat: no-repeat;
+  transform: translateZ(0);
+}
+.weui-picker__indicator {
+  width: 100%;
+  height: 34px;
+  position: absolute;
+  left: 0;
+  top: 102px;
+  z-index: 3;
+}
+.weui-picker__indicator:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #E5E5E5;
+  color: #E5E5E5;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.weui-picker__indicator:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #E5E5E5;
+  color: #E5E5E5;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.weui-picker__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.weui-picker__item {
+  padding: 0;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.weui-picker__item_disabled {
+  color: #999999;
+}
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+/*
+* Tencent is pleased to support the open source community by making WeUI available.
+* 
+* Copyright (C) 2017 THL A29 Limited, a Tencent company. All rights reserved.
+* 
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance
+* with the License. You may obtain a copy of the License at
+* 
+*       http://opensource.org/licenses/MIT
+* 
+* Unless required by applicable law or agreed to in writing, software distributed under the License is
+* distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+* either express or implied. See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+.gallery {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #000000;
+}
+.gallery .g-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 1.6rem;
+  left: 0;
+  background: center center no-repeat;
+  background-size: contain;
+}
+.gallery .g-txt {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #FFFFFF;
+  line-height: 1.6rem;
+  text-align: center;
+}
+
+.pop {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1002;
+  transform: translate(-50%, -50%);
+  width: 10.8rem;
+  background: #fff;
+  border-radius: 0.24rem;
+}
+.pop .text {
+  padding: .6rem;
+  margin: .6rem 0;
+  text-align: center;
+  font-size: .56rem;
+}
+.pop .text i {
+  font-style: normal;
+  border: 1px solid #4e8bee;
+  color: #4e8bee;
+  display: inline-block;
+  margin-right: .2rem;
+  width: .8rem;
+  height: .8rem;
+  border-radius: .8rem;
+  line-height: .8rem;
+}
+.pop .text h1 {
+  text-align: center;
+  font-size: .56rem;
+  color: #333;
+  margin-bottom: .6rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid #ccc;
+}
+.pop .left-text {
+  text-align: left;
+  text-align: justify;
+  text-justify: auto;
+  line-height: 1.2rem;
+}
+/* .pop .btn {
+  display: box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 .66rem;
+  padding-bottom: .6rem;
+} */
+.pop .btn a {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: block;
+  height: 1.3rem;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #ac5500;
+  font-size: .64rem;
+  background: #ffd400;
+  border-radius: .1rem;
+  border: 1px solid #ffd400;
+}
+.pop .btn a:nth-child(2) {
+  margin-left: .4rem;
+}
+.pop .btn .hollow {
+  background: #fff;
+  border: 1px solid #999;
+  color: #999;
+}
+.pop .loader-inner {
+  width: 3rem;
+  margin: 0 auto ;
+}
+.pop .close {
+  position: absolute;
+  right: -0.3rem;
+  top: -0.3rem;
+  z-index: 999;
+  width: .8rem;
+  height: .8rem;
+  line-height: .8rem;
+  border-radius: .8rem;
+  text-align: center;
+  display: block;
+  font-size: .48rem;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.pop .close:before {
+  content: "\e904";
+  color: #999;
+}
+.pop .list-xx li {
+  float: left;
+  margin: 0 .3rem .48rem 0;
+  width: 31%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.pop .list-xx li:nth-child(3n) {
+  margin-right: 0;
+}
+.pop .list-xx .on {
+  background: #ffd400;
+  color: #fff;
+}
+.pop .mx {
+  padding: .6rem .6rem .4rem;
+}
+.pop .mx ul:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+}
+.pop .mx li {
+  border: 1px solid #ffb20c;
+  color: #ffb20c;
+  border-radius: .1rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  margin-bottom: .7rem;
+}
+.pop .mx li:nth-last-child(1),
+.pop .mx li:nth-last-child(2),
+.pop .mx li:nth-last-child(3) {
+  margin-bottom: 0;
+}
+.pop .title {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-size: .56rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.pop .table-a1 {
+  padding: 0;
+  margin: 0;
+}
+.pop .table-a1 ul:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+}
+.pop .table-a1 li {
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  margin: 0;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.pop .table-a1 li span {
+  font-size: .52rem;
+}
+.pop .table-a1 li .txt-l {
+  flex: 1;
+  padding-left: .4rem;
+}
+.pop .table-a1 li .txt-r {
+  text-align: right;
+  color: #999;
+  padding-right: .4rem;
+}
+.pop .table-a1 li:nth-child(3n) {
+  border-right: 0;
+}
+.pop .table-a2 {
+  padding: 0;
+  margin: 0;
+}
+.pop .table-a2 ul:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+}
+.pop .table-a2 li {
+  display: flex;
+  display: -webkit-flex;
+  width: 50%;
+  margin: 0;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.pop .table-a2 li span {
+  font-size: .52rem;
+}
+.pop .table-a2 li .txt-l {
+  flex: 1;
+  padding-left: .4rem;
+}
+.pop .table-a2 li .txt-r {
+  text-align: right;
+  color: #999;
+  padding-right: .4rem;
+}
+.pop .table-a2 li:nth-child(2n) {
+  border-right: 0;
+}
+
+
+.black_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  animation: dialogFaceSlipToUp ease-in 220ms;
+}
+.black_overlay.slipBottom[opacity="0"] {
+  display: none;
+}
+.black_overlay.slipUp {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-animation-name: dialogFaceSlipToUp;
+  animation-name: dialogFaceSlipToUp;
+}
+.black_overlay.slipBottom {
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  -webkit-animation-name: dialogFaceSlipToBottom;
+  animation-name: dialogFaceSlipToBottom;
+}
+/* 
+.zy .border {
+  border: 1px solid #ccc;
+}
+.zy .border-bottom {
+  position: relative;
+}
+.zy .border-bottom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  width: 200%;
+  height: 1px;
+  background: #ccc;
+  -webkit-transform: scale(0.5);
+}
+.zy .border-bot {
+  position: relative;
+  height: .2rem;
+  background: #eee;
+}
+.zy .border-bot:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  width: 200%;
+  height: 1px;
+  background: #ccc;
+  -webkit-transform: scale(0.5);
+}
+.zy .border-bot:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  width: 200%;
+  height: 1px;
+  background: #ccc;
+  -webkit-transform: scale(0.5);
+}
+
+.width-auto {
+  width: auto !important ;
+}
+.width-1 {
+  width: 100% !important ;
+}
+.width-2 {
+  width: 50% !important ;
+}
+.width-3 {
+  width: 33.3% !important ;
+}
+.width-4 {
+  width: 25% !important ;
+}
+.width-5 {
+  width: 20% !important ;
+}
+.display-none {
+  display: none !important;
+}
+.display-block {
+  display: block !important;
+}
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: .3rem solid transparent;
+  border-right: .3rem solid transparent;
+  border-top: .3rem solid #ffd400;
+}
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: .3rem solid transparent;
+  border-right: .3rem solid transparent;
+  border-bottom: .3rem solid #ffd400;
+}
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: .3rem solid transparent;
+  border-bottom: .3rem solid transparent;
+  border-right: .3rem solid #ffd400;
+}
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: .3rem solid transparent;
+  border-bottom: .3rem solid transparent;
+  border-left: .3rem solid #ffd400;
+}
+
+*/

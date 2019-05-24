@@ -1,0 +1,38 @@
+﻿@using WeixinMP.model
+@model List<Group>
+@{
+  ViewBag.Title = "发通知";
+}
+<div class="weui-cells_checkbox">
+  <div style="margin-bottom:82px;">
+    @foreach (var g in Model)
+    {
+      <div class="weui-cells__title weui-flex" style="line-height: 28px;"><span class="weui-flex__item">@g.name</span></div>
+      <div class="weui-cells">
+        @foreach (var m in g.members)
+        {
+          <label class="weui-cell weui-check__label" for="u_@m.userid">
+            <div class="weui-cell__hd">
+              <input type="checkbox" class="weui-check" id="u_@m.userid" value="@m.userid">
+              <i class="weui-icon-checked"></i>
+            </div>
+            <div class="weui-cell__bd">
+              <p>@m.name</p>
+            </div>
+            <div class="weui-cell__ft">
+              <p>@m.title</p>
+            </div>
+          </label>
+        }
+      </div>
+    }
+  </div>
+  <div class="weui-btn-area weui-flex" style="position: fixed; left: 0; bottom: 0; right: 0;">
+    <div style="margin-right: 10px;">
+      <a class="weui-btn weui-btn_default" data-action="selectall">全选</a>
+    </div>
+    <div class="weui-flex__item">
+      <a class="weui-btn weui-btn_primary" data-action="selectconfirm">确定</a>
+    </div>
+  </div>
+</div>

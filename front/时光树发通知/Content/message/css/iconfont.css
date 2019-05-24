@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?85d7nt');
+  src:  url('../fonts/icomoon.eot?85d7nt#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?85d7nt') format('truetype'),
+    url('../fonts/icomoon.woff?85d7nt') format('woff'),
+    url('../fonts/icomoon.svg?85d7nt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-people:before { content:"\e900"}
+.icon-photograph:before { content:"\e901"}
+.icon-close:before { content:"\e902"}
+.icon-voice:before { content:"\e903"}
+.icon-sonic:before { content:"\e904"}
+.icon-rightarrow:before { content:"\e905"}
+.icon-downarrow:before { content:"\e90e"}
+.icon-uparrow:before { content:"\e90b"}
+.icon-yes:before { content:"\e90c"}
+.icon-stars:before { content:"\e90d"}
+.icon-add:before { content:"\e90a"}
+.icon-zambia:before { content:"\e908"}
+.icon-comment:before { content:"\e907"}
+.icon-observes:before { content:"\e906"}
+.icon-info:before { content:"\e917"}
+.icon-message:before { content:"\e916"}
+.icon-photo:before { content:"\e915"}
+.icon-video:before { content:"\e914"}
+.icon-link:before { content:"\e913"}
+.icon-record:before { content:"\e912"}
+.icon-upphoto:before { content:"\e911"}
+.icon-word:before { content:"\e910"}
+.icon-play:before { content:"\e90f"}
+.icon-timing:before { content:"\e918"}
+
+
+
+
+

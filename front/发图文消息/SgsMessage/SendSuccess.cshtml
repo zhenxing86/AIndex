@@ -1,0 +1,19 @@
+﻿@using WeixinMP.model
+@model Message
+@{
+  ViewBag.Title = "发通知";
+  Layout = "~/Views/Message/_Layout.cshtml";
+}
+<div class="weui-msg">
+  <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+  <div class="weui-msg__text-area">
+    <h2 class="weui-msg__title">发送成功</h2>
+    <p class="weui-msg__desc">通知内容将会发送到接收人的时光树上</p>
+  </div>
+  <div class="weui-msg__opr-area">
+    <p class="weui-btn-area">
+      <a href="https://msms.zgyey.com/message/sendhistory?uid=@ViewData["userid"]&kid=@ViewData["kid"]&role=@ViewData["role"]#!" class="weui-btn weui-btn_primary">发送历史</a>
+      <a href="/message/send#" class="weui-btn weui-btn_default">再发一条</a>
+    </p>
+  </div>
+</div>

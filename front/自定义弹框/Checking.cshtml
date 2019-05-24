@@ -1,0 +1,244 @@
+﻿@using WeixinMP.model
+@using System.Data
+@using System.Text.RegularExpressions
+@model CheckingInfo
+@{
+  ViewBag.Title = "班级点名";
+  var sicks = new string[] { "发烧", "感冒", "咳嗽", "上炎", "气管炎", "肺炎", "腹泻", "手足口", "水痘", "腮腺炎", "麻疹" };
+}
+@section style{
+  @Html.Partial("style/_common")
+}
+@section script{
+  @Html.Partial("script/_common")
+  <script>
+    window.history.replaceState(null, '', '#')
+
+    $(function () {
+      $.router('/', { on: function () { }, after: function () { } })
+      $.router('/leave/:userid', 'leave', {
+        on: function (userid) {
+          $('#leave input[name=userid]').val(userid || 0)
+          $('#leave input[name=reason]').each(function () { this.checked = false })
+          var a = $('a[data-userid=' + userid + '] .cell-ft')
+          $('#att').text((a.hasClass('green') ? a.text() : ('出勤' + (a.data().intime && ('(' + a.data().intime + ')')))))
+        }, after: function () {
+          $('.black_overlay').remove()
+        }
+      })
+      $('#select').on('click', function () {
+        var remark = '', state = 0, reason = 0, userid = $('#leave input[name=userid]').val();
+        var checked = false
+        $('#leave input[name=reason]').each(function () {
+          if (this.checked) {
+            reason = $(this).val()
+            remark = $(this).closest('.cell').text().replace(/\s/g, '')
+            if (reason == 1) {
+              remark = "病假(" + remark + ")"
+            }
+            state = reason > 0 ? -1 : 0
+            checked = true;
+          }
+        })
+        var name = $('a[data-userid=' + userid + '] .cell-bd').text()
+        if (!checked) {
+          $.alert('请选择<span class="red">' + name + '</span>小朋友的考勤状态')
+          return
+        }
+        $.confirm('确定更改<span class="red">' + name + '</span>小朋友的考勤状态为<span class="red">' + remark + '</span>？', { text: '取消', click: function () { } }, {
+          text: '确定', click: function () {
+            $('a[data-userid=' + userid + '] .cell-ft').removeClass('red green').addClass(state == 0 ? 'green' : 'red').text(remark)
+            var s = ($('input[name=contents]').val() || '').split(';')
+            for (var i = 0; i < s.length; i++) {
+              if (s[i].split(',')[0] == userid) {
+                s.splice(i, 1)
+                break
+              }
+            }
+            s.push(userid + ',' + state + ',' + reason + ',' + (reason != 1 ? '' : remark.replace(';', '；').replace(',', '，').replace(/病假\((.*?)\)/, '$1')))
+            $('input[name=contents]').val(s.join(';'))
+            history.back();
+          }
+        })
+      })
+      $('#othersick').on('click', function () {
+        $(this).find('input').prop('checked', true)
+        var prompt = $.prompt('请输入请病假内容', '', function (text) {
+          if (!text) { $.alert('病假内容不能为空'); return; }
+          var remark = text, state = -1, reason = 1, userid = $('#leave input[name=userid]').val();
+          var name = $('a[data-userid=' + userid + '] .cell-bd').text();
+          $.confirm('确定更改<span class="red">' + name + '</span>小朋友的考勤状态为<span class="red">病假(其他)</span>？', { text: '取消', click: function () { } }, {
+            text: '确定', click: function () {
+              $('a[data-userid=' + userid + '] .cell-ft').removeClass('red green').addClass('red').text('病假(其他)')
+              var s = ($('input[name=contents]').val() || '').split(';')
+              for (var i = 0; i < s.length; i++) {
+                if (s[i].split(',')[0] == userid) {
+                  s.splice(i, 1)
+                  break
+                }
+              }
+              s.push(userid + ',' + state + ',' + reason + ',' + (reason != 1 ? '' : remark.replace(';', '；').replace(',', '，')))
+              $('input[name=contents]').val(s.join(';'))
+              prompt.remove();
+              history.back();
+            }
+          })
+        })
+      })
+
+
+      $('#submit').on('click', function () {
+        $.submit('提交中', {
+          url: '/tea/Checking/Check',
+          type: 'POST',
+          data: { contents: $('input[name=contents]').val() || '' },
+          success: function (data) {
+            $.toast(data.info, 1000, function () {
+              if (!data.code) {
+                location.href = '/tea/checking/index'
+              }
+            })
+          }
+        })
+      })
+    })
+  </script>
+
+}
+<div>
+  <div class="list">
+    <div class="cell" style="background-color: #ffffe0; font-size: 14px;">
+      <div class="cell-bd text-center">请对<span class="red">缺勤的小朋友</span>进行<span class="red">缺勤登记</span></div>
+    </div>
+    <div class="cell title">
+      <div class="cell-bd">班级小朋友名单</div>
+    </div>
+    @{
+      Regex reg = new Regex(@"\d+?:\d+?");
+      foreach (var s in Model.students)
+      {
+        string title = "";
+        //string intime = reg.IsMatch(s.title ?? "") ? s.title.ToDateTime().ToString("HH:mm") : "";
+        title = (s.state >= 0 ? ("出勤" + s.intime.ToString("(HH:mm)")) : s.reason.GetRemark());
+        //病假
+        if (s.state == -1 && (int)s.reason == 1)
+        {
+          if (sicks.Contains(s.remark))
+          {
+            title = "病假(" + s.remark + ")";
+          }
+          else
+          {
+            title = "病假(其他)";
+          }
+        }
+      <a class="cell cell-access" data-userid="@s.userid" href="#/leave/@s.userid">
+        <div class="cell-bd">@s.name</div>
+        <div class="cell-ft @(s.state >= 0 ? "green" : "red")" data-intime="@(s.intime.ToString("HH:mm"))">@title</div>
+      </a>
+      }
+    }
+  </div>
+  <div class="btn-area submit-area">
+    <div class="btn btn-yellow" id="submit">确认点名</div>
+  </div>
+  <div class="placeholder"></div>
+  @{
+    var contents = string.Join(";", Model.students.Where(x => x.state < 0).Select(x => string.Format("{0},{1},{2},{3}", x.userid, x.state, (int)x.reason, x.remark)).ToList());
+  }
+  <input type="hidden" name="contents" value="@contents" />
+</div>
+
+<div class="route-view" id="leave">
+  <input type="hidden" name="userid" value="0" />
+  <div class="list">
+    <div class="cell title">
+      <div class="cell-bd">出勤</div>
+    </div>
+    <label class="cell checkbox">
+      <div class="cell-hd">
+        <input type="radio" name="reason" value="0" />
+        <span class="icon icon-checked"></span>
+      </div>
+      <div class="cell-bd" id="att">出勤</div>
+    </label>
+    @*  </div>
+  <div class="list">*@
+    <div class="cell title">
+      <div class="cell-bd">病假</div>
+    </div>
+    <div class="table table-sm columns-2">
+      @foreach (var s in sicks)
+      {
+        <label class="cell checkbox">
+          <div class="cell-hd">
+            <input type="radio" name="reason" value="1" />
+            <span class="icon icon-checked"></span>
+          </div>
+          <div class="cell-bd">@(s)</div>
+        </label>
+      }
+      <div class="cell checkbox" id="othersick">
+        <div class="cell-hd">
+          <input type="radio" name="reason" value="1" />
+          <span class="icon icon-checked"></span>
+        </div>
+        <div class="cell-bd">其他</div>
+      </div>
+
+      <div class="placeholder"></div>
+    </div>
+    @*  </div>
+  <div class="list">*@
+    <div class="cell title">
+      <div class="cell-bd">事假</div>
+    </div>
+    <label class="cell checkbox">
+      <div class="cell-hd">
+        <input type="radio" name="reason" value="2" />
+        <span class="icon icon-checked"></span>
+      </div>
+      <div class="cell-bd">事假</div>
+    </label>
+    <div class="cell title">
+      <div class="cell-bd">家长带回</div>
+    </div>
+    @*  </div>
+  <div class="list">*@
+    <label class="cell checkbox">
+      <div class="cell-hd">
+        <input type="radio" name="reason" value="3" />
+        <span class="icon icon-checked"></span>
+      </div>
+      <div class="cell-bd">家长带回</div>
+    </label>
+    @*  </div>
+  <div class="list">*@
+    <div class="cell title">
+      <div class="cell-bd">无故缺勤</div>
+    </div>
+    <label class="cell checkbox">
+      <div class="cell-hd">
+        <input type="radio" name="reason" value="4" />
+        <span class="icon icon-checked"></span>
+      </div>
+      <div class="cell-bd">无故缺勤</div>
+    </label>
+    @*  </div>
+  <div class="list">*@
+    <div class="cell title">
+      <div class="cell-bd">在家休养</div>
+    </div>
+    <label class="cell checkbox">
+      <div class="cell-hd">
+        <input type="radio" name="reason" value="5" />
+        <span class="icon icon-checked"></span>
+      </div>
+      <div class="cell-bd">在家休养</div>
+    </label>
+  </div>
+  <div class="btn-area submit-area">
+    <div class="btn btn-yellow" id="select">确定</div>
+  </div>
+  <div class="placeholder"></div>
+</div>

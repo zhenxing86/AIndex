@@ -1,0 +1,43 @@
+﻿@using com.zgyey.and_smsapp.model;
+@{
+    ViewBag.Title = "通知模板";
+    Layout = null;
+    IList<SmsTemplate> templist = ViewData["templist"] as IList<SmsTemplate>;
+
+    int index = 1;
+    string[] smstypelist = { "班级通知", "园所通知", "在园表现", "作业布置", "温馨提示", "其它" };
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+}
+
+
+@Html.Hidden("smstype","1")
+@Html.Hidden("hidPage","0")
+@Html.Hidden("hidPageCount",ViewData["totalpage"])
+
+<div id="zyjy" class="zyjy">
+    <ul class="zyjyPhotoList">
+        @foreach(string smstype in smstypelist)
+        { 
+        <li onclick="javascript:getModule('@srvUrl',@index);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:void(0);"></a>
+                    <i class="name">@smstype</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+            index++;
+        }
+    </ul>
+<p class="clear"></p>
+</div>
+
+<div id="modulelist" style="display:none;">
+</div>
+@*<p id="more" class="more" style="display:none;"><a href="javascript:moreModule('@srvUrl');">查看更多</a></p>*@
+ <div class="fixed-wrap">
+    <div class="fixed02">
+        <a href="javascript:void(0);" onclick="javascript:goback();" class="sure">返回</a>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@using com.zgyey.and_smsapp.model;
+@model IList<Notice_Detial_Class>
+@{
+    ViewBag.Title = "通知阅读情况";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+}
+
+<script>
+    function loadComplete() {
+    }
+    </script>
+<div id="zyjy" class="zyjy">
+    <ul class="zyjyPhotoList">
+        @foreach(Notice_Detial_Class ndc in Model)
+        { 
+        <li onclick="javascript:detial('@srvUrl',@ViewData["uid"],@ndc.cid,@ViewData["taskid"]);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" style=" margin-top:22px;" href="javascript:detial('@srvUrl',@ViewData["uid"],@ndc.cid,@ViewData["taskid"]);"></a>
+                    <i class="name">@ndc.cname</i>
+                    <div style="float:right; padding-top:8px; color:#999"><span style="color:#999;margin-left:20px; line-height:40px">已读：@ndc.readcnt</span> <span style="margin-left:20px;">未读：<i style="color:#f00">@ndc.noreadcnt</i></span></div>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+        }
+    </ul>
+<p class="clear"></p>
+</div>
+
+

@@ -1,0 +1,13 @@
+发通知
+
+图文消息
+语音消息
+视频消息
+纯文本消息
+纯文本短信
+
+发送短息：只列出手机号正确的用户
+
+使用
+vue/1.0.28/vue.min.js和vue-router/0.7.13/vue-router.min.js
+调用ov_gapjs库和window.wst实现web页面js调用手机端方法实现拍照，弹框等功能

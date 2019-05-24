@@ -1,0 +1,165 @@
+﻿@using com.zgyey.and_smsapp.model
+@{
+    ViewBag.Title = "发通知";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    LoginUser_Info loginuser = ViewData["loginuser"] as LoginUser_Info;
+    IList<Grade_Info> gradelist = ViewData["gradelist"] as IList<Grade_Info>;
+    //IList<User_Info> tealist = ViewData["tealist"] as IList<User_Info>;
+    IList<Teacher_Info> tealist = ViewData["tealist"] as IList<Teacher_Info>;
+    
+    int tousid = int.Parse(ViewData["touid"].ToString());
+    int uid = int.Parse(ViewData["uid"].ToString());
+    string realname = ViewData["realname"].ToString();
+
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+
+    Kin_Sms sms = ViewData["sms"] as Kin_Sms;
+
+}  
+<script>
+    function loadComplete() {
+        //instead of document.read();
+        initView();
+    }
+
+    function timeSendSelected() {
+        if ($("#timesend").hasClass("cur")) {
+            $("#timesend").removeClass("cur");
+            $("#istime").val(0);
+        }
+        else {
+            $("#timesend").addClass("cur");
+            $("#istime").val(1);
+        }
+
+    }
+    @*function CheckSMSLength(obj) {
+        if(@loginuser.kid==24082)
+        {
+            var smslength = @loginuser.smsLen;
+            var objlength = obj.value.replace("%stuname%", "xsxm");
+            $("#tip").html("已输入 <span id=\"bodyLen\" style=\"color:#002fc8; font-weight:bold;\">0</span>" +
+                    "个字符.还可输入<span id=\"ylen\" style=\"color:#002fc8; font-weight:bold;\" >" + smslength + "</span> 个字符. ");
+            $("#bodyLen").html(objlength.length);
+
+            $("#ylen").html(smslength - objlength.length); 
+        }
+    };*@
+</script>
+@Html.Hidden("ulist",ViewData["ulist"])
+@Html.Hidden("tlist","")
+@Html.Hidden("usertype",loginuser.usertype)
+@Html.Hidden("person_count",tousid>0?"1人":"")
+@Html.Hidden("type")
+@Html.Hidden("kid",ViewData["kid"])
+@Html.Hidden("uid",ViewData["uid"])
+@Html.Hidden("istime",0)
+@Html.Hidden("onlySendChild",loginuser.onlySendChild)
+<div id="send_message" class="ajaxload on">
+    <div class="w94 recipients" onclick="javascrip:showView(1);">
+    	<a class="add_reci" href="javascript:;" ></a>
+        <span id="personcount" class="right">@(tousid>0?"1人":"")</span>
+        <span id="persons" class="reci_name">@(tousid>0?realname:"")</span>
+    </div>
+    <div class="w94 edit_box">
+        <input id="smstitle" class="edit_title" name="" value="@(loginuser.usertype>1?"园所通知":"班级通知")" />
+    	<textarea name="content" id="content"></textarea>
+    </div>
+    <div class="w94 mod" onclick="javascrip:showView(2);">
+    	<a class="arrow_right" href="javascript:;" ></a>
+        通知模板
+    </div>
+    <div class="w94 mod" onclick="javascrip:hisSmsNotice('@srvUrl');">
+    	<a class="arrow_right" href="javascrip:;" ></a>
+        历史通知
+    </div>
+  @*  @if(@loginuser.kid==24082)
+    {
+     <div class="w94 mod" >
+        <p class="note_tip">
+            温馨提示：<span id="tip"> 内容不得包含违法，不健康的字眼。</span>
+        </p>
+     </div>
+    }*@
+        <div class="w94 mod" style="position:relative;">
+        <a href="javascript:timeSendSelected();"  style="width:100%; height:40px; display: block; color:#9982DC;">
+    	    <p class="arrow_gx" id="timesend"></p>定时发送
+        </a>
+    </div>
+    <div class="w94 send_btn">
+        @if (loginuser.openWebSms > 0)
+        {
+    	<p class="terrace" style="height:55px;"> 
+        	<a href="javascript:;" class="terrace_btn" onclick="javascript:sendSmsEvent('@srvUrl',2,@loginuser.auditSms,@loginuser.smsLen);">发平台短信</a>
+        </p>
+        <p class="app" style="height:55px;">
+        	<a href="javascript:;" class="app_btn" onclick="javascript:sendSmsEvent('@srvUrl',1,@loginuser.appAuditSms,@loginuser.smsLen);">发APP消息</a>
+        </p>
+            
+        <div style="color:#666; clear:both; font-size:105%">
+            本月已发：<span style=" color:#F00">@sms.sendcount</span>条;
+            剩余短信：<span style=" color:#F00">@sms.totalcount</span>条
+        </div>
+        }
+        else
+        {
+            <a href="javascript:;" class="sending" onclick="javascript:sendSmsEvent('@srvUrl',1,@loginuser.appAuditSms,@loginuser.smsLen);">发APP消息</a>
+        }
+    </div>
+</div>
+<div id="person" class="ajaxload" style="display:none;">
+    @{
+        ViewDataDictionary person = new ViewDataDictionary();
+        person.Add("loginuser", loginuser);
+        person.Add("gradelist", gradelist);
+        person.Add("tealist", tealist);
+        person.Add("selecttype",ViewData["selecttype"]);
+    }
+    @Html.Partial("SelectPerson", person)
+</div>
+<div id="module" class="ajaxload" style="display:none;">
+    @Html.Partial("Module")
+</div>
+
+<div id="time_send" class="ajaxload" style="display:none;">
+    @Html.Partial("TimeSend", person)
+</div>
+
+<div id="popWin" style="display:none;">
+    <div class="black"></div>
+    <div class="pop">
+        <div class="info">
+            您将使用<i style="color:#F00">50</i>条短信<br>
+		    短信数量不足，请联系客服充值
+        </div>
+        <div class="pop_btn">
+            <a href="javascript:popWin_close();" class="cancel">取消</a>
+            <a href="javascript:;" id="send" class="confirm">确定</a>
+        </div>
+    </div>
+</div>
+
+<div id="msgWin" style="display:none;">
+<div class="black"></div>
+    <div class="pop02">
+    	<h2 class="pop_header">提示</h2>
+    	<p id="msg">您的问题正在处理中</p>
+        <a href="javascript:hideCommonMsg();" id="queding" class='queding02'>确定</a>
+    </div>
+</div>
+
+
+<div class="black" id="poptime_bg" style="display:none;"></div>
+<div class="poptime" id="poptime" style="display:none;">
+    <a href="javascript:poptimeClose();" class="pt_close"></a>
+    <div class="pp2">
+    <p class="text">阅读情况接收时间</p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',1,@loginuser.appAuditSms);">1小时后</a></p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',2,@loginuser.appAuditSms);">2小时后</a></p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',3,@loginuser.appAuditSms);">3小时后</a></p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',4,@loginuser.appAuditSms);">上午08:00</a></p>
+    </div>
+</div>
+
+
+

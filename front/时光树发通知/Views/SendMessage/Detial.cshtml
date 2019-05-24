@@ -1,0 +1,66 @@
+﻿@using com.zgyey.and_smsapp.model;
+@{
+    ViewBag.Title = "发送明细";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    IList<Notice_Detial> noreadlist = ViewData["noreadlist"] as IList<Notice_Detial>;
+    IList<Notice_Detial> readlist = ViewData["readlist"] as IList<Notice_Detial>;
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+}
+<script>
+    function loadComplete() {
+    }
+    function navgoto(obj) {
+        $(obj).addClass("on").siblings("a").removeClass("on");
+        if($(obj).hasClass("reading_yes"))
+        {
+            $("ul.read").css("display", "block").siblings("ul").css("display", "none");
+            $("#readmore").css("display", "block");
+            $("#more").css("display", "none");
+        }
+        else {
+            $("ul.noread").css("display", "block").siblings("ul").css("display", "none");
+            $("#readmore").css("display", "none");
+            $("#more").css("display", "block");
+        }
+    }
+</script>
+@Html.Hidden("uid",ViewData["uid"])
+@Html.Hidden("cid",ViewData["cid"])
+@Html.Hidden("hidPage","0")
+@Html.Hidden("hidPageCount",ViewData["totalpage"])
+@Html.Hidden("readhidPage","0")
+@Html.Hidden("readhidPageCount",ViewData["readtotalpage"])
+@Html.Hidden("taskid",ViewData["taskid"])
+<div class="nav">
+    <a id="reading_not" class="reading_not on" href="javascript:;" onclick="javascript:navgoto(this);">未阅读（@ViewData["noreadcount"] 人）</a>
+    <a id="reading_yes" class="reading_yes" href="javascript:;" onclick="javascript:navgoto(this);">已阅读（@ViewData["readcount"] 人）</a>
+</div>
+    
+<ul id="noticelist" class="item_list noread">
+    @foreach(Notice_Detial noread in noreadlist)
+    {
+    <li class="item">
+        <span class="name">@noread.username</span>
+        <span class="grade right">@noread.cname</span>
+    </li>
+    }
+</ul>
+<ul id="readnoticelist" class="item_list read" style="display:none;">
+    @foreach (Notice_Detial read in readlist)
+    {
+    <li class="item">
+        <i class="right">@read.cdate</i>
+        <span class="name">@read.username</span>
+        <span class="grade">@read.cname</span>
+    </li>
+    }
+</ul>
+@if(int.Parse(ViewData["totalpage"].ToString())>1)
+{
+<p id="more" class="more"><a href="javascript:moreNoticeDetial('@srvUrl');">查看更多</a></p>
+}
+@if(int.Parse(ViewData["readtotalpage"].ToString())>1)
+{
+<p id="readmore" class="more" style="display:none;"><a href="javascript:moreNoticeDetial('@srvUrl');">查看更多</a></p>
+}

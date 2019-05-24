@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>@ViewBag.Title</title>
+   <link href="@Url.Content(string.Format(global_asax.staticurl,"/Content/css/recipe.css"))" rel="stylesheet" />
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/jquery-1.9.1.min.js"))"></script>
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/js/recipe.js"))"></script>
+
+    <style>
+        .black {position:fixed; left:0; right:0; top:0; bottom:0; width:100%; height:100%; background-color:#000; opacity:0.3; z-index:99;}
+        .pop {position:fixed; z-index:100; left:50%; top:50%; margin-left:-137px; margin-top:-92px; width:275px; height:175px; background-color:#fff;}
+        .info {width:275px; height:124px; display:table-cell; vertical-align:middle; text-align:center;font:1.1em/25px 'Microsoft YaHei';}
+        .pop_btn {width:100%; height:50px; border-top:1px solid #d9d9d9;}
+        .pop_btn .cancel, .pop_btn .confirm {display:block; float:left; width:137px; height:50px; text-align:center; font:1.1em/50px 'Microsoft YaHei'; color:#9981DC;}
+        .pop_btn .cancel {border-right:1px solid #d9d9d9;}
+        .pop_btn a:hover {color:#464646;}
+
+        .pop02 {position:fixed; z-index:100; left:50%; top:50%; margin-left:-137px; margin-top:-92px; width:275px; height:160px; background-color:#fff; border-radius:5px;}
+        .pop_header {width:100%; height:32px; font:110%/32px ''; background-color:#9981DC; color:#fff; text-align:center; margin-bottom:15px; display:none}
+        .pop02 p {width:275px; height:110px; margin:20px auto 0; text-align:center; display:table-cell; vertical-align:middle;font:110%/36px 'Microsoft YaHei';}
+        .pop02 a.queding02 {display:block; width:85%; margin:0 auto; height:36px; background-color:#ffd400; text-align:center; color:#ac5500; border-radius:100px; font:110%/36px 'Microsoft YaHei'; margin:0 auto;}
+
+        .more { width:80%; height:50px; line-height:50px; text-align:center; margin:0 auto; margin-bottom:65px; margin-top:10px; border:1px solid #d5d5d5 }
+        .more a{ width:100%; height:50px; display:block}
+    </style>
+</head>
+<script type="text/javascript" >
+    $(document).ready(function () {
+        if (window.location.href.indexOf("List") > -1) {
+            $("body").css({ "background": "#fff" });
+        }
+        else {
+            $("body").css({ "background": "#f5f5f5" });
+        }
+    });
+</script>
+<body>
+    @RenderBody()
+    <div id="popWin" style="display:none;">
+        <div class="black"></div>
+        <div class="pop">
+            <div class="info">
+                您将使用<i style="color:#F00">50</i>条短信<br>
+		        短信数量不足，请联系客服充值
+            </div>
+            <div class="pop_btn">
+                <a href="javascript:RECIPE.common.popWin_close();" class="cancel">取消</a>
+                <a href="javascript:;" id="send" class="confirm">确定</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="msgWin" style="display:none;">
+    <div class="black"></div>
+        <div class="pop02">
+    	    <h2 class="pop_header">提示</h2>
+    	    <p id="msg">您的问题正在处理中</p>
+            <a href="javascript:RECIPE.common.hideCommonMsg();" id="queding" class='queding02'>确定</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

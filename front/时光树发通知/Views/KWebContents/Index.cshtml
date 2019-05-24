@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>@(ViewBag.Title ?? "新闻公告")</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/notice.css?ver=2@(System.Configuration.ConfigurationManager.AppSettings["staticver"])" rel="stylesheet" />
+    <style>
+        .list-group-item
+        {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="list-group" id="list">
+    </div>
+    <div class="row" style="padding-bottom: 20px;">
+        <span class="col-xs-8 col-xs-offset-2 text-center text-muted" style="border: 1px solid #9E9E9E; font-size: 16px; line-height: 40px;" id="more">显示更多</span>
+        <input type="hidden" id="page" name="page" value="1" />
+    </div>
+    <script src="~/Scripts/lib/cookie.min.js"></script>
+    <script src="~/Scripts/js/ovgap.js"></script>
+    <script src="~/Scripts/browser.js?ver=@(DateTime.Now.Ticks)"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="~/Scripts/template.js"></script>
+    <script>
+
+        $(function () {
+            $('#page').val(1);
+            getMore();
+            $('#more').bind('click', getMore);
+            var url = '/kwebcontents/add?uid=@Request["uid"]&kid=@Request["kid"]&role=@Request["role"]&categorycode=@Request["categorycode"]';
+            setTimeout("onDynamicTab({ type: 1, content: \"添加\", click: \"location.href=\'" + url + "\'\" })", 100);
+        })
+
+        function getMore() {
+            var size = 10;
+            $.ajax({
+                url: '/KWebContents/GetLists?categorycode=@Request["categorycode"]&kid=@Request["kid"]&page=' + $('#page').val() + '&size=' + size,
+                cache: false,
+                success: function (data) {
+                    var html = template('tp', data);
+                    $('#list').append(html);
+                    $('#page').val(parseInt($('#page').val()) + 1);
+                    if (data.length < size) {
+                        $('#more').unbind('click').html('没有更多了');
+                    }
+                }
+            })
+        }
+    </script>
+    <script id="tp" type="text/html">
+        {{each}}
+        <div onclick="onNewWindow('{{$value.sitedns}}/app_content_{{$value.categorycode}}-{{$value.contentid}}.html?view=1');" class="list-group-item row">
+            <div class="col-xs-8 text-ellipsis">{{$value.title}}</div>
+            <div class="col-xs-4 text-right text-muted" style="font-size: 14px;">{{$value.createdatetime}}<span class="glyphicon glyphicon-menu-right" style="margin-left: 10px;"></span></div>
+        </div>
+        {{/each}}
+    </script>
+</body>
+</html>

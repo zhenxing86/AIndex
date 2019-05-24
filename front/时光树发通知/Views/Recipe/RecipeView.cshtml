@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = Request["title"]??"每周食谱";
+    Layout = "~/Views/Shared/_Recipe.cshtml";
+    
+}
+<a href="/Recipe/Edit/?contentid=@Request["contentid"]&kid=@Request["kid"]&title=@Request["title"]" class="edit"></a>
+<div class="mzsp">
+    <dl id="data">
+    </dl>
+</div>
+<script id="tp" type="text/html">
+    {{each}}
+            <dd>
+                <p class="title week_a{{$value.icon_index}}"><span class="week">{{$value.sdate}}</span><span class="time">{{$value.sendtimeStr}}</span></p>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mzsp_table">
+                    {{include 'tp2' $value.day_contents}}
+                </table>
+            </dd>
+    {{/each}}
+</script>
+<script id="tp2" type="text/html">
+    {{each}}
+    <tr>
+        <td align="center" class="week_b{{$value.icon_index}}">{{$value.eatname}}</td>
+        <td>{{$value.foot}}</td>
+    </tr>
+    {{/each}}
+</script>
+
+
+<script src="https://cdn.rawgit.com/florian/cookie.js/master/cookie.min.js"></script>
+<script src="~/Scripts/js/ovgap.js"></script>
+<script src="~/Scripts/browser.js?ver=@(DateTime.Now.Ticks)"></script>
+<script src="~/Scripts/zepto-1.1.6.min.js"></script>
+<script src="~/Scripts/template.js"></script>
+<script>
+    setTimeout('onDynamicTab({ type: 1, content: "分享", click: "share();"})', 50);
+    getModel();
+    function getModel() {
+        $.ajax({
+            url: '/Recipe/GetModel?contentid=@Request["contentid"]&kid=@Request["kid"]',
+            cache: false,
+            success: function (data) {
+                var html = template('tp', data);
+                $('#data').html(html);
+            }
+        })
+    }
+
+    function share() {
+        mobileApi({
+            api: 'share',
+            data: {
+                title: document.title, text: function () { return "每周食谱"; }, img: 'http://www.zgyey.com/sgs.png', url: '@Request["dns"]/app_content__MZSP-@(Request["contentid"]).html'
+            }
+        });
+    }
+</script>

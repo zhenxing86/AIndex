@@ -1,0 +1,28 @@
+﻿*
+{
+    font-family: Verdana,'Microsoft Yahei';
+    margin: 0;
+}
+
+.list-group-item
+{
+    border-left: 0;
+    border-right: 0;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+    .list-group-item:first-child
+    {
+        border-top: 0;
+    }
+
+.text-ellipsis
+{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
+}

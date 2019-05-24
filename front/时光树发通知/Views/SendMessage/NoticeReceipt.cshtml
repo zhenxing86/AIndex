@@ -1,0 +1,40 @@
+﻿@using com.zgyey.and_smsapp.model;
+@{
+    ViewBag.Title = "通知回执";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    IList<Notice_View> nv = ViewData["NoticeView"] as IList<Notice_View>;
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+}
+<script>
+    function loadComplete() {
+        $("body").addClass("body_color");
+    }
+</script>
+@Html.Hidden("hidPage","0")
+@Html.Hidden("hidPageCount",ViewData["totalpage"])
+@Html.Hidden("uid",ViewData["uid"])
+<div id="nvlist">
+    @foreach (Notice_View item in nv)
+    {
+        <div class="check_mes">
+    	    <h2 class="mas_title"><a href="javascript:;" class="status gray">@item.cdate</a><i class="from01"></i>&nbsp;&nbsp;@item.title</h2>
+            <p class="mas pl0">
+            @item.smscontent
+            </p>
+            @if(item.img_url!="")
+            {
+            <p class="mas pl0">
+            <a href="@item.img_url" onclick="return false;"><img src="@item.img_url_small" /></a>
+            </p>
+            }
+             <p class="mas pl0" style="text-align:right;">
+            ——@item.sendername
+            </p>
+        </div>
+    }
+</div>
+@if(int.Parse(ViewData["totalpage"].ToString())>1)
+{
+<p id="more" class="more"><a href="javascript:moreNoticeView('@srvUrl',1);">查看更多</a></p>
+}

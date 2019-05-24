@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>班级公告</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js?v=1" data-main="/Scripts/app/classnotice-add" defer async="true"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css?v=1" rel="stylesheet" />
+    <link href="~/Content/css/notice.css?ver=3@(System.Configuration.ConfigurationManager.AppSettings["staticver"])" rel="stylesheet" />
+</head>
+<body>
+    <input type="hidden" id="cid" name="cid" value="@(Request["cid"] ?? "0")" />
+    <input type="hidden" id="role" name="role" value="@(Request["role"]??"1")"/>
+    <input type="hidden" id="uid" name="uid" value="@(Request["uid"]??"0")"/>
+    <div class="container" id="editor">
+        <div class="row row-border-bottom" style="background-color: #f7f7f7;" onclick="javascript:showClasses();">
+            <div class="col-xs-8">
+                <input class="class-lab" id="class-lab" value="" placeholder="选择班级" readonly="readonly">
+            </div>
+            <div class="col-xs-4 text-right">
+                <div style="padding-top: 5px;">
+                    <span class="class-cnt" id="class-cnt"></span>
+                    <span class="pull-right class-add-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row row-border-bottom">
+            <div class="col-xs-12">
+                <input type="text" class="title-input" id="title" name="title" placeholder="请输入标题" />
+            </div>
+        </div>
+        <div class="row row-border-bottom">
+            <div class="col-xs-12">
+                <textarea id="content" name="content" placeholder="请输入内容"></textarea>
+            </div>
+        </div>
+        <div class="row row-border-bottom">
+            <div class="col-xs-12" onclick="javascript:uploadPhoto();">
+                <div class="pull-left img-upload" id="upload-div">
+                    <img id="up-img" />
+                </div>
+                <div id="lab-up" class="pull-left img-upload-text">
+                    上传图片
+                </div>
+            </div>
+        </div>
+@*        <div class="row row-border-bottom" style="line-height: 60px; font-size: 16px;" onclick="javascript:show('modul');">
+            <span class="col-xs-9">预设模板</span>
+            <span class="col-xs-3 text-right text-muted"><span class="glyphicon glyphicon-menu-right"></span></span>
+        </div>*@
+        <div class="row" style="margin-top: 10px;">
+            <button class="col-xs-10 col-xs-offset-1 btn text-center" style="line-height: 30px; background-color: #ffd400; color: #ac5500; font-size: 20px;" onclick="javascript:preview();">预览</button>
+        </div>
+    </div>
+
+    <div class="tmp-panel" id="modul">
+        <ul class="list-group" id="modul-data">
+            @{
+                string[] modulTypes = { "班级通知", "园所通知", "在园表现", "作业布置", "温馨提示", "其它" };
+                var index = 1;
+                foreach (var s in modulTypes)
+                {
+                <li class="list-group-item">
+                    <div class="row text-muted" onclick="javascript:showModul(@(index++));">
+                        <span class="col-xs-10 text-ellipsis">@s</span>
+                        <span class="col-xs-2 text-right"><span class="glyphicon glyphicon-menu-right"></span></span>
+                    </div>
+                </li>
+                }
+            }
+        </ul>
+        <div class="row" style="position: fixed; bottom: 10px; left: 15px; right: 15px;">
+            <button class="col-xs-10 col-xs-offset-1 btn text-center" style="line-height: 30px; background-color: #ffd400; color: #ac5500; font-size: 20px;" onclick="javascript:hide('modul',-1);">返回</button>
+        </div>
+    </div>
+
+    <div class="tmp-panel" id="modul-detail">
+        <ul class="list-group" id="modul-detail-data">
+        </ul>
+        <div class="row" style="position: fixed; bottom: 10px; left: 15px; right: 15px;">
+            <button class="col-xs-10 col-xs-offset-1 btn text-center btn-back" onclick="javascript:hide('modul-detail',-1);">返回</button>
+        </div>
+    </div>
+
+    <div class="tmp-panel" id="classes">
+        <ul class="list-group" id="classes-data">
+        </ul>
+        <div class="row" style="position: fixed; bottom: 5px; left: 15px; right: 15px;">
+            <span class="col-xs-10">
+                <button class="col-xs-5 col-xs-offset-1 btn text-center btn-back" onclick="javascript:backFromClasses();">返回</button>
+                <button class="col-xs-5 col-xs-offset-1 btn text-center btn-back" onclick="javascript:classSelected();">确定</button>
+            </span>
+            <span class="col-xs-2 text-right ok-icon" style="line-height: 50px;" onclick="javascript:selectAllClasses();"><span class="glyphicon glyphicon-ok-circle" id="classes-all"></span></span>
+        </div>
+    </div>
+
+    <div class="container" style="background-color: #fff; height: 100%; display: none; padding-top: 10px;position: fixed;top: 0;left: 0;right: 0;bottom: 0;" id="preview">
+        <div class="row" style="overflow:auto;height:100%;">
+            <div class="col-xs-12">
+                <h3 style="text-align: center;" id="pre-title"></h3>
+                <div style="font-size:17px;" id="pre-content">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal" style="display: none;">
+        <div class="modal-dialog" id="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center" style="font-size: 18px; margin: 20px auto;" id="alter-lab">
+                    </p>
+                    <div class="row">
+                        <button class="btn col-xs-offset-1 col-xs-10 btn-yes" id="alter-hide" onclick="javascript:hideMsg();">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade in hidden" id="backdrop"></div>
+
+    <div class="img-div" id="img-div" onclick="javascript:hideImg();">
+        <div style="display:table;height:inherit;width:inherit;">
+            <div style="display:table-cell;vertical-align:middle;text-align:center;">
+                <img id="img-view" /></div>
+        </div>
+    </div>
+
+    
+    <script type="text/html" id="tpl-modul">
+        {{each}}
+        <li class="list-group-item" onclick="javascript:insertContent({{$value.id}});">
+            <p class="modul" id="modul-{{$value.id}}">{{$value.content}}</p>
+        </li>
+        {{/each }}
+    </script>
+    <script type="text/html" id="tpl-classes">
+        {{each}}
+        <li class="list-group-item">
+            <div class="row text-muted" onclick="javascript:selectClass({{$value.cid}},'{{$value.cname}}');">
+                <span class="col-xs-10 text-ellipsis">{{$value.cname}}</span>
+                <span class="col-xs-2 text-right ok-icon"><span class="glyphicon glyphicon-ok-circle" id="ok-{{$value.cid}}"></span></span>
+            </div>
+        </li>
+        {{/each }}
+    </script>
+
+</body>
+</html>

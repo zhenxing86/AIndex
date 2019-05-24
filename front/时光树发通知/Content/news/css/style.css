@@ -1,0 +1,73 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dd{margin:0;padding:0;border:0; }
+body { color:#333; font-size:18px; font-family:"Microsoft YaHei";}
+ul,ol,dl{list-style-type:none;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;} 
+select,input,img,select,textarea{vertical-align:middle;font-size:16px;font-family:"Microsoft YaHei";}
+a{text-decoration:none;outline:none; color:#333}
+a:link,a:visited,a:active{text-decoration:none;outline:none;}
+.clear { clear:both}
+.red { color:#F00}
+.hide{ display:none; }
+
+.header { width:100%; height:46px;}
+.header a { width:50%; height:45px; line-height:45px; display:block; float:left; color:#999; text-align:center; position:relative; border-bottom:1px solid #eee; }
+.header .tab .on { background:#ffa800; color:#fff;border-bottom:1px solid #ffa800; }
+.header .tab .on span { width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-bottom:10px solid #fff; position:absolute; left:50%; bottom:-1px; margin-left:-10px; z-index:2;}
+
+
+.section { width:100%;}
+.section .notice .people { height:46px; background:#f7f7f7; border-bottom:1px solid #eee; position:relative }
+.section .notice .people .p_box { width:95%; margin:0 auto}
+.section .notice .people .add_p { position:absolute; right:10px; top:7px; z-index:1; width:30px; height:30px; border:1px solid #ddd; border-radius:100px; display:block; background:url(../images/icon.svg) no-repeat  #fff; background-size:120px;}
+.section .notice .people input { border:0; margin:0 auto; height:40px; background:none;width:90%; color:#666}
+.section .notice .con { height:200px; border-bottom:1px solid #ddd;}
+.section .notice .con .n_title { border-bottom:1px solid #eee; width:95%; margin:0 auto; height:46px; }
+.section .notice .con .n_title input { border:0px; height:40px; width:90%; background:none; color:#999}
+.section .notice .con .n_text {width:95%; margin:0 auto; height:160px; } 
+.section .notice .con .n_text textarea { border:0;  height:140px; width:100%; background:none; color:#333; padding-top:5px;}
+.section .notice .bz { border-bottom:14px solid #f7f7f7; text-align:right; padding-right:10px; color:#999}
+.section .notice .bz p{ border-bottom:1px solid #eee; font-size:15px; line-height:30px;}
+
+.section .notice .up_photo { width:100%; height:75px;}
+.section .notice .up_photo .add_img { width:60px; height:60px; display:block; margin:10px; border:1px dashed #ddd; position:relative; background:url(../images/icon.svg) no-repeat; background-size:240px;}
+.section .notice .up_photo .add_img span { position: absolute; right:-75px; top:17px; z-index:1; color:#999}
+
+.section .notice .option { border-top:1px solid #eee}
+.section .notice .option a { position:relative; display:block; height:46px; line-height:46px; padding-left:10px;border-bottom:1px solid #eee;}
+.section .notice .option .arrow_left { position:absolute; right:5px; top:5px; z-index:1; width:30px; height:30px; display:block; background:url(../images/icon.svg) no-repeat -30px 0; background-size:120px;}
+.section .notice .option .check { position:absolute; right:10px; top:7px; z-index:1; width:30px; height:30px; border:1px solid #ddd; border-radius:100px;}
+.section .notice .option .on {border:1px solid #ffa800; background:url(../images/icon.svg) no-repeat -60px 0 #ffa800 ;background-size:120px; }
+
+.section .notice_btn { width:90%; height:46px; line-height:46px;text-align:center; border-radius:5px; margin:20px auto 10px; background:#ffa800;}
+.section .notice_btn a { width:100%; height:46px; display:block; color:#fff; font-size:20px;}
+.section .history { text-align:center; margin-bottom:10px;}
+.section .history a { color:#999;}
+.section  .infosum { text-align:center; padding-bottom:10px; color:#666}
+
+
+	@media screen and (max-width:320px)
+	{
+	body {font-size:17px; line-height:29px;}
+
+	}
+	
+	@media screen and (min-width:321px) and (max-width:360px)
+	{
+		
+	body {font-size:17px; line-height:29px;}
+
+	}
+	@media screen and (min-width:361px) and (max-width:375px)
+	{
+	body {font-size:18px;line-height:29px;}
+	
+	}
+
+
+	@media screen and (min-width:376px) and (max-width:1920px)
+	{
+	body {font-size:18px;line-height:29px;}
+	
+	}

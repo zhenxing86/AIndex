@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>@(ViewBag.Title ?? "新闻公告")</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" data-main="/Scripts/app/kwebcontents-add" defer async="true"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/notice.css?ver=2@(System.Configuration.ConfigurationManager.AppSettings["staticver"])" rel="stylesheet" />
+@*    <link href="~/Content/css/notice-common.css?ver=2@(System.Configuration.ConfigurationManager.AppSettings["staticver"])" rel="stylesheet" />
+    <link href="~/Content/css/notice-add.css?ver=2@(System.Configuration.ConfigurationManager.AppSettings["staticver"])" rel="stylesheet" />*@
+
+</head>
+<body>
+    <div class="container" style="padding-top: 10px;" id="editor">
+        <div class="row row-border-bottom">
+            <div class="col-xs-12">
+                <input type="text" class="title-input" id="title" name="title" placeholder="请输入标题" />
+            </div>
+        </div>
+        <div class="row row-border-bottom">
+            <div class="col-xs-12">
+                <textarea style="height: 240px;" id="content" name="content" placeholder="请输入内容"></textarea>
+            </div>
+        </div>
+        <div class="row row-border-bottom">
+            <div class="col-xs-12" onclick="uploadPhoto();">
+                <div class="pull-left img-upload" id="upload-div">
+                    <img id="up-img" onclick="showImg();" />
+                </div>
+                <div id="lab-up" class="pull-left img-upload-text">
+                    上传图片
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <button class="col-xs-10 col-xs-offset-1 btn text-center" style="line-height: 30px; background-color: #ffd400; color: #ac5500; font-size: 20px;" onclick="document.body.focus();setTimeout(function(){preview()},200);">预览</button>
+        </div>
+    </div>
+
+
+    <div class="container" style="background-color: #fff; height: 100%; display: none; padding-top: 10px;" id="preview">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 style="text-align: center;" id="pre-title"></h3>
+                <div style="font-size:17px;" id="pre-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal" style="display: none;">
+        <div class="modal-dialog" id="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center" style="font-size: 18px; margin: 20px auto;" id="alter-lab">
+                    </p>
+                    <div class="row">
+                        <button class="btn col-xs-offset-1 col-xs-10 btn-yes" id="alter-hide" onclick="javascript:hideMsg();">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade in hidden" id="backdrop"></div>
+
+
+    <input type="hidden" id="kid" name="kid" value="@Request["kid"]"/>
+    <input type="hidden" id="uid" name="uid" value="@Request["uid"]"/>
+    <input type="hidden" id="categoryid" name="categoryid" value="@ViewBag.categoryid"/>
+
+</body>
+</html>

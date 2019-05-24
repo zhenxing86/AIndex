@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@((ViewData["messagetype"]??Request["messagetype"]??"1").ToString()=="0"?"短信通知":"幼儿园通知")</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <link href="/Content/message/css/styles.css?v=201610281823" rel="stylesheet" />
+    <link href="/Content/message/css/iconfont.css?v=1" type="text/css" rel="stylesheet">
+    <script src="/Scripts/flexible.js?v=1" type="text/javascript"></script>
+    <script src="//cdn.staticfile.org/zepto/1.1.6/zepto.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue/1.0.28/vue.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue-router/0.7.13/vue-router.min.js?v=1"></script>     
+    <script src="//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js?v=1"></script>
+    <script src="/Scripts/lib/zyapp.min.js?v=201610251526"></script>
+    <script src="/Scripts/message/message.min.js?v=201705181706"></script>
+
+</head>
+<body>   
+
+<input type="hidden" name="taskid" id="taskid" value="@Request["taskid"]" />
+<input type="hidden" name="uid" id="uid" value="@(ViewData["uid"])" />
+<input type="hidden" name="kid" id="kid" value="@(ViewData["kid"]??Request["kid"])" />
+<input type="hidden" name="role" id="role" value="@(ViewData["role"]??Request["role"])" />
+<input type="hidden" name="state" id="state" value="@(ViewData["state"]??Request["state"]??"1")" />
+<input type="hidden" name="messagetype" id="messagetype" value="@(ViewData["messagetype"]??Request["messagetype"]??"1")" />
+
+<div class="info" id="app">
+    <div class="textarea" v-html="message.content.replace('\n','<br>')"></div>
+    <msg-audio :audio="message.audios[0]&&message.audios[0].url"></msg-audio>
+    <msg-img :imgs="message.imgs"></msg-img>
+    <msg-video :video="message.videos[0]&&message.videos[0].url"></msg-video>
+</div>
+
+<script type="text/html" id="msg-audio">
+    <div class="voice" v-show="audio">
+        <p class="arrow-left"></p>
+        <p class="sum" v-on:click.stop="play">{{{length}}}
+        </p>
+        <p class="sprite" :class="playing ? 'on' : ''"></p>
+        <audio :src="audio" style="display: none;" preload="metadata" controls v-on:loadedmetadata="loadedmetadata" v-on:ended="ended" v-on:error="loaderror"></audio>
+    </div>
+</script>
+<script type="text/html" id="msg-img">
+    <div class="parent-photo" v-show="!!imgs&&imgs.length>0">
+        <ul>
+            <li v-for="img in imgs">
+                <img :src="img.url.replace(/!.*/,'')+'!/fw/300'" v-on:click.stop="show($index)"/>
+            </li>
+        </ul>
+    </div>
+</script>
+<script type="text/html" id="msg-video">
+    <div class="video" style="margin-top: 0;" v-show="!!video">
+        <a class="play icon-play" v-on:click.stop="play"></a>
+        <p class="img_bg"></p>
+        <img src="/Content/message/img/alpha.png" :style="{background: 'url('+video+'?vframe/jpg/offset/1) no-repeat center center',backgroundSize:'cover'}"/>
+    </div>
+</script>
+</body>
+</html>

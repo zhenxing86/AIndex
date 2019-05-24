@@ -1,0 +1,192 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+  <title>Webpack Sample Project</title>
+  <script src="./js/flexible.js" type="text/javascript"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery_extend.js"></script>
+  <link rel="stylesheet" href="./dist/common.css">
+  <link rel="stylesheet" href="./dist/iconfont.css">
+  <link rel="stylesheet" href="./dist/styles.css">
+</head>
+
+<body>
+  <div class="list">
+    <div class="cell title">标题</div>
+    <div class="cell">
+      <div class="cell-hd">head</div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+    <div class="cell uploader">
+      <div class="cell-hd">
+        上传图片
+      </div>
+      <div class="cell-bd">
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <div class="uploader-item" style="background-image:url(https://i0.hdslb.com/bfs/archive/6db4010dd78761af51ab4be056744134640b23af.jpg);">
+            <span class="icon icon-close"></span>
+        </div>
+        <label class="uploader-item uploader-input" for="uploader">
+          <input id="uploader" type="file" accept="image/gif, image/jpg, image/jpeg, image/png">
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="list">
+    <div class="cell title">
+      <div class="cell-hd">
+        <span class="icon icon-rectangle"></span>
+      </div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+    <div class="cell cell-access">
+      <div class="cell-hd">
+        <span class='icon icon-msg-photo'></span>
+      </div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+    <div class="cell">
+      <div class="cell-hd">
+        <span class='icon icon-msg-photo'></span>
+      </div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+    <div class="cell">
+      <div class="cell-hd">
+        <span class='icon icon-msg-photo'></span>
+      </div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+  </div>
+  <div class="list">
+    <div class="title title-blue title-preblock cell">
+      <div class="cell-bd">标题3</div>
+      <div class="cell-ft">更多</div>
+    </div>
+    <div class="cell cell-access">
+      <div class="cell-hd">
+        <span class='icon icon-msg-photo'></span>
+      </div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+    <div class="cell">
+      <div class="cell-hd">
+        <span class='icon icon-msg-photo'></span>
+      </div>
+      <div class="cell-bd">body</div>
+      <div class="cell-ft">foot</div>
+    </div>
+    <label class="cell checkbox" for="c1">
+      <div class="cell-hd">
+        <input type="checkbox" id="c1" name="c1" value="c1" checked>
+        <span class='icon icon-checked'></span>
+      </div>
+      <div class="cell-bd">多选1</div>
+    </label>
+    <label class="cell checkbox" for="c2">
+      <div class="cell-hd">
+        <input type="checkbox" id="c2" name="c1" value="c2">
+        <span class='icon icon-checked'></span>
+      </div>
+      <div class="cell-bd">多选2</div>
+    </label>
+    <div class="title title-blue title-preblock cell">
+      <div class="cell-bd">标题4</div>
+      <div class="cell-ft">更多</div>
+    </div>
+    <label class="cell checkbox" for="d1">
+      <div class="cell-hd">
+        <input type="radio" id="d1" name="d1" value="d1">
+        <span class='icon icon-checked'></span>
+      </div>
+      <div class="cell-bd">单选1</div>
+    </label>
+    <label class="cell checkbox" for="d2">
+      <div class="cell-hd">
+        <input type="radio" id="d2" name="d1" value="d2">
+        <span class='icon icon-checked'></span>
+      </div>
+      <div class="cell-bd">单选2</div>
+    </label>
+    <div class="cell select">
+      <div class="cell-bd">
+        <select name="aa" id="aa">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="btn-area btn-area-checkbox">
+    <label for="a1" class="left btn btn-checkbox" style="width:25%">
+      <input type="radio" name="a1" id="a1">
+      <span class="btn-text">选项1</span>
+    </label>
+    <label for="a2" class="left btn btn-checkbox" style="width:25%">
+      <input type="radio" name="a1" id="a2">
+      <span class="btn-text">选项2</span>
+    </label>
+    <label for="a3" class="left btn btn-checkbox" style="width:25%">
+      <input type="radio" name="a1" id="a3">
+      <span class="btn-text">选项3</span>
+    </label>
+    <label for="a4" class="left btn btn-checkbox" style="width:25%">
+      <input type="radio" name="a1" id="a4">
+      <span class="btn-text">选项4</span>
+    </label>
+    <label for="a5" class="left btn btn-checkbox" style="width:25%">
+      <input type="radio" name="a1" id="a5">
+      <span class="btn-text">选项5</span>
+    </label>
+    <label for="a6" class="left btn btn-checkbox" style="width:25%">
+      <input type="radio" name="a1" id="a6">
+      <span class="btn-text">选项6</span>
+    </label>
+    <div class="clear"></div>
+  </div>
+  <div class="flexbox btn-area">
+    <div class="flex-1 btn btn-lg">
+      123
+    </div>
+    <div class="flex-1 btn btn-sm">
+      123
+    </div>
+    <div class="flex-2 btn btn-yellow">
+      123
+    </div>
+  </div>
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>

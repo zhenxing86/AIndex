@@ -1,0 +1,35 @@
+﻿@{
+    string HostDomain = com.zgyey.hbapp.common.Setting.HostDomain;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>@ViewBag.Title</title>
+   <link href="@Url.Content(string.Format(global_asax.staticurl,"/Content/css/style.css"))" rel="stylesheet" />
+    <link href="@Url.Content(string.Format(global_asax.staticurl,"/Content/css/mobiscroll.custom-2.6.2.min.css"))" rel="stylesheet" />
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/jquery-1.9.1.min.js"))"></script>
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/js/smsapp.js"))"></script>
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/js/mobiscroll.custom-2.6.2.min.js"))"></script>
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/js/date.js"))"></script>
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/js/ovgap.js"))"></script>
+    <script src="@Url.Content(string.Format(global_asax.staticurl,"/Scripts/js/browser.js"))"></script>
+</head>
+<script>
+       @* function loadscript() {
+            LazyLoad.js([
+              '@Url.Content(HostDomain+"/Scripts/js/date.js")',
+              '@Url.Content(HostDomain+"/Scripts/js/smsapp.js")',
+              '@Url.Content(HostDomain+"/Scripts/js/mobiscroll.custom-2.6.2.min.js")'
+            ], loadComplete);
+        }
+        setTimeout(loadscript, 10);*@
+
+    window.onload = function () { loadComplete(); };
+</script>
+<body>
+    @RenderBody()
+</body>
+</html>
+

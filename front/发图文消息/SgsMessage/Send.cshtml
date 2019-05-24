@@ -1,0 +1,145 @@
+﻿@using WeixinMP.model
+@model Message
+@{
+  ViewBag.Title = "发通知";
+  Layout = "~/Views/Message/_Layout.cshtml";
+}
+<script>
+  window.history.replaceState(null, '', '#')
+</script>
+<style>
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    z-index: 10;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+  }
+
+  .weui-btn-area {
+    margin: 0;
+    padding: 18px 15px;
+    background: #fff;
+    z-index: 8;
+  }
+
+  .weui-cell_access:visited {
+    background-color: #fff;
+  }
+
+  .out {
+    display: none;
+  }
+
+  .hidden {
+    display: none;
+    transition: display 0.5s;
+    -webkit-transition: display 0.5s;
+    -o-transition: display 0.5s;
+    -moz-transition: display 0.5s;
+  }
+</style>
+<div style="height: 100%; width: 100%; overflow-x: hidden; overflow-y: auto;">
+  <form class="container" id="main">
+    @*<div class="weui-cells__title">通知内容</div>*@
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" name="content" placeholder="请输入通知内容" rows="4" required style="min-height: 100px;"></textarea>
+          @*<div class="weui-textarea-counter" style="font-size: 14px;">已输入<span>0</span>字</div>*@
+        </div>
+      </div>
+    </div>
+    <div class="weui-cells__title">图片</div>
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <div class="weui-uploader">
+            <div class="weui-uploader__bd">
+              <ul class="weui-uploader__files" id="uploaderFiles">
+                @*<li class="weui-uploader__file" data-url="https://weui.io/images/pic_160.png" style="background-image: url(https://weui.io/images/pic_160.png)"></li>*@
+              </ul>
+              <div class="weui-uploader__input-box">
+                <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/png,image/jpeg,image/jpg,image/gif" multiple="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="weui-cells__title">接收人</div>
+    <div class="weui-cells">
+      <a class="weui-cell weui-cell_access" href="#teachers">
+        <div class="weui-cell__bd">
+          <p>老师</p>
+        </div>
+        <div class="weui-cell__ft"><span data-cnt="teachers">0</span>/@Model.teachers.Sum(x => x.members.Count)</div>
+      </a>
+      <a class="weui-cell weui-cell_access" href="#students">
+        <div class="weui-cell__bd">
+          <p>学生</p>
+        </div>
+        <div class="weui-cell__ft"><span data-cnt="students">0</span>/@Model.students.Sum(x => x.members.Count)</div>
+      </a>
+    </div>
+    <div class="weui-cells__title">其他设置</div>
+    <div class="weui-cells">
+      <div class="weui-cell weui-cell_switch">
+        <div class="weui-cell__bd">定时发送</div>
+        <div class="weui-cell__ft">
+          <input class="weui-switch" type="checkbox" name="istime">
+        </div>
+      </div>
+      <div class="weui-cell" style="display: none;">
+        <div class="weui-cell__hd">
+          <label for="" class="weui-label">发送时间</label>
+        </div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="datetime-local" name="sendtime">
+        </div>
+      </div>
+      @*<div class="weui-cell weui-cell_select weui-cell_select-after">
+        <div class="weui-cell__hd">
+          <label for="" class="weui-label">回执时间</label>
+        </div>
+        <div class="weui-cell__bd">
+          <select class="weui-select" name="receipttype">
+            <option value="1">一小时后</option>
+            <option value="2">两小时后</option>
+            <option value="3">三小时后</option>
+            <option value="3">上午10:00</option>
+          </select>
+        </div>
+      </div>*@
+    </div>
+    <div class="weui-btn-area">
+      <a data-action="submit" class="weui-btn weui-btn_primary" id="showTooltips">发送</a>
+    </div>
+
+    <input type="hidden" name="imgs" value="" />
+    <input type="hidden" name="recuserid" value="" required placeholder="请选择接收人" />
+  </form>
+
+  <div class="container out" id="teachers">
+    @Html.Partial("_Members", Model.teachers)
+  </div>
+  <div class="container out" id="students">
+    @Html.Partial("_Members", Model.students)
+  </div>
+
+</div>
+
+<script src="/Scripts/message/send.js?v=201708151017"></script>

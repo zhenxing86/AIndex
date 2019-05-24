@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://srv.zgyey.com/sms -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>发通知</title>
+    <script src="./发通知_files/lazyload-min.js"></script>
+    <link href="http://srv.zgyey.com/sms/Content/css/style.css?var=20141010" rel="stylesheet">
+
+<script>
+        function loadscript() {
+            LazyLoad.js([
+              'http://srv.zgyey.com/sms/Scripts/zepto-1.1.4.min.js?var=20141010',
+              'http://srv.zgyey.com/sms/Scripts/js/smsapp.js?var=7'
+            ], loadComplete);
+        }
+        setTimeout(loadscript, 10);
+
+        window.onunload=function(){};
+</script><script src="./发通知_files/zepto-1.1.4.min.js" class="lazyload" charset="utf-8"></script><script src="./发通知_files/smsapp.js" class="lazyload" charset="utf-8"></script></head>
+
+<style>
+
+	/*---------------------pop-------------------*/
+	.poptime { position:fixed; left:10%; top:20%;   z-index:999;  width:80%;  border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; background:#fff;}
+	.poptime .pp2 { height:300px;}
+	.poptime .pp2 .text { padding-top:20px; text-align:center; font:110%/26px "Microsoft YaHei",arial,serif; }
+	.poptime .pp2 .text1 { padding-top:10px; text-align:center; font:100%/24px "Microsoft YaHei",arial,serif; color:#666 }
+	.poptime .pp2 .text2 { position:absolute; bottom:10px; width:100%;  padding-top:10px; text-align:center; font:100%/22px "Microsoft YaHei",arial,serif; color:#666 }
+	.poptime .pp2 .box { width:86%; margin:0 auto; padding:15px 0px; margin-top:10px; background:#fff8dd; border:1px solid #f2bd70; text-align:center; font:110%/26px "Microsoft YaHei",arial,serif; color:#a7844e; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
+	
+	
+	.poptime .pp2 .btn { margin:0 auto; width:85%; height:46px; text-align:center;  margin-top:10px; background:#f7f4ff; border:1px solid #a783ff; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+	.poptime .pp2 .btn a { font:120%/46px "Microsoft YaHei",arial,serif; color:#a383f0; display: block; width:100%;height:46px;}
+	.poptime .pp2 .btn a:hover { background:#eee8ff}
+	.poptime .bottom { position:absolute; bottom:10px; left:3%; width:94%; height:46px; margin:0 auto; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px;}
+	.poptime .bottom a { display:block; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; text-align:center; font:bold 120%/46px "Microsoft YaHei",arial,serif;color:#fff; background:#a783ff}
+	.poptime .bottom a:hover { background:#9a71ff; }
+	
+	#background {position:absolute; z-index:998; width:100%; height:100%; top:0px; left:0px; background:rgb(50,50,50);background:rgba(0,0,0,0.5); }
+
+</style>
+
+
+<body class="body_color">
+
+<div class="poptime" >
+    <div class="pp2">
+    <p class="text">通知回执时间</p>
+    <p class="btn"><a href="principal-2-1.html">1小时后</a></p>
+    <p class="btn"><a href="principal-2-1.html">2小时后</a></p>
+    <p class="btn"><a href="principal-2-1.html">3小时后</a></p>
+    <p class="btn"><a href="principal-2-1.html">上午08:00</a></p>
+    </div>
+</div>
+
+<div id="background"></div>
+
+
+
+<script>
+    function loadComplete() {
+        //instead of document.read();
+        $("body").addClass("body_color");
+        $("#personcount").text($("#person_count").val());
+    }
+</script>
+<input id="ulist" name="ulist" type="hidden" value="$296926$310670">
+<input id="usertype" name="usertype" type="hidden" value="98">
+<input id="person_count" name="person_count" type="hidden" value="2人">
+<input id="type" name="type" type="hidden" value="">
+<input data-val="true" data-val-number="字段 Int32 必须是一个数字。" data-val-required="The Int32 field is required." id="kid" name="kid" type="hidden" value="12511">
+<div id="send_message" class="ajaxload on" style="display: block;">
+    <div class="w94 recipients" onclick="javascrip:showView(1);">
+    	<a class="add_reci" href="javascript:;"></a>
+        <span id="personcount" class="right">2人</span>
+        <span id="persons" class="reci_name">陈雨涵，张小麦</span>
+    </div>
+    <div class="w94 edit_box">
+        <input id="smstitle" class="edit_title" name="" value="园所通知">
+    	<textarea name="content" id="content" onchange="CheckSMSLength(this);" onkeydown="CheckSMSLength(this);" onkeyup="CheckSMSLength(this);"></textarea>
+    </div>
+    <div class="w94 mod" onclick="javascrip:showView(2);">
+    	<a class="arrow_right" href="javascript:;"></a>
+        通知模板
+    </div>
+    <div class="w94 mod" onclick="javascrip:hisSmsNotice(&#39;http://srv.zgyey.com/sms&#39;);">
+    	<a class="arrow_right" href="javascrip:;"></a>
+        历史通知
+    </div>
+    <div class="w94 send_btn">
+    	<p class="terrace" style="height:55px;">
+        	<a href="javascript:;" class="terrace_btn" onclick="javascript:sendWebSms(&#39;http://srv.zgyey.com/sms&#39;);">发平台短信</a>
+        </p>
+        <p class="app" style="height:55px;">
+        	<a href="javascript:;" class="app_btn" onclick="javascript:sendAppSms(&#39;http://srv.zgyey.com/sms&#39;);">发APP消息</a>
+        </p>
+        <div style="color:#666; clear:both; font-size:105%">
+            本月已发：<span style=" color:#F00">31</span>条;
+            剩余短信：<span style=" color:#F00">3654</span>条
+        </div>
+    </div>
+</div>
+<div id="person" class="ajaxload" style="display: none;">
+
+    
+<input id="select_type" name="select_type" type="hidden" value="teachers02">
+<input id="on_type" name="on_type" type="hidden" value="teachers02">
+<div class="send_nav">
+        <a id="teachers02" class="teachers02 on" href="javascript:;" onclick="goto(this);">老师</a>
+        <a id="nj" class="nj" href="javascript:;" onclick="goto(this);">年级</a>
+        <a id="grades02" class="grades02" href="javascript:;" onclick="goto(this);">班级</a>
+ </div>
+
+<div class="item_list stu" style="display: none;">
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="46144" data-personcount="0" data-totalcount="29">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/29人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">托一班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295777" data-username="朱柳成"></i></span>
+            	        <span class="item_left"><i class="name">朱柳成</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295770" data-username="张佳妮"></i></span>
+            	        <span class="item_left"><i class="name">张佳妮</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295765" data-username="张博森"></i></span>
+            	        <span class="item_left"><i class="name">张博森</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295772" data-username="曾裕轩"></i></span>
+            	        <span class="item_left"><i class="name">曾裕轩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="1417250" data-username="徐文安"></i></span>
+            	        <span class="item_left"><i class="name">徐文安</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295776" data-username="王祺"></i></span>
+            	        <span class="item_left"><i class="name">王祺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295768" data-username="秦绮梅"></i></span>
+            	        <span class="item_left"><i class="name">秦绮梅</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295771" data-username="罗俊涛"></i></span>
+            	        <span class="item_left"><i class="name">罗俊涛</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="444581" data-username="刘子沫"></i></span>
+            	        <span class="item_left"><i class="name">刘子沫</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296381" data-username="刘佳美丽"></i></span>
+            	        <span class="item_left"><i class="name">刘佳美丽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296302" data-username="林炎"></i></span>
+            	        <span class="item_left"><i class="name">林炎</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="472550" data-username="廖楼高"></i></span>
+            	        <span class="item_left"><i class="name">廖楼高</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="800183" data-username="李祖豪"></i></span>
+            	        <span class="item_left"><i class="name">李祖豪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295769" data-username="李梓棠"></i></span>
+            	        <span class="item_left"><i class="name">李梓棠</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="782033" data-username="李玉苹"></i></span>
+            	        <span class="item_left"><i class="name">李玉苹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="969014" data-username="李伟峰"></i></span>
+            	        <span class="item_left"><i class="name">李伟峰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796065" data-username="李皮"></i></span>
+            	        <span class="item_left"><i class="name">李皮</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296298" data-username="李明宇"></i></span>
+            	        <span class="item_left"><i class="name">李明宇</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="468734" data-username="李华志"></i></span>
+            	        <span class="item_left"><i class="name">李华志</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="490019" data-username="贾小明"></i></span>
+            	        <span class="item_left"><i class="name">贾小明</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295767" data-username="黄铭欣"></i></span>
+            	        <span class="item_left"><i class="name">黄铭欣</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="522279" data-username="黄丽丽"></i></span>
+            	        <span class="item_left"><i class="name">黄丽丽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295779" data-username="黄柯茗"></i></span>
+            	        <span class="item_left"><i class="name">黄柯茗</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295773" data-username="陈稀"></i></span>
+            	        <span class="item_left"><i class="name">陈稀</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="441850" data-username="陈秒"></i></span>
+            	        <span class="item_left"><i class="name">陈秒</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296383" data-username="陈嘉诺"></i></span>
+            	        <span class="item_left"><i class="name">陈嘉诺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295775" data-username="曹裕薇"></i></span>
+            	        <span class="item_left"><i class="name">曹裕薇</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796066" data-username="曹梦冉"></i></span>
+            	        <span class="item_left"><i class="name">曹梦冉</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796064" data-username="鲍玺年"></i></span>
+            	        <span class="item_left"><i class="name">鲍玺年</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="46149" data-personcount="0" data-totalcount="29">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/29人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">托二班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796172" data-username="袁婉笑"></i></span>
+            	        <span class="item_left"><i class="name">袁婉笑</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796174" data-username="杨涛涛"></i></span>
+            	        <span class="item_left"><i class="name">杨涛涛</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796171" data-username="谢思岚"></i></span>
+            	        <span class="item_left"><i class="name">谢思岚</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796173" data-username="肖雨蝶"></i></span>
+            	        <span class="item_left"><i class="name">肖雨蝶</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796168" data-username="肖慧萱"></i></span>
+            	        <span class="item_left"><i class="name">肖慧萱</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796160" data-username="吴雨童"></i></span>
+            	        <span class="item_left"><i class="name">吴雨童</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796154" data-username="吴东凌"></i></span>
+            	        <span class="item_left"><i class="name">吴东凌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796167" data-username="魏湘玲"></i></span>
+            	        <span class="item_left"><i class="name">魏湘玲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796170" data-username="王左儿"></i></span>
+            	        <span class="item_left"><i class="name">王左儿</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796162" data-username="王回丰"></i></span>
+            	        <span class="item_left"><i class="name">王回丰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796159" data-username="万逸萌"></i></span>
+            	        <span class="item_left"><i class="name">万逸萌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796161" data-username="万琳"></i></span>
+            	        <span class="item_left"><i class="name">万琳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796166" data-username="双李嘉"></i></span>
+            	        <span class="item_left"><i class="name">双李嘉</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796169" data-username="荣俊熙"></i></span>
+            	        <span class="item_left"><i class="name">荣俊熙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796156" data-username="聂玺霈"></i></span>
+            	        <span class="item_left"><i class="name">聂玺霈</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796158" data-username="罗奇瑞"></i></span>
+            	        <span class="item_left"><i class="name">罗奇瑞</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296051" data-username="罗敬壹"></i></span>
+            	        <span class="item_left"><i class="name">罗敬壹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="808045" data-username="龙雨霏"></i></span>
+            	        <span class="item_left"><i class="name">龙雨霏</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796155" data-username="柳博文"></i></span>
+            	        <span class="item_left"><i class="name">柳博文</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796153" data-username="刘政齐"></i></span>
+            	        <span class="item_left"><i class="name">刘政齐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296053" data-username="梁永芳"></i></span>
+            	        <span class="item_left"><i class="name">梁永芳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="468779" data-username="李秋华"></i></span>
+            	        <span class="item_left"><i class="name">李秋华</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="644439" data-username="李秋华"></i></span>
+            	        <span class="item_left"><i class="name">李秋华</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296052" data-username="李铭博"></i></span>
+            	        <span class="item_left"><i class="name">李铭博</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796157" data-username="乐冠萱"></i></span>
+            	        <span class="item_left"><i class="name">乐冠萱</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296056" data-username="蒋琛"></i></span>
+            	        <span class="item_left"><i class="name">蒋琛</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295778" data-username="冯永祥"></i></span>
+            	        <span class="item_left"><i class="name">冯永祥</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296057" data-username="曹锦洋"></i></span>
+            	        <span class="item_left"><i class="name">曹锦洋</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296054" data-username="蔡亚辰"></i></span>
+            	        <span class="item_left"><i class="name">蔡亚辰</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="80696" data-personcount="0" data-totalcount="18">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/18人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">托三班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="786036" data-username="赵华"></i></span>
+            	        <span class="item_left"><i class="name">赵华</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="785790" data-username="赵纯"></i></span>
+            	        <span class="item_left"><i class="name">赵纯</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="781819" data-username="张翰"></i></span>
+            	        <span class="item_left"><i class="name">张翰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="853157" data-username="曾嵘"></i></span>
+            	        <span class="item_left"><i class="name">曾嵘</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="785798" data-username="吴小丽"></i></span>
+            	        <span class="item_left"><i class="name">吴小丽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="660104" data-username="吴泉"></i></span>
+            	        <span class="item_left"><i class="name">吴泉</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796054" data-username="邱芳"></i></span>
+            	        <span class="item_left"><i class="name">邱芳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796058" data-username="乔丽"></i></span>
+            	        <span class="item_left"><i class="name">乔丽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796059" data-username="刘桂珠"></i></span>
+            	        <span class="item_left"><i class="name">刘桂珠</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796060" data-username="李金乔"></i></span>
+            	        <span class="item_left"><i class="name">李金乔</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="755201" data-username="宫磊"></i></span>
+            	        <span class="item_left"><i class="name">宫磊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="781691" data-username="高高"></i></span>
+            	        <span class="item_left"><i class="name">高高</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796061" data-username="董诗民"></i></span>
+            	        <span class="item_left"><i class="name">董诗民</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796056" data-username="邓清连"></i></span>
+            	        <span class="item_left"><i class="name">邓清连</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796051" data-username="陈舒婷"></i></span>
+            	        <span class="item_left"><i class="name">陈舒婷</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="727685" data-username="陈妙丹"></i></span>
+            	        <span class="item_left"><i class="name">陈妙丹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="727676" data-username="陈美玲"></i></span>
+            	        <span class="item_left"><i class="name">陈美玲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796055" data-username="陈乐怡"></i></span>
+            	        <span class="item_left"><i class="name">陈乐怡</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="81185" data-personcount="0" data-totalcount="40">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/40人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">小一班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796094" data-username="周迅"></i></span>
+            	        <span class="item_left"><i class="name">周迅</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796128" data-username="周晓川"></i></span>
+            	        <span class="item_left"><i class="name">周晓川</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796091" data-username="赵薇"></i></span>
+            	        <span class="item_left"><i class="name">赵薇</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802409" data-username="张皓壹"></i></span>
+            	        <span class="item_left"><i class="name">张皓壹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="801370" data-username="于陌墨"></i></span>
+            	        <span class="item_left"><i class="name">于陌墨</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796088" data-username="叶祖新"></i></span>
+            	        <span class="item_left"><i class="name">叶祖新</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802400" data-username="徐子涵"></i></span>
+            	        <span class="item_left"><i class="name">徐子涵</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802402" data-username="肖子皓"></i></span>
+            	        <span class="item_left"><i class="name">肖子皓</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802406" data-username="吴泽皓"></i></span>
+            	        <span class="item_left"><i class="name">吴泽皓</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796086" data-username="吴彦祖"></i></span>
+            	        <span class="item_left"><i class="name">吴彦祖</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796085" data-username="吴奇隆"></i></span>
+            	        <span class="item_left"><i class="name">吴奇隆</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802404" data-username="吴程程"></i></span>
+            	        <span class="item_left"><i class="name">吴程程</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="810403" data-username="王兆莹"></i></span>
+            	        <span class="item_left"><i class="name">王兆莹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802403" data-username="唐艺轩"></i></span>
+            	        <span class="item_left"><i class="name">唐艺轩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802407" data-username="彭梓洛"></i></span>
+            	        <span class="item_left"><i class="name">彭梓洛</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802405" data-username="彭昱萱"></i></span>
+            	        <span class="item_left"><i class="name">彭昱萱</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802408" data-username="马皓轩"></i></span>
+            	        <span class="item_left"><i class="name">马皓轩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="808041" data-username="罗巧巧"></i></span>
+            	        <span class="item_left"><i class="name">罗巧巧</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796089" data-username="刘心悠"></i></span>
+            	        <span class="item_left"><i class="name">刘心悠</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796084" data-username="刘诗景"></i></span>
+            	        <span class="item_left"><i class="name">刘诗景</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796090" data-username="林心如"></i></span>
+            	        <span class="item_left"><i class="name">林心如</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796087" data-username="林更新"></i></span>
+            	        <span class="item_left"><i class="name">林更新</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="679906" data-username="李想"></i></span>
+            	        <span class="item_left"><i class="name">李想</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796106" data-username="孔睿之"></i></span>
+            	        <span class="item_left"><i class="name">孔睿之</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796197" data-username="黄毅文"></i></span>
+            	        <span class="item_left"><i class="name">黄毅文</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796092" data-username="范冰冰"></i></span>
+            	        <span class="item_left"><i class="name">范冰冰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="703628" data-username="朵朵"></i></span>
+            	        <span class="item_left"><i class="name">朵朵</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796107" data-username="邓凤琴"></i></span>
+            	        <span class="item_left"><i class="name">邓凤琴</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796104" data-username="邓成鑫"></i></span>
+            	        <span class="item_left"><i class="name">邓成鑫</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796103" data-username="邓宸昊"></i></span>
+            	        <span class="item_left"><i class="name">邓宸昊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796102" data-username="但军熠"></i></span>
+            	        <span class="item_left"><i class="name">但军熠</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796101" data-username="单闻音"></i></span>
+            	        <span class="item_left"><i class="name">单闻音</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796100" data-username="代梓瑶"></i></span>
+            	        <span class="item_left"><i class="name">代梓瑶</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796099" data-username="代运芝"></i></span>
+            	        <span class="item_left"><i class="name">代运芝</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796098" data-username="储燕"></i></span>
+            	        <span class="item_left"><i class="name">储燕</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796096" data-username="陈重霖"></i></span>
+            	        <span class="item_left"><i class="name">陈重霖</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796095" data-username="陈韵冰"></i></span>
+            	        <span class="item_left"><i class="name">陈韵冰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796082" data-username="陈艺萱"></i></span>
+            	        <span class="item_left"><i class="name">陈艺萱</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796083" data-username="陈俊熙"></i></span>
+            	        <span class="item_left"><i class="name">陈俊熙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="802401" data-username="艾宏熙"></i></span>
+            	        <span class="item_left"><i class="name">艾宏熙</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="46146" data-personcount="0" data-totalcount="28">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/28人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">小二班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295812" data-username="张宗翰"></i></span>
+            	        <span class="item_left"><i class="name">张宗翰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="632842" data-username="张晓民"></i></span>
+            	        <span class="item_left"><i class="name">张晓民</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295815" data-username="杨芷伊"></i></span>
+            	        <span class="item_left"><i class="name">杨芷伊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295816" data-username="杨彦汐"></i></span>
+            	        <span class="item_left"><i class="name">杨彦汐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295813" data-username="徐思璟"></i></span>
+            	        <span class="item_left"><i class="name">徐思璟</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295818" data-username="谢宇卓"></i></span>
+            	        <span class="item_left"><i class="name">谢宇卓</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796127" data-username="夏天天"></i></span>
+            	        <span class="item_left"><i class="name">夏天天</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796126" data-username="王宗子龙"></i></span>
+            	        <span class="item_left"><i class="name">王宗子龙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="478368" data-username="梁小容"></i></span>
+            	        <span class="item_left"><i class="name">梁小容</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295814" data-username="李文俊"></i></span>
+            	        <span class="item_left"><i class="name">李文俊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796125" data-username="雷子凡"></i></span>
+            	        <span class="item_left"><i class="name">雷子凡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796121" data-username="康福娃"></i></span>
+            	        <span class="item_left"><i class="name">康福娃</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796122" data-username="金诗音"></i></span>
+            	        <span class="item_left"><i class="name">金诗音</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796123" data-username="贾雪怡"></i></span>
+            	        <span class="item_left"><i class="name">贾雪怡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796124" data-username="黄榆涵"></i></span>
+            	        <span class="item_left"><i class="name">黄榆涵</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796119" data-username="黄水香"></i></span>
+            	        <span class="item_left"><i class="name">黄水香</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796116" data-username="胡琳娜"></i></span>
+            	        <span class="item_left"><i class="name">胡琳娜</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796114" data-username="胡传强"></i></span>
+            	        <span class="item_left"><i class="name">胡传强</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796113" data-username="侯纯"></i></span>
+            	        <span class="item_left"><i class="name">侯纯</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796112" data-username="洪丽萍"></i></span>
+            	        <span class="item_left"><i class="name">洪丽萍</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796111" data-username="郭欢欢"></i></span>
+            	        <span class="item_left"><i class="name">郭欢欢</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796110" data-username="龚绍哲"></i></span>
+            	        <span class="item_left"><i class="name">龚绍哲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796109" data-username="高亚鹏"></i></span>
+            	        <span class="item_left"><i class="name">高亚鹏</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796108" data-username="高森函"></i></span>
+            	        <span class="item_left"><i class="name">高森函</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796120" data-username="长一诺"></i></span>
+            	        <span class="item_left"><i class="name">长一诺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796117" data-username="长一凡"></i></span>
+            	        <span class="item_left"><i class="name">长一凡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="564658" data-username="波恩"></i></span>
+            	        <span class="item_left"><i class="name">波恩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="826402" data-username="jz22"></i></span>
+            	        <span class="item_left"><i class="name">jz22</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="82203" data-personcount="0" data-totalcount="26">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/26人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">小三班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796146" data-username="紫菱"></i></span>
+            	        <span class="item_left"><i class="name">紫菱</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796130" data-username="庄丹妮"></i></span>
+            	        <span class="item_left"><i class="name">庄丹妮</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796132" data-username="郑时飞"></i></span>
+            	        <span class="item_left"><i class="name">郑时飞</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796131" data-username="阴沫含"></i></span>
+            	        <span class="item_left"><i class="name">阴沫含</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796129" data-username="易玲安"></i></span>
+            	        <span class="item_left"><i class="name">易玲安</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796133" data-username="熊皓然"></i></span>
+            	        <span class="item_left"><i class="name">熊皓然</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796137" data-username="席诗语"></i></span>
+            	        <span class="item_left"><i class="name">席诗语</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796143" data-username="万鸿杰"></i></span>
+            	        <span class="item_left"><i class="name">万鸿杰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796141" data-username="陶伊诺"></i></span>
+            	        <span class="item_left"><i class="name">陶伊诺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796151" data-username="谭春苗"></i></span>
+            	        <span class="item_left"><i class="name">谭春苗</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796138" data-username="苏泊尔"></i></span>
+            	        <span class="item_left"><i class="name">苏泊尔</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796144" data-username="史艳"></i></span>
+            	        <span class="item_left"><i class="name">史艳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796135" data-username="施语轩"></i></span>
+            	        <span class="item_left"><i class="name">施语轩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796139" data-username="邱梓健"></i></span>
+            	        <span class="item_left"><i class="name">邱梓健</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796134" data-username="卿乐菊"></i></span>
+            	        <span class="item_left"><i class="name">卿乐菊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796140" data-username="彭喜婕"></i></span>
+            	        <span class="item_left"><i class="name">彭喜婕</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796142" data-username="聂维宏"></i></span>
+            	        <span class="item_left"><i class="name">聂维宏</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796152" data-username="莫凤"></i></span>
+            	        <span class="item_left"><i class="name">莫凤</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796147" data-username="门曼怡"></i></span>
+            	        <span class="item_left"><i class="name">门曼怡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796148" data-username="罗凯"></i></span>
+            	        <span class="item_left"><i class="name">罗凯</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796136" data-username="刘雨焯"></i></span>
+            	        <span class="item_left"><i class="name">刘雨焯</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796150" data-username="刘一洲"></i></span>
+            	        <span class="item_left"><i class="name">刘一洲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796145" data-username="刘灿辉"></i></span>
+            	        <span class="item_left"><i class="name">刘灿辉</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796149" data-username="林洳妃"></i></span>
+            	        <span class="item_left"><i class="name">林洳妃</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="712351" data-username="廖欣彦"></i></span>
+            	        <span class="item_left"><i class="name">廖欣彦</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="722143" data-username="陈若熙"></i></span>
+            	        <span class="item_left"><i class="name">陈若熙</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="55906" data-personcount="0" data-totalcount="28">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/28人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">中一班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="653612" data-username="钟梓橙"></i></span>
+            	        <span class="item_left"><i class="name">钟梓橙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567298" data-username="张志东"></i></span>
+            	        <span class="item_left"><i class="name">张志东</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="703868" data-username="张琳"></i></span>
+            	        <span class="item_left"><i class="name">张琳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796068" data-username="曾俊达"></i></span>
+            	        <span class="item_left"><i class="name">曾俊达</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796067" data-username="曾嘉怡"></i></span>
+            	        <span class="item_left"><i class="name">曾嘉怡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="464689" data-username="徐宝峰"></i></span>
+            	        <span class="item_left"><i class="name">徐宝峰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="1429431" data-username="新幼儿"></i></span>
+            	        <span class="item_left"><i class="name">新幼儿</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="466107" data-username="魏子沫"></i></span>
+            	        <span class="item_left"><i class="name">魏子沫</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="467680" data-username="王晓霞"></i></span>
+            	        <span class="item_left"><i class="name">王晓霞</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="703579" data-username="宋晓晓"></i></span>
+            	        <span class="item_left"><i class="name">宋晓晓</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="653615" data-username="刘彦汐"></i></span>
+            	        <span class="item_left"><i class="name">刘彦汐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567133" data-username="刘欣玥"></i></span>
+            	        <span class="item_left"><i class="name">刘欣玥</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="711334" data-username="刘小小"></i></span>
+            	        <span class="item_left"><i class="name">刘小小</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="942169" data-username="刘可可"></i></span>
+            	        <span class="item_left"><i class="name">刘可可</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="466315" data-username="李正"></i></span>
+            	        <span class="item_left"><i class="name">李正</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="794269" data-username="李连连"></i></span>
+            	        <span class="item_left"><i class="name">李连连</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="712992" data-username="江波"></i></span>
+            	        <span class="item_left"><i class="name">江波</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="718529" data-username="何林丽"></i></span>
+            	        <span class="item_left"><i class="name">何林丽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="647885" data-username="邓芳芳"></i></span>
+            	        <span class="item_left"><i class="name">邓芳芳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796081" data-username="陈诗瑶"></i></span>
+            	        <span class="item_left"><i class="name">陈诗瑶</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796080" data-username="陈牧菲"></i></span>
+            	        <span class="item_left"><i class="name">陈牧菲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796079" data-username="陈灵渲"></i></span>
+            	        <span class="item_left"><i class="name">陈灵渲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796074" data-username="陈海龙"></i></span>
+            	        <span class="item_left"><i class="name">陈海龙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="648183" data-username="陈果"></i></span>
+            	        <span class="item_left"><i class="name">陈果</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796072" data-username="陈博迈"></i></span>
+            	        <span class="item_left"><i class="name">陈博迈</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796071" data-username="常煜龙"></i></span>
+            	        <span class="item_left"><i class="name">常煜龙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796070" data-username="常立"></i></span>
+            	        <span class="item_left"><i class="name">常立</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796069" data-username="查星宇"></i></span>
+            	        <span class="item_left"><i class="name">查星宇</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="55905" data-personcount="0" data-totalcount="28">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/28人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">中二班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796184" data-username="周紫萱"></i></span>
+            	        <span class="item_left"><i class="name">周紫萱</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796193" data-username="钟添乐"></i></span>
+            	        <span class="item_left"><i class="name">钟添乐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796189" data-username="赵妍琦"></i></span>
+            	        <span class="item_left"><i class="name">赵妍琦</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796194" data-username="张元承"></i></span>
+            	        <span class="item_left"><i class="name">张元承</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796192" data-username="张润葭"></i></span>
+            	        <span class="item_left"><i class="name">张润葭</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796175" data-username="张连赫"></i></span>
+            	        <span class="item_left"><i class="name">张连赫</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="644591" data-username="张红"></i></span>
+            	        <span class="item_left"><i class="name">张红</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796187" data-username="雍顺"></i></span>
+            	        <span class="item_left"><i class="name">雍顺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796180" data-username="杨陈诺"></i></span>
+            	        <span class="item_left"><i class="name">杨陈诺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796176" data-username="许紫卉"></i></span>
+            	        <span class="item_left"><i class="name">许紫卉</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796190" data-username="许珏溦"></i></span>
+            	        <span class="item_left"><i class="name">许珏溦</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796188" data-username="徐忠豪"></i></span>
+            	        <span class="item_left"><i class="name">徐忠豪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796186" data-username="徐毅弘"></i></span>
+            	        <span class="item_left"><i class="name">徐毅弘</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796181" data-username="熊昊齐"></i></span>
+            	        <span class="item_left"><i class="name">熊昊齐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796191" data-username="谢添若"></i></span>
+            	        <span class="item_left"><i class="name">谢添若</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796185" data-username="向夢秋"></i></span>
+            	        <span class="item_left"><i class="name">向夢秋</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796182" data-username="先义铖"></i></span>
+            	        <span class="item_left"><i class="name">先义铖</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796183" data-username="夏江韦"></i></span>
+            	        <span class="item_left"><i class="name">夏江韦</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796177" data-username="吴太一"></i></span>
+            	        <span class="item_left"><i class="name">吴太一</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567138" data-username="吴昊然"></i></span>
+            	        <span class="item_left"><i class="name">吴昊然</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796178" data-username="吴东凌"></i></span>
+            	        <span class="item_left"><i class="name">吴东凌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="563577" data-username="林宝峰"></i></span>
+            	        <span class="item_left"><i class="name">林宝峰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567136" data-username="李致远"></i></span>
+            	        <span class="item_left"><i class="name">李致远</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295909" data-username="李文章"></i></span>
+            	        <span class="item_left"><i class="name">李文章</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295908" data-username="李睿斌"></i></span>
+            	        <span class="item_left"><i class="name">李睿斌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="563576" data-username="黄敏生"></i></span>
+            	        <span class="item_left"><i class="name">黄敏生</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="653617" data-username="侯婧怡"></i></span>
+            	        <span class="item_left"><i class="name">侯婧怡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567135" data-username="陈宇帆"></i></span>
+            	        <span class="item_left"><i class="name">陈宇帆</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="81280" data-personcount="0" data-totalcount="26">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/26人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">中三班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796273" data-username="郑培全"></i></span>
+            	        <span class="item_left"><i class="name">郑培全</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796271" data-username="庾敬威"></i></span>
+            	        <span class="item_left"><i class="name">庾敬威</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796272" data-username="叶武雄"></i></span>
+            	        <span class="item_left"><i class="name">叶武雄</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796252" data-username="叶文斌"></i></span>
+            	        <span class="item_left"><i class="name">叶文斌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796258" data-username="徐妙璇"></i></span>
+            	        <span class="item_left"><i class="name">徐妙璇</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796260" data-username="吴浩娜"></i></span>
+            	        <span class="item_left"><i class="name">吴浩娜</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796254" data-username="邱泽强"></i></span>
+            	        <span class="item_left"><i class="name">邱泽强</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796277" data-username="潘华朝"></i></span>
+            	        <span class="item_left"><i class="name">潘华朝</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796275" data-username="罗志荣"></i></span>
+            	        <span class="item_left"><i class="name">罗志荣</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796276" data-username="罗凯佳"></i></span>
+            	        <span class="item_left"><i class="name">罗凯佳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796261" data-username="伦碧琪"></i></span>
+            	        <span class="item_left"><i class="name">伦碧琪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796279" data-username="刘伟贤"></i></span>
+            	        <span class="item_left"><i class="name">刘伟贤</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796278" data-username="刘关全"></i></span>
+            	        <span class="item_left"><i class="name">刘关全</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796266" data-username="林晓雪"></i></span>
+            	        <span class="item_left"><i class="name">林晓雪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796274" data-username="林文杰"></i></span>
+            	        <span class="item_left"><i class="name">林文杰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796268" data-username="林丹旭"></i></span>
+            	        <span class="item_left"><i class="name">林丹旭</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796256" data-username="廖伟滨"></i></span>
+            	        <span class="item_left"><i class="name">廖伟滨</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796267" data-username="梁晓霞"></i></span>
+            	        <span class="item_left"><i class="name">梁晓霞</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796264" data-username="梁珊珊"></i></span>
+            	        <span class="item_left"><i class="name">梁珊珊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796259" data-username="梁慧娟"></i></span>
+            	        <span class="item_left"><i class="name">梁慧娟</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796263" data-username="洪丽鸿"></i></span>
+            	        <span class="item_left"><i class="name">洪丽鸿</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796255" data-username="丁晓毅"></i></span>
+            	        <span class="item_left"><i class="name">丁晓毅</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796270" data-username="陈哲"></i></span>
+            	        <span class="item_left"><i class="name">陈哲</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796265" data-username="陈伟琼"></i></span>
+            	        <span class="item_left"><i class="name">陈伟琼</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796253" data-username="陈瑞斌"></i></span>
+            	        <span class="item_left"><i class="name">陈瑞斌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796262" data-username="陈建文"></i></span>
+            	        <span class="item_left"><i class="name">陈建文</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="46142" data-personcount="0" data-totalcount="28">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/28人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">大一班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796213" data-username="钟建政"></i></span>
+            	        <span class="item_left"><i class="name">钟建政</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796214" data-username="忠豪"></i></span>
+            	        <span class="item_left"><i class="name">忠豪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="769551" data-username="张英杰"></i></span>
+            	        <span class="item_left"><i class="name">张英杰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="770835" data-username="张博渊"></i></span>
+            	        <span class="item_left"><i class="name">张博渊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796210" data-username="义铖"></i></span>
+            	        <span class="item_left"><i class="name">义铖</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796209" data-username="伊诺"></i></span>
+            	        <span class="item_left"><i class="name">伊诺</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296018" data-username="夏铭骏"></i></span>
+            	        <span class="item_left"><i class="name">夏铭骏</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="698496" data-username="伍桐"></i></span>
+            	        <span class="item_left"><i class="name">伍桐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="776502" data-username="文静"></i></span>
+            	        <span class="item_left"><i class="name">文静</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="808046" data-username="王莹"></i></span>
+            	        <span class="item_left"><i class="name">王莹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796215" data-username="唐嫣"></i></span>
+            	        <span class="item_left"><i class="name">唐嫣</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296016" data-username="孙艺凌"></i></span>
+            	        <span class="item_left"><i class="name">孙艺凌</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="801417" data-username="苏艺言"></i></span>
+            	        <span class="item_left"><i class="name">苏艺言</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="1425762" data-username="吕振江"></i></span>
+            	        <span class="item_left"><i class="name">吕振江</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567134" data-username="廖雯晞"></i></span>
+            	        <span class="item_left"><i class="name">廖雯晞</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="755225" data-username="李伟峰"></i></span>
+            	        <span class="item_left"><i class="name">李伟峰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="653620" data-username="李俊乐"></i></span>
+            	        <span class="item_left"><i class="name">李俊乐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296019" data-username="俊林"></i></span>
+            	        <span class="item_left"><i class="name">俊林</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296022" data-username="黄俊荣"></i></span>
+            	        <span class="item_left"><i class="name">黄俊荣</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796208" data-username="黄锦恒"></i></span>
+            	        <span class="item_left"><i class="name">黄锦恒</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="560636" data-username="黄海华"></i></span>
+            	        <span class="item_left"><i class="name">黄海华</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296020" data-username="邓昂"></i></span>
+            	        <span class="item_left"><i class="name">邓昂</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796217" data-username="丹妮"></i></span>
+            	        <span class="item_left"><i class="name">丹妮</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796212" data-username="陈思好"></i></span>
+            	        <span class="item_left"><i class="name">陈思好</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296017" data-username="陈珈羽"></i></span>
+            	        <span class="item_left"><i class="name">陈珈羽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796211" data-username="陈浩"></i></span>
+            	        <span class="item_left"><i class="name">陈浩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296014" data-username="陈飞"></i></span>
+            	        <span class="item_left"><i class="name">陈飞</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796206" data-username="白虎"></i></span>
+            	        <span class="item_left"><i class="name">白虎</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="46153" data-personcount="0" data-totalcount="28">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/28人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">大二班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796284" data-username="邹伟"></i></span>
+            	        <span class="item_left"><i class="name">邹伟</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796225" data-username="张琪琪"></i></span>
+            	        <span class="item_left"><i class="name">张琪琪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796288" data-username="叶志义"></i></span>
+            	        <span class="item_left"><i class="name">叶志义</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796285" data-username="吴婵娇"></i></span>
+            	        <span class="item_left"><i class="name">吴婵娇</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796220" data-username="王雯"></i></span>
+            	        <span class="item_left"><i class="name">王雯</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295916" data-username="唐旭辉"></i></span>
+            	        <span class="item_left"><i class="name">唐旭辉</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796221" data-username="孙俪"></i></span>
+            	        <span class="item_left"><i class="name">孙俪</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796222" data-username="孙华"></i></span>
+            	        <span class="item_left"><i class="name">孙华</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="779354" data-username="吕亚曦"></i></span>
+            	        <span class="item_left"><i class="name">吕亚曦</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="810404" data-username="龙雨霏"></i></span>
+            	        <span class="item_left"><i class="name">龙雨霏</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567139" data-username="林若雨"></i></span>
+            	        <span class="item_left"><i class="name">林若雨</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="567137" data-username="李文昊"></i></span>
+            	        <span class="item_left"><i class="name">李文昊</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="620929" data-username="李仕佳"></i></span>
+            	        <span class="item_left"><i class="name">李仕佳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295913" data-username="李金宝"></i></span>
+            	        <span class="item_left"><i class="name">李金宝</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="562901" data-username="江婷"></i></span>
+            	        <span class="item_left"><i class="name">江婷</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796280" data-username="黄琼"></i></span>
+            	        <span class="item_left"><i class="name">黄琼</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796281" data-username="黄强"></i></span>
+            	        <span class="item_left"><i class="name">黄强</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295914" data-username="贺希莹"></i></span>
+            	        <span class="item_left"><i class="name">贺希莹</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796218" data-username="海龙"></i></span>
+            	        <span class="item_left"><i class="name">海龙</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796223" data-username="冯芳花"></i></span>
+            	        <span class="item_left"><i class="name">冯芳花</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796219" data-username="邓亚丽"></i></span>
+            	        <span class="item_left"><i class="name">邓亚丽</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796226" data-username="陈玉新"></i></span>
+            	        <span class="item_left"><i class="name">陈玉新</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796224" data-username="陈闻音"></i></span>
+            	        <span class="item_left"><i class="name">陈闻音</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796286" data-username="陈慧婵"></i></span>
+            	        <span class="item_left"><i class="name">陈慧婵</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796283" data-username="陈寒源"></i></span>
+            	        <span class="item_left"><i class="name">陈寒源</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796287" data-username="陈海杰"></i></span>
+            	        <span class="item_left"><i class="name">陈海杰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796282" data-username="陈帆"></i></span>
+            	        <span class="item_left"><i class="name">陈帆</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295915" data-username="曹宇翔"></i></span>
+            	        <span class="item_left"><i class="name">曹宇翔</i></span>
+                    </li>
+             </ul>
+         </div>
+        <div class="students">
+            <h2 class="item" data-select="0" data-cid="46141" data-personcount="0" data-totalcount="29">
+                <span class="item_right" style="width:35%;" onclick="classClick(this);"><i class="num" style="margin:0;">0/29人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">大三班</i></span>
+            </h2>
+            <ul style="display:none;">
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796204" data-username="朱羽墨"></i></span>
+            	        <span class="item_left"><i class="name">朱羽墨</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796205" data-username="朱小小"></i></span>
+            	        <span class="item_left"><i class="name">朱小小</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296125" data-username="朱佳怡"></i></span>
+            	        <span class="item_left"><i class="name">朱佳怡</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295785" data-username="周恒毅"></i></span>
+            	        <span class="item_left"><i class="name">周恒毅</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="688083" data-username="钟书漫"></i></span>
+            	        <span class="item_left"><i class="name">钟书漫</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="688224" data-username="钟书瞒"></i></span>
+            	        <span class="item_left"><i class="name">钟书瞒</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796202" data-username="雨露"></i></span>
+            	        <span class="item_left"><i class="name">雨露</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796195" data-username="榆涵"></i></span>
+            	        <span class="item_left"><i class="name">榆涵</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796201" data-username="文智搏"></i></span>
+            	        <span class="item_left"><i class="name">文智搏</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295790" data-username="王紫灵"></i></span>
+            	        <span class="item_left"><i class="name">王紫灵</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295788" data-username="王稚杰"></i></span>
+            	        <span class="item_left"><i class="name">王稚杰</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796199" data-username="苏青"></i></span>
+            	        <span class="item_left"><i class="name">苏青</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796196" data-username="苏俊源"></i></span>
+            	        <span class="item_left"><i class="name">苏俊源</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796203" data-username="思岚"></i></span>
+            	        <span class="item_left"><i class="name">思岚</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295784" data-username="钱彦希"></i></span>
+            	        <span class="item_left"><i class="name">钱彦希</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="796198" data-username="彭秋阶"></i></span>
+            	        <span class="item_left"><i class="name">彭秋阶</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296121" data-username="刘智善"></i></span>
+            	        <span class="item_left"><i class="name">刘智善</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295786" data-username="刘毓阳"></i></span>
+            	        <span class="item_left"><i class="name">刘毓阳</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295787" data-username="刘宣佐"></i></span>
+            	        <span class="item_left"><i class="name">刘宣佐</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295781" data-username="刘嘉裕"></i></span>
+            	        <span class="item_left"><i class="name">刘嘉裕</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296123" data-username="李维嵩"></i></span>
+            	        <span class="item_left"><i class="name">李维嵩</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="570514" data-username="李锦"></i></span>
+            	        <span class="item_left"><i class="name">李锦</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296128" data-username="俊宇"></i></span>
+            	        <span class="item_left"><i class="name">俊宇</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295782" data-username="黄博奥"></i></span>
+            	        <span class="item_left"><i class="name">黄博奥</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296126" data-username="何俊毅"></i></span>
+            	        <span class="item_left"><i class="name">何俊毅</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296120" data-username="邓雅文"></i></span>
+            	        <span class="item_left"><i class="name">邓雅文</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="296124" data-username="楚蒲员"></i></span>
+            	        <span class="item_left"><i class="name">楚蒲员</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="295783" data-username="陈乐翔"></i></span>
+            	        <span class="item_left"><i class="name">陈乐翔</i></span>
+                    </li>
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="650913" data-username="白静雯"></i></span>
+            	        <span class="item_left"><i class="name">白静雯</i></span>
+                    </li>
+             </ul>
+         </div>
+</div>
+
+<dl class="item_list tea" style="display: block;">
+    <dt class="item" data-teaid="296418" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">李秋芽</i></a>
+    </dt>
+    <dt class="item" data-teaid="296922" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">李雷</i></a>
+    </dt>
+    <dt class="item" data-teaid="296926" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02 on"></i></a>
+        <a class="item_left"><i class="name">陈雨涵</i></a>
+    </dt>
+    <dt class="item" data-teaid="310670" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02 on"></i></a>
+        <a class="item_left"><i class="name">张小麦</i></a>
+    </dt>
+    <dt class="item" data-teaid="460496" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">张丽丽</i></a>
+    </dt>
+    <dt class="item" data-teaid="466920" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">兰溪</i></a>
+    </dt>
+    <dt class="item" data-teaid="479936" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">黄湘娥</i></a>
+    </dt>
+    <dt class="item" data-teaid="551761" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">何虹</i></a>
+    </dt>
+    <dt class="item" data-teaid="554494" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">李爱华</i></a>
+    </dt>
+    <dt class="item" data-teaid="555665" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">张玉玲</i></a>
+    </dt>
+    <dt class="item" data-teaid="560725" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">黎姿</i></a>
+    </dt>
+    <dt class="item" data-teaid="562896" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">张兰兰</i></a>
+    </dt>
+    <dt class="item" data-teaid="563525" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">李秀丽</i></a>
+    </dt>
+    <dt class="item" data-teaid="635821" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">张敏敏</i></a>
+    </dt>
+    <dt class="item" data-teaid="653219" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">田小蒙</i></a>
+    </dt>
+    <dt class="item" data-teaid="653544" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">张粒粒</i></a>
+    </dt>
+    <dt class="item" data-teaid="653548" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">蔡陈源</i></a>
+    </dt>
+    <dt class="item" data-teaid="653605" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">杨惠</i></a>
+    </dt>
+    <dt class="item" data-teaid="676825" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">刘子情</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418031" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">韩梅梅</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418035" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">胡志伟</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418036" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">李雷</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418038" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">魏征</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418042" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">李雷</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418064" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">蒋欣</i></a>
+    </dt>
+    <dt class="item" data-teaid="1418070" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">孙菲菲</i></a>
+    </dt>
+</dl>
+
+<dl class="item_list grade" style="display: none;">
+    <dt class="item" onclick="gradeClick(this);" data-grade="97" data-unamelist="托班" data-personcount="0" data-totalcount="76">
+        <a class="item_right" style="width:35%;"><i class="num" style="margin:0;">0/76人</i><i class="circle02"></i></a>
+        <a class="item_left" style="width:65%;"><i class="name">托班</i></a>
+    </dt>
+    <dt class="item" onclick="gradeClick(this);" data-grade="35" data-unamelist="小班" data-personcount="0" data-totalcount="94">
+        <a class="item_right" style="width:35%;"><i class="num" style="margin:0;">0/94人</i><i class="circle02"></i></a>
+        <a class="item_left" style="width:65%;"><i class="name">小班</i></a>
+    </dt>
+    <dt class="item" onclick="gradeClick(this);" data-grade="36" data-unamelist="中班" data-personcount="0" data-totalcount="82">
+        <a class="item_right" style="width:35%;"><i class="num" style="margin:0;">0/82人</i><i class="circle02"></i></a>
+        <a class="item_left" style="width:65%;"><i class="name">中班</i></a>
+    </dt>
+    <dt class="item" onclick="gradeClick(this);" data-grade="37" data-unamelist="大班" data-personcount="0" data-totalcount="85">
+        <a class="item_right" style="width:35%;"><i class="num" style="margin:0;">0/85人</i><i class="circle02"></i></a>
+        <a class="item_left" style="width:65%;"><i class="name">大班</i></a>
+    </dt>
+</dl>
+
+
+
+<div class="fixed-wrap">
+    <div class="fixed02">
+        <span class="item_right" onclick="javascript:selectAll(this);"><i class="circle02"></i></span>
+        <span class="item_left">
+            <a href="javascript:;" onclick="javascript:selectPersonCommit();" class="queding">确定</a>
+            <a href="javascript:;" onclick="javascript:showView(3);" class="return">返回</a>
+        </span>
+    </div>
+</div>
+
+</div>
+<div id="module" class="ajaxload" style="display: none;">
+    
+<input id="smstype" name="smstype" type="hidden" value="1">
+<input id="hidPage" name="hidPage" type="hidden" value="0">
+<input id="hidPageCount" name="hidPageCount" type="hidden" value="">
+
+<div id="zyjy" class="zyjy">
+    <ul class="zyjyPhotoList">
+        <li onclick="javascript:getModule(&#39;http://srv.zgyey.com/sms&#39;,1);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:getModule('http://srv.zgyey.com/sms',1);"></a>
+                    <i class="name">班级通知</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+        <li onclick="javascript:getModule(&#39;http://srv.zgyey.com/sms&#39;,2);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:getModule('http://srv.zgyey.com/sms',2);"></a>
+                    <i class="name">园所通知</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+        <li onclick="javascript:getModule(&#39;http://srv.zgyey.com/sms&#39;,3);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:getModule('http://srv.zgyey.com/sms',3);"></a>
+                    <i class="name">在园表现</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+        <li onclick="javascript:getModule(&#39;http://srv.zgyey.com/sms&#39;,4);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:getModule('http://srv.zgyey.com/sms',4);"></a>
+                    <i class="name">作业布置</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+        <li onclick="javascript:getModule(&#39;http://srv.zgyey.com/sms&#39;,5);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:getModule('http://srv.zgyey.com/sms',5);"></a>
+                    <i class="name">温馨提示</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+        <li onclick="javascript:getModule(&#39;http://srv.zgyey.com/sms&#39;,6);">
+            <div class="zyjyphoto_info">
+                <h2 class="actionname">
+                    <a class="arrow_right" href="javascript:getModule('http://srv.zgyey.com/sms',6);"></a>
+                    <i class="name">其它</i>
+                    <p class="clear"></p>
+                </h2>
+            </div>
+        </li>
+    </ul>
+<p class="clear"></p>
+</div>
+
+<div id="modulelist" style="display:none;">
+</div>
+<p id="more" class="more" style="display:none;"><a href="javascript:moreModule('http://srv.zgyey.com/sms');">查看更多</a></p>
+ <div class="fixed-wrap">
+    <div class="fixed02">
+        <a href="javascript:;" onclick="javascript:goback();" class="sure">返回</a>
+    </div>
+</div>
+
+</div>
+
+<div id="popWin" style="display:none;">
+    <div class="black"></div>
+    <div class="pop">
+        <div class="info">
+            您将使用<i style="color:#F00">50</i>条短信<br>
+		    短信数量不足，请联系客服充值
+        </div>
+        <div class="pop_btn">
+            <a href="javascript:popWin_close();" class="cancel">取消</a>
+            <a href="javascript:;" id="send" class="confirm">确定</a>
+        </div>
+    </div>
+</div>
+
+<div id="msgWin" style="display: none;">
+<div class="black"></div>
+    <div class="pop02">
+    	<h2 class="pop_header">提示</h2>
+    	<p id="msg">请选择接收人</p>
+        <a href="javascript:hideCommonMsg();" id="queding" class="queding02">确定</a>
+    </div>
+</div>
+
+
+
+
+
+</body></html>

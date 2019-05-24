@@ -1,0 +1,66 @@
+﻿@using com.zgyey.and_smsapp.model
+@{
+    string date = DateTime.Now.ToString("yyyy-MM-dd");
+    LoginUser_Info loginuser = ViewData["loginuser"] as LoginUser_Info;
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+
+} 
+
+@Html.Hidden("date",date)
+<div class="content" style=" display:none">
+    <div>
+    <select name="theme" id="theme" class="changes">
+    <option value="android-ics light">Android ICS Light</option>
+    </select>
+    </div>
+    <div>
+    <select name="mode" id="mode" class="changes">
+    <option value="scroller">Scroller</option>
+    </select>
+    </div>
+    <div>
+    <select name="display" id="display" class="changes">
+    <option value="inline">Inline</option>
+    </select>
+    </div>
+    <div>
+    <select name="language" id="language" class="changes">
+    <option value="zh">Chinese</option>
+    </select>
+    </div>
+    <div>  
+    <select name="demo" id="demo" class="changes">
+    <option value="time" >Time</option>
+    </select>
+    </div>
+</div>
+   
+        
+        
+             
+<div class="timing_tips" >设置定时发送时间</div>
+<div class="timing_box">
+	<dl>
+    <dd class="date">
+    <a href="javascript:addDays(-1);" class="left_arrow"></a><p id="txt_time" class="time">2015 - 09 - 24 星期四</p><a href="javascript:addDays(1);" class="right_arrow"></a>
+    </dd>
+    <dd class="day_t">
+        <div id="demo_default" class="demos">    
+        <input type="text" name="test_default" id="test_default" readonly="readonly" style="width:90%; height:40px; border:0px; text-align:center; font-size:20px; margin:0 auto; "/>
+        </div>
+    </dd>
+    <dd class="timing_btn">
+        <div class="w94 send_btn">
+            <p class="terrace" style="height:55px;">
+        	    <a href="javascript:;" class="terrace_btn" onclick="javascript:goback();">返回</a>
+            </p>
+            <p class="app" style="height:55px;">
+        	    <a href="javascript:;" class="app_btn" onclick="javascript:sendSms('@srvUrl',@loginuser.auditSms,1,false);">发送</a>
+            </p>
+        </div>
+    </dd>
+    </dl>
+</div>
+
+
+

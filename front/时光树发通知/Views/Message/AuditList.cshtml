@@ -1,0 +1,170 @@
+﻿@using System.Linq
+@using System.Data
+@using System.Web.Script.Serialization
+<!DOCTYPE html>
+<html>
+<head>
+    <title>通知审核</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <script>
+        if (!/^#\!\/$/.test(location.hash.replace(/\?.*/g, '')) && !!location.hash) {
+            location.replace(location.href.replace(/#\!\/.*/, ''))
+        }
+    </script>
+    <link href="/Content/message/css/styles.css?v=201610281823" rel="stylesheet" />
+    <link href="/Content/message/css/iconfont.css?v=1" type="text/css" rel="stylesheet">
+    <script src="/Scripts/flexible.js?v=1" type="text/javascript"></script>
+</head>
+<body id="app">
+    
+        <input type="hidden" name="uid" id="uid" value="@(ViewData["uid"] ?? Request["uid"])" />
+        <input type="hidden" name="kid" id="kid" value="@(ViewData["kid"] ?? Request["kid"])" />
+        <input type="hidden" name="role" id="role" value="@(ViewData["role"] ?? Request["role"])" />
+        <input type="hidden" name="aftertime" id="aftertime" value="2099-12-31 23:59:59" />
+    
+    <router-view></router-view>
+    
+<script type="text/html" id="main">
+    <div class="wrapper">
+        <div class="content" v-on:scroll="getmore($event)">
+            <template v-for="msg in messages">
+                <msg :message="msg" :index="$index"></msg>
+            </template>
+            <router-view></router-view>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="msg">
+    <div class="examine" v-on:click="detail">	    	
+	      	<div class="name"><span class="head"><img :data-src="(message.headpic.indexOf('headphoto.yp.yeyimg.com')>0?message.headpic.replace(/!.*/,'')+'!/sq/100':message.headpic)"></span>{{message.sendername}}
+                <p class="m-a1 state" v-if="message.state==0">待审核</p>
+                @*<p class="m-a2 state" v-if="message.state==1">通过</p>*@
+                <p class="m-a3 state" v-if="message.state==2">不通过</p>
+	      	</div>
+	      	<div class="top-info">
+	      		<ul>
+	      			<li><span class="t-left">发送时间:</span><span>{{message.sendtime | dateformat3}}</span></li>
+	      			<li><span class="t-left">接  收  人:</span><span>{{receiver}}</span></li>	      			
+	      		</ul>
+	      	</div>
+	      	<div class="box-text">
+                <div class="text" style="word-break:break-all;" v-if="!!message.content"
+                     :class="message.imgs.length>0||message.audios.length>0||message.videos.length>0?'line-no2':'line-no4'">
+                    {{{message.content}}}
+                </div>
+                <msg-img v-if="message.imgs.length>0" :imgs="message.imgs"></msg-img>
+                <msg-audio v-if="message.imgs.length==0&&message.audios.length>0" :audio="message.audios[0]&&message.audios[0].url"></msg-audio>
+                <msg-video v-if="message.imgs.length==0&&message.audios.length==0&&message.videos.length>0" :video="message.videos[0]&&message.videos[0].url"></msg-video>
+	      	</div>
+	      	<p class="msg"><span class="tags">{{message.title}}</span><span class="time">{{message.writetime}}</span></p>	      
+	</div>
+    <p class="border-bot"></p>
+
+</script>
+<script type="text/html" id="msg-img">
+    <div class="photo"v-show="!!imgs&&imgs.length>0">
+        <ul>
+            <template v-for="img in imgs">
+                <li v-if="$index<=2" v-on:click.stop="show($index)"><img :data-src="img.url.replace(/!.*/,'')+'!/sq/100'"/><span v-if="$index==2&&imgs.length>3" class="tags sizesmall">{{imgs.length}}张</span></li>
+            </template>
+        </ul>
+    </div>
+</script>
+<script type="text/html" id="msg-video">
+    <div class="video" style="margin: 0;" v-show="!!video">
+        <a class="play icon-play" v-on:click.stop="play"></a>
+        <p class="img_bg"></p>
+        <img src="/Content/message/img/alpha.png" :style="{background: 'url('+video+'?vframe/jpg/offset/1) no-repeat center center',backgroundSize:'cover'}"/>
+    </div>
+</script>
+<script type="text/html" id="msg-audio">
+    <div class="voice" style=" margin:0 0 0 .2rem;" v-show="!!audio">
+        <p class="arrow-left"></p>
+        <p class="sum" v-on:click.stop="play($event)">{{{length}}}</p>
+        <p class="sprite" :class="playing?'on':''"></p>        
+        <audio :src="audio" style="display: none;" preload controls v-on:loadedmetadata="loadedmetadata" v-on:ended="ended" v-on:error="loaderror"></audio>
+    </div>
+</script>
+
+<script type="text/html" id="msg-img2">
+    <div class="parent-photo" style="margin:0" v-show="!!imgs&&imgs.length>0">
+        <ul>
+            <li v-for="img in imgs">
+                <img :data-src="img.url.replace(/!.*/,'')+'!/fw/300'" v-on:click.stop="show($index)"/>
+            </li>
+        </ul>
+    </div>
+</script>
+<script type="text/html" id="msg-audio2">
+    <div class="voice" v-show="!!audio">
+        <p class="arrow-left"></p>
+        <p class="sum" v-on:click.stop="play($event)">{{{length}}}</p>
+        <p class="sprite" :class="playing?'on':''"></p>        
+        <audio :src="audio" style="display: none;" preload controls v-on:loadedmetadata="loadedmetadata" v-on:ended="ended" v-on:error="loaderror"></audio>
+    </div>
+</script>
+
+
+<script type="text/html" id="aduit">
+    <div class="wrapper" style="position:fixed;top:0;bottom:0;right:0;left:0;background-color: #fff;overflow:hidden;z-index:10;">
+        <div class="content">
+    	    <div class="examine ex-details">
+	    	    <div class="top-info">
+	      		    <ul style="width:100%">
+	      			    <li class="border"><span class="t-left">发  送  人:</span><span>{{message.sendername}}</span></li>
+	      			    <li class="border"><span class="t-left">发送时间:</span><span>{{message.sendtime | dateformat3}}</span></li>
+	      			    <li class="border" v-on:click="toggle"><span class="t-left">接  收  人:</span><span>{{receiver}}</span>
+                              <span class="icon icon-downarrow":class="open?'icon icon-downarrow':'icon icon-uparrow'"></span>
+	      			    </li>
+	      		    </ul>
+	      	    </div>
+	      	    <div class="list-name" v-show="open">
+                    <span v-for="name in receivers">{{name}}</span>
+	      		    <p style="clear: both;"></p>
+	      	    </div>
+	    	    <div class="box-text info" style="position:relative">
+	    		    <p class="b-title">通知内容</p>
+                    <div class="text" style="word-break:break-all;" v-html="message.content.replace('\n','<br>')"></div>
+                    <msg-img2 :imgs="message.imgs"></msg-img2>
+                    <msg-audio2 :audio="message.audios[0]&&message.audios[0].url"></msg-audio2>
+                    <msg-video :video="message.videos[0]&&message.videos[0].url"></msg-video>
+	      	    </div>
+	        </div>
+        </div>
+	    <div class="footer" v-if="message.state == 0">
+	 	    <div class="ex-btn border">
+	 		    <a v-on:click="reject">不通过</a>
+	 		    <a v-on:click="pass">通过</a>
+	 	    </div>
+	    </div>
+        <confirm :show="confirm.isShow" :info="confirm.info" :yes="yes" :yestext="confirm.yesText" :no="no" :notext="confirm.noText"></confirm>
+    </div>
+</script>
+
+<script type="text/html" id="confirm">
+    <div class="poplayout" v-show="show">
+        <div class="pop-body">
+            <div class="pop">
+                <div class="confirm">
+                    <div class="text border">{{info}}</div>
+                    <div class="btn"><a class="border yes" v-on:click="no" v-show="!!notext">{{notext}}</a><a v-on:click="yes" v-show="!!yestext">{{yestext}}</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="black-overlay"></div>
+    </div>
+</script> 
+    
+    <script src="//cdn.staticfile.org/zepto/1.1.6/zepto.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue/1.0.28/vue.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue-router/0.7.13/vue-router.min.js?v=1"></script>    
+    <script src="/Scripts/lib/tools.min.js?v=1"></script>
+    <script src="/Scripts/lib/zyapp.min.js?v=201610251526"></script>
+    <script src="/Scripts/message/auditlist.min.js?v=201705181706"></script>
+</body>
+</html>

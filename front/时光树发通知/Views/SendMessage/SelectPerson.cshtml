@@ -1,0 +1,106 @@
+﻿@using com.zgyey.and_smsapp.model
+@{
+    ViewBag.Title = "选择发送人";
+    Layout = null;
+    LoginUser_Info loginuser = ViewData["loginuser"] as LoginUser_Info;
+    IList<Grade_Info> gradelist = ViewData["gradelist"] as IList<Grade_Info>;
+    IList<Teacher_Info> tealist = ViewData["tealist"] as IList<Teacher_Info>;
+}
+@Html.Hidden("select_type",ViewData["selecttype"])
+@Html.Hidden("on_type",ViewData["selecttype"])
+@Html.Hidden("commitSelectedType",0)
+
+    @if (loginuser.usertype > 1)
+    {
+        <div class="send_nav1">
+        <a id="teachers02" class="teachers02 on" href="javascript:;" onclick="goto(this);">老师</a>
+        <a id="nj" class="nj" href="javascript:;" onclick="goto(this);">年级</a>
+        <a id="grades02" class="grades02" href="javascript:;" onclick="goto(this);">班级</a>
+            </div>
+    }
+    else
+    {
+         <div class="send_nav2">
+        <a id="teachers" class="teachers on" href="javascript:" onclick="goto(this);">老师</a>
+        <a id="grades" class="grades" href="javascript:" onclick="goto(this);">班级</a>
+            </div>
+    }
+ 
+
+<div class="item_list stu" style="display:none;" id="stu">
+    @foreach (Grade_Info grade in gradelist)
+    {
+        foreach(Class_Info cls in grade.classinfo)
+        {
+        <div class="students" id="students">
+            <h2 class="item" data-select="0" data-cid="@cls.cid" data-personcount="0" data-totalcount="@cls.childcount">
+                <span class="item_right" style="width:35%;" onclick="classClick(this,0);"><i class="num" style="margin:0;">0/@(cls.childcount)人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this);"><i class="name">@cls.cname</i></span>
+            </h2>
+            <ul style="display:none;">
+                @foreach (User_Info user in cls.childinfo)
+                {
+                    <li class="item item_color" onclick="personClick(this,0);">
+                        <span class="item_right"><i class="circle02" data-userid="@user.userid" data-username="@user.username"></i></span>
+            	        <span class="item_left"><i class="name">@user.username</i></span>
+                    </li>
+                }
+             </ul>
+         </div>
+        }
+    }
+</div>
+
+@*<dl class="item_list tea" id="tea">
+    @foreach(User_Info tea in tealist)
+    {
+    <dt class="item" data-teaid="@tea.userid" onclick="teaClick(this);">
+        <a class="item_right"><i class="circle02"></i></a>
+        <a class="item_left"><i class="name">@tea.username</i></a>
+    </dt>
+    }
+</dl>*@
+
+<div class="item_list tea" style="display:none;" id="tea">
+    @foreach (Teacher_Info tea in tealist)
+        {
+        <div class="teas">
+            <h2 class="item" data-select="0" data-deptid="@tea.deptid" data-personcount="0" data-totalcount="@tea.teachercount">
+                <span class="item_right" style="width:35%;" onclick="classClick(this,1);"><i class="num" style="margin:0;">0/@(tea.teachercount)人</i><i class="circle02"></i></span>
+                <span class="item_left" style="width:65%;" onclick="personExpand(this,1);"><i class="name">@tea.deptname</i></span>
+            </h2>
+            <ul style="display:none;">
+                @foreach (User_Info user in tea.teachers)
+                {
+                    <li class="item item_color" onclick="personClick(this);">
+                        <span class="item_right"><i class="circle02" data-userid="@user.userid" data-username="@user.username"></i></span>
+            	        <span class="item_left"><i class="name">@user.username</i></span>
+                    </li>
+                }
+             </ul>
+         </div>
+        }
+</div>
+
+
+<dl class="item_list grade" style="display:none;" id="grade">
+    @foreach (Grade_Info grade in gradelist)
+    {
+    <dt class="item" onclick="gradeClick(this);" data-grade="@grade.gradeid" data-unamelist="@grade.viewpersons" data-personcount="0" data-totalcount="@grade.childcount">
+        <a class="item_right" style="width:35%;"><i class="num" style="margin:0;">0/@(grade.childcount)人</i><i class="circle02"></i></a>
+        <a class="item_left" style="width:65%;"><i class="name">@grade.gname</i></a>
+    </dt>
+    }
+</dl>
+
+
+
+<div class="fixed-wrap">
+    <div class="fixed02">
+        <span class="item_right" onclick="javascript:selectAll(this);"><i class="circle02"></i></span>
+        <span class="item_left">
+            <a href="javascript:;" onclick="javascript:selectPersonCommit();" class="queding">确定</a>
+            <a href="javascript:;" onclick="javascript:goback();" class="return">返回</a>
+        </span>
+    </div>
+</div>

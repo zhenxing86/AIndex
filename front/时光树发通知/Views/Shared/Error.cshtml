@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error</title>
+</head>
+<body>
+    <h2>
+        Sorry, an error occurred while processing your request.
+        @if (System.Configuration.ConfigurationManager.AppSettings["Release"] == "0")
+        {
+            @DateTime.Now
+            @ViewData["ErrorMessage"] 
+        }
+    </h2>
+</body>
+</html>

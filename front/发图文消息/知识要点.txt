@@ -1,0 +1,6 @@
+director.js路由应用
+weui.js使用
+
+文件上传，先预览，后统一上传
+window.URL || window.webkitURL || window.mozURL
+src = url ? url.createObjectURL(file) : e.target.result

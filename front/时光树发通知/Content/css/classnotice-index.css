@@ -1,0 +1,25 @@
+﻿
+.add
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #ffd400;
+    font-size: 36px;
+    border-radius: 100px;
+}
+
+.getmore
+{
+    border: 1px solid #ddd;
+    line-height: 30px;
+    text-decoration: none;
+    color: #808080;
+    font-size: 14px;
+}
+
+.add .icon
+{
+    background-color: #fff;
+    border-radius: 100px;
+}

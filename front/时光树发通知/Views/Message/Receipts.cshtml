@@ -1,0 +1,139 @@
+﻿@using System.Linq
+@using System.Data
+@using System.Web.Script.Serialization
+<!DOCTYPE html>
+<html>
+<head>
+    <title>通知回执</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <script>
+        if (!/^#\!\/$/.test(location.hash.replace(/\?.*/g, '')) && !!location.hash) {
+            location.replace(location.href.replace(/#\!\/.*/, ''))
+        }
+    </script>
+    <link href="/Content/message/css/styles.css?v=201610281823" rel="stylesheet" />
+    <link href="/Content/message/css/iconfont.css?v=1" type="text/css" rel="stylesheet">
+    <script src="/Scripts/flexible.js?v=1" type="text/javascript"></script>
+</head>
+<body id="app">
+    
+        <input type="hidden" name="uid" id="uid" value="@(ViewData["uid"] ?? Request["uid"])" />
+        <input type="hidden" name="kid" id="kid" value="@(ViewData["kid"] ?? Request["kid"])" />
+        <input type="hidden" name="role" id="role" value="@(ViewData["role"] ?? Request["role"])" />
+        <input type="hidden" name="aftertime" id="aftertime" value="2099-12-31 23:59:59" />
+    
+    <router-view></router-view>
+
+<script type="text/html" id="main">
+    <div class="wrapper">
+        <div class="content" style="background: #f1f1f1;" v-on:scroll="getmore($event)">
+            <template v-for="message in messages">
+                <msg :message="message"></msg>
+            </template>
+            <router-view></router-view>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="msg">
+    <p class="info-time"><span>{{message.sendtime | dateformat}}</span></p>
+    <div class="pay-list margin" v-on:click="receiver(message.taskid,message.type,message.state)">
+        <p class="top-color"></p>
+        <div class="title">{{message.title}}<span class="date sizesmall">{{message.writetime |dateformat2}}</span>
+            @*<p class="m-a1 state" v-if="message.state==0">待审核</p>
+            <p class="m-a2 state" v-if="message.state==1">通过</p>
+            <p class="m-a3 state" v-if="message.state==2">不通过</p>*@
+        </div>
+        <div class="text" style="word-break:break-all;" v-if="!!message.content"
+             :class="message.imgs.length>0||message.audios.length>0||message.videos.length>0?'line-no2':'line-no4'">
+            @*<p class="m-timing icon-timing" v-if="message.sendmode==1">定时发送：<span>{{message.sendtime | dateformat3}}</span></p>*@
+            {{{message.content}}}
+        </div>
+        <msg-img v-if="message.imgs.length>0" :imgs="message.imgs"></msg-img>
+        <msg-audio v-if="message.imgs.length==0&&message.audios.length>0" :audio="message.audios[0]&&message.audios[0].url"></msg-audio>
+        <msg-video v-if="message.imgs.length==0&&message.audios.length==0&&message.videos.length>0" :video="message.videos[0]&&message.videos[0].url"></msg-video>
+        <p class="msg-big border"><a @*v-on:click.stop="receiver(message.taskid,message.type,message.state)"*@>已读：<span class="p-sum">{{message.readcnt}}</span>人 未读：<span class="p-sum">{{message.unreadcnt}}</span>人</a></p>
+        <p class="view-details">查看详情</p>
+    </div>
+</script>
+<script type="text/html" id="msg-img">
+    <div class="photo" v-show="!!imgs&&imgs.length>0">
+        <ul>
+            <template v-for="img in imgs">
+                <li v-if="$index<=2" v-on:click.stop="show($index)"><img :data-src="img.url.replace(/!.*/,'')+'!/sq/100'"/><span v-if="$index==2&&imgs.length>3" class="tags sizesmall">{{imgs.length}}张</span></li>
+            </template>
+        </ul>
+    </div>
+</script>
+<script type="text/html" id="msg-audio">
+    <div class="voice" style=" margin:0 0 0 .8rem;" v-show="!!audio">
+        <p class="arrow-left"></p>
+        <p class="sum" v-on:click.stop="play($event)">{{{length}}}</p>
+        <p class="sprite" :class="playing?'on':''"></p>  
+        <audio :src="audio" style="display: none;" preload controls v-on:loadedmetadata="loadedmetadata" v-on:ended="ended" v-on:error="loaderror"></audio>
+    </div>
+</script>
+<script type="text/html" id="msg-video">
+    <div class="video" style="margin-top: 0;" v-show="!!video">
+        <a class="play icon-play" v-on:click.stop="play"></a>
+        <p class="img_bg"></p>
+        <img src="/Content/message/img/alpha.png" :style="{background: 'url('+video+'?vframe/jpg/offset/1) no-repeat center center',backgroundSize:'cover'}"/>
+    </div>
+</script>
+
+<script type="text/html" id="selector">
+    <div class="wrapper" style="position:fixed;top:0;bottom:0;right:0;left:0;background-color: #fff;overflow:hidden;z-index:100;">
+        <div class="tab border">
+            <ul class="swiper-pagination swiper-pagination-h swiper-pagination-clickable swiper-pagination-bullets" style="overflow:hidden;width: 12.42rem;">
+                <li class="swiper-pagination-bullet" :class="tab=='read'?' swiper-pagination-bullet-active':''"
+                    v-on:click="shift('read')">已读<span></span></li>
+                <li class="swiper-pagination-bullet" :class="tab=='unread'?' swiper-pagination-bullet-active':''"
+                    v-on:click="shift('unread')">未读<span></span></li>
+            </ul>
+        </div>
+        <div class="content">
+            <select-list :groups="read" v-show="tab=='read'"></select-list>
+            <select-list :groups="unread" v-show="tab=='unread'"></select-list>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="select-list">
+    <div class="people">
+        <dl>
+            <dd class="border" v-for="group in groups">
+                <p class="name" v-on:click="toggle($index)">
+                    <i :class="group.open?'css-downarrow':'css-rightarrow'"></i>{{group.name}}
+                </p>
+                <p class="sum">
+                    {{group.member.length||0}}人
+                </p>
+                <div v-show="group.open">
+                    <ul>
+                        <li class="border" v-for="p in group.member">
+                            <p class="name">
+                                <span class="head"><img :src="(p.headpic.indexOf('headphoto.yp.yeyimg.com')>0?p.headpic.replace(/!.*/,'')+'!/sq/100':p.headpic)"/></span>
+                                {{p.name}}
+                            </p>
+                            <p class="sum">{{p.identity}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</script>
+
+    
+    <script src="//cdn.staticfile.org/zepto/1.1.6/zepto.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue/1.0.28/vue.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue-router/0.7.13/vue-router.min.js?v=1"></script>     
+    <script src="/Scripts/lib/tools.min.js?v=1"></script>
+    <script src="/Scripts/lib/zyapp.min.js?v=201610251526"></script>
+    <script src="/Scripts/message/receipts.min.js?v=201705181706"></script>
+</body>
+</html>

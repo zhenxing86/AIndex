@@ -1,0 +1,56 @@
+﻿@model IList<com.zgyey.and_smsapp.model.Sms_Notice>
+@{
+    ViewBag.Title = "发送历史";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+}
+<script>
+    function loadComplete() {
+    }
+</script>
+@Html.Hidden("hidPage","0")
+@Html.Hidden("hidPageCount",ViewData["totalpage"])
+@Html.Hidden("uid",ViewData["uid"])
+
+<div id="smsnoticelist">
+    @foreach (com.zgyey.and_smsapp.model.Sms_Notice notice in Model)
+    {
+        string timehtml = "";
+        if (notice.sendmode == 1) //定时发送
+        {
+            timehtml = string.Format("<span style=\"float:left; color:#999; padding-left:10px;\">定时 <i style=\"color:#{0}\">{1}</i></span>", notice.sendtime > DateTime.Now ? "ff8502" : "999", notice.sendtime.ToString("MM-dd HH:mm"));
+        }
+    <div class="message" >
+        <h2 class="mas_title" onclick="detialClass('@srvUrl',@notice.isnotice,@notice.sender,@notice.taskid);">
+            @if(notice.isnotice==1)
+            {
+            <a href="javascript:" class="status red">未阅&nbsp;&nbsp;@notice.noreadcnt 人</a>
+            <i class="from01"></i>@Html.Raw("&nbsp;&nbsp;")@notice.sms_title@Html.Raw("&nbsp;&nbsp;")
+            }
+            else
+            {
+            <a href="javascript:;" class="status green">发送&nbsp;&nbsp;@notice.noreadcnt 人</a>
+            <i class="@(notice.isnotice==0?"from02":"from03")"></i>@Html.Raw("&nbsp;&nbsp;")@notice.sms_title@Html.Raw("&nbsp;&nbsp;")
+            }
+        </h2>
+        <p class="mas">
+            @Html.Raw(notice.contentAHref)
+        </p>
+        @if(notice.img_url!=""){
+            <p class="mas"><a href="@notice.img_url" onclick="return false;"><img src="@notice.img_url_small" /></a></p>
+        }
+         <p class="mas pl0">
+            <span style=" padding-left:15px; float:left; color:#999">@notice.cdate</span>
+             @Html.Raw(timehtml)
+             <span style=" float:right;color:#999">@notice.sendername</span> 
+        </p>
+        <p style=" clear:both"></p>
+    </div>
+    }
+</div>
+@if(int.Parse(ViewData["totalpage"].ToString())>1)
+{
+<p id="more" class="more"><a href="javascript:moreSmsNotice('@srvUrl');">查看更多</a></p>
+}
+
+

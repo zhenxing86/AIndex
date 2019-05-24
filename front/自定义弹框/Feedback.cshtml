@@ -1,0 +1,180 @@
+﻿@using WeixinMP.model
+@model Exhort
+@{
+  ViewBag.Title = "叮嘱待办事项";
+  ViewBag.viewport = false;
+  var stuname = Model.username;
+  //Model.pic_url = "http://dingyue.nosdn.127.net/cfHHUGp0nqMzmz2uGguBPqH6dUG0H2bvA9oCuGv2wBKRO1511347123347.jpg,http://dingyue.nosdn.127.net/R0ZFPP=ZCxsU2FUQnPs7uCGSzu=X0t11ccFNhCCSkPfLj1511347123348compressflag.jpg";
+}
+@section style{
+
+  @Html.Partial("style/_todo")
+  <style>
+    .li {
+      cursor: pointer;
+    }
+  </style>
+}
+@section script{
+  @Html.Partial("script/_director")
+  @Html.Partial("script/_todo")
+
+  <script type="text/javascript">
+    $(function () {
+      location.hash = '# '
+      var route = {
+        "/": function () {
+          $('#preview').css('display', 'none')
+          $('body').css('overflow', '')
+        }
+      }
+      var router = new Router(route)
+      router.init();
+
+      $('#file').on('change', function (event) {
+        var t = this
+        if (!t.value) return
+        var loading = $.loading('上传图片中')
+        $.upload(this.files[0], {
+          success: function (url) {
+            loading.dispose()
+            var a = $('li.no')
+            var img = $('<img/>', { 'src': '/Content/todo/images/bg.png', 'data-src': url }).css({ background: 'url("' + url + '!/sq/160") center center', 'background-size': 'cover' });
+            var li = $('<li></li>').append($('<span></span>').addClass('photo').append('<i class="icon-close"></i>').append(img)).append('<i class="icon-add"></i>')
+            $(a).before(li);
+            t.value = '';
+          },
+          error: function () {
+            loading.find('.text').text('上传失败，请重试')
+            setTimeout(function () { loading.dispose() }, 1000)
+          }
+        })
+      })
+
+      $('ul').on('click', function (e) {
+        if ($(e.target)[0].tagName == 'I' && $(e.target).hasClass('icon-close')) {
+          $(e.target).closest('li').remove();
+          e.stopPropagation();
+          return
+        }
+        var a = $(e.target).closest('li');
+        if (a.length > 0) {
+          if (a.hasClass('no')) {
+            $('#file').click()
+          } else {
+            $('#preview').css('display', '').find('img').attr('src', $(a).find('img').data('src'));
+            $('body').css('overflow', 'hidden')
+            location.hash = '#preview';
+          }
+          e.stopPropagation();
+          return
+        }
+      })
+      $('#preview').on('click', function () {
+        history.back();
+      })
+
+      $('#submit').on('click', function () {
+        $('#tips').css('display', $('textarea[name=remark]').val() ? 'none' : '');
+        if (!$('textarea[name=remark]').val()) { return; }
+        var pic_url = [];
+        $('ul img').each(function () {
+          if ($(this).data().src) {
+            pic_url.push($(this).data().src)
+          }
+        })
+        $('input[name=pic_url]').val(pic_url.join(','))
+
+        $.submit({
+          url: '/tea/exhort/save',
+          data: $('form').serialize(),
+          type: 'POST',
+          success: function (data) {
+            if (data.code == 0) {
+              $.toast('提交成功', 1000, function () {
+                location.reload();
+              })
+            }
+          },
+          error: function () {
+            $.alert('提交失败，请重试')
+          }
+        })
+      })
+    })
+  </script>
+}
+
+<div class="ieep">
+  <form class="register">
+    <!-- star-->
+    <div class="media-list">
+      <p class="left-info">小朋友姓名</p>
+      <div class="right-info">@Model.username</div>
+    </div>
+
+    @*    <div class="media-list">
+      <p class="left-info">家长联系电话</p>
+      <div class="right-info"><a href="tel:18028633611">18028633611</a></div>
+    </div>*@
+
+    <div class="media-much ">
+      <div class="textarea">
+        @Model.contents
+      </div>
+    </div>
+
+    <div class="media-much ">
+      <div id="tips" style="display: none;">
+        <a style="margin-right: .48rem;"></a><span class="color-red">请记录叮嘱执行情况</span>
+      </div>
+      <div class="textarea">
+        <textarea name="remark">@Model.remark</textarea>
+      </div>
+    </div>
+
+
+    <div class="up-photo">
+      <p class="tips">拍照记录叮嘱执行情况</p>
+      <ul>
+        @if (!Model.pic_url.IsNullOrWhiteSpace())
+        {
+            foreach (var m in Model.pic_url.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries))
+            {
+          <li>
+            <span class="photo ">
+              <i class="icon-close"></i>
+              <img src="/Content/todo/images/bg.png" data-src="@m" style="background: url('@(m)!/sq/160') center center; background-size: cover;" />
+            </span>
+            <i class="icon-add"></i>
+          </li>
+            }
+        }
+        <li class="no">
+          <span class="photo">
+            <i class="icon-close"></i>
+            <img data-src="" style="background: url(#) center center; background-size: cover;" />
+          </span>
+          <i class="icon-add"></i>
+        </li>
+        <p class="clear"></p>
+      </ul>
+    </div>
+    <input type="file" name="file" id="file" value=" " style="display: none;" accept="image/*" capture="camera" />
+    <input type="hidden" name="userid" value="@Model.userid" />
+    <input type="hidden" name="adddate" value="@Model.adddate.ToString("yyyy-MM-dd")" />
+    <input type="hidden" name="pic_url" value="@Model.pic_url" />
+    <div class="bot-btn">
+      <a id="submit" class="sizebig yellow-bg">发送</a>
+    </div>
+    <!--end-->
+  </form>
+</div>
+
+<div id="preview" style="display: none; position: fixed; top: 0; left: 0; z-index: 1000; bottom: 0; right: 0;">
+  <div style="position: absolute; z-index: 9999; left: 0; top: 0; right: 0; bottom: 0; height: 100%; width: 100%; display: table; text-align: center; background: rgba(0,0,0,1);">
+    <div style="display: table-cell; text-align: center; vertical-align: middle; width: 100%;">
+      <img src="#" width="100%" />
+    </div>
+  </div>
+</div>

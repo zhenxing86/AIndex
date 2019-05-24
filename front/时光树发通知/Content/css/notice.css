@@ -1,0 +1,223 @@
+﻿html, body
+{
+    height:100%;
+}
+*
+{
+    font-family: Verdana,'Microsoft Yahei';
+    margin: 0;
+}
+
+.list-group-item
+{
+    border-left: 0;
+    border-right: 0;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+    .list-group-item:first-child
+    {
+        border-top: 0;
+    }
+
+.text-ellipsis
+{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 40px;
+}
+
+.modul
+{
+    text-align: justify;
+    word-wrap: break-word;
+    word-break: normal;
+    font-size: 15px;
+    font-family: 'Microsoft YaHei';
+    line-height: 24px;
+    margin: 0;
+}
+
+.modal .btn-yes
+{
+    background-color: #ffd400;
+    color: #ac5500;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+input, textarea
+{
+    font-size: 17px;
+    border: 0px;
+    color: #333;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: none;
+}
+
+input
+{
+    height: 48px;
+}
+
+textarea
+{
+    height: 180px;
+    line-height: 24px;
+    resize: none;
+    padding-top: 5px;
+}
+
+.on
+{
+    color: #ffd400;
+}
+
+.ok-icon
+{
+    color: #ddd;
+    font-size: 26px;
+}
+
+.glyphicon-ok-circle
+{
+    font-size: 26px;
+}
+
+.class-lab
+{
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    height: 45px;
+    background: none;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.img-upload
+{
+    background: url(/Content/images/icon.svg) no-repeat;
+    background-size: 240px;
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #ddd;
+    margin: 10px;
+    background-position: -1px -2px;
+}
+
+    .img-upload img
+    {
+        width: inherit;
+        height: inherit;
+        display: none;
+    }
+
+.img-uploaded
+{
+    border: none;
+}
+
+    .img-uploaded img
+    {
+        display: inline;
+    }
+
+.row-border-bottom
+{
+    border-bottom: 1px solid #eee;
+}
+
+.tmp-panel
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    display: none;
+}
+
+    .tmp-panel .list-group
+    {
+        overflow-y: auto;
+        top: 0;
+        bottom: 50px;
+        position: fixed;
+        right: 0;
+        left: 0;
+    }
+
+.class-add-icon
+{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    display: inline-block;
+    background: url(../images/icon.svg) no-repeat #fff;
+    background-size: 120px;
+    background-position: -1px -2px;
+    margin-top: 3px;
+}
+
+.class-cnt
+{
+    line-height: 38px;
+    color: #999;
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+
+.img-upload-text
+{
+    line-height: 80px;
+}
+
+.btn-back
+{
+    line-height: 30px;
+    background-color: #ffd400;
+    color: #ac5500;
+    font-size: 20px;
+}
+
+.img-div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    z-index: 1041;
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+    .img-div img
+    {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+    }
+
+.modal-dialog
+{
+    width: 80%;
+    margin: 40% auto 0 auto;
+}

@@ -1,0 +1,494 @@
+﻿@using System.Linq
+@using System.Data
+@using System.Web.Script.Serialization
+<!DOCTYPE html>
+<html>
+<head>
+    <title>发通知</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <script>
+      if (!/^#\!\/$/.test(location.hash.replace(/\?.*/g, '')) && !!location.hash) {
+        location.replace(location.href.replace(/#\!\/.*/, ''))
+      }
+    </script>        
+    <link href="/Content/message/css/styles.css?v=201610281823" rel="stylesheet" />
+    <link href="/Content/message/css/iconfont.css?v=1" type="text/css" rel="stylesheet">
+    <script src="/Scripts/flexible.js?v=1" type="text/javascript"></script>
+    <style>
+      .sk-circle {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+      }
+
+        .sk-circle .sk-circle-box {
+          margin: 50% auto;
+          position: relative;
+          width: 4rem;
+          height: 4rem;
+        }
+
+        .sk-circle .sk-child {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+        }
+
+          .sk-circle .sk-child:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+            height: 15%;
+            background-color: #333;
+            border-radius: 100%;
+            -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+            animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+          }
+
+        .sk-circle .sk-circle2 {
+          -webkit-transform: rotate(30deg);
+          -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+        }
+
+        .sk-circle .sk-circle3 {
+          -webkit-transform: rotate(60deg);
+          -ms-transform: rotate(60deg);
+          transform: rotate(60deg);
+        }
+
+        .sk-circle .sk-circle4 {
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+
+        .sk-circle .sk-circle5 {
+          -webkit-transform: rotate(120deg);
+          -ms-transform: rotate(120deg);
+          transform: rotate(120deg);
+        }
+
+        .sk-circle .sk-circle6 {
+          -webkit-transform: rotate(150deg);
+          -ms-transform: rotate(150deg);
+          transform: rotate(150deg);
+        }
+
+        .sk-circle .sk-circle7 {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+
+        .sk-circle .sk-circle8 {
+          -webkit-transform: rotate(210deg);
+          -ms-transform: rotate(210deg);
+          transform: rotate(210deg);
+        }
+
+        .sk-circle .sk-circle9 {
+          -webkit-transform: rotate(240deg);
+          -ms-transform: rotate(240deg);
+          transform: rotate(240deg);
+        }
+
+        .sk-circle .sk-circle10 {
+          -webkit-transform: rotate(270deg);
+          -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+        }
+
+        .sk-circle .sk-circle11 {
+          -webkit-transform: rotate(300deg);
+          -ms-transform: rotate(300deg);
+          transform: rotate(300deg);
+        }
+
+        .sk-circle .sk-circle12 {
+          -webkit-transform: rotate(330deg);
+          -ms-transform: rotate(330deg);
+          transform: rotate(330deg);
+        }
+
+        .sk-circle .sk-circle2:before {
+          -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+        }
+
+        .sk-circle .sk-circle3:before {
+          -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+        }
+
+        .sk-circle .sk-circle4:before {
+          -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+        }
+
+        .sk-circle .sk-circle5:before {
+          -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+        }
+
+        .sk-circle .sk-circle6:before {
+          -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+        }
+
+        .sk-circle .sk-circle7:before {
+          -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+        }
+
+        .sk-circle .sk-circle8:before {
+          -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+        }
+
+        .sk-circle .sk-circle9:before {
+          -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+        }
+
+        .sk-circle .sk-circle10:before {
+          -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+        }
+
+        .sk-circle .sk-circle11:before {
+          -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+        }
+
+        .sk-circle .sk-circle12:before {
+          -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+        }
+
+      @@-webkit-keyframes sk-circleBounceDelay {
+        0%, 80%, 100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @@keyframes sk-circleBounceDelay {
+        0%, 80%, 100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+</head>
+<body id="app">
+
+<div class="sk-circle">
+    <div class="sk-circle-box">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
+</div>
+
+
+<input type="hidden" name="uid" id="uid" value="@(ViewData["uid"])" />
+<input type="hidden" name="kid" id="kid" value="@(ViewData["kid"])" />
+<input type="hidden" name="smsLen" id="smsLen" value="@(ViewData["smsLen"])" />
+<input type="hidden" name="surpluscnt" id="surpluscnt" value="@(Convert.ToInt32(ViewData["smscnt"] ?? "0"))" />
+<input type="hidden" name="smstype" id="smstype" value="@(Convert.ToInt32(Request["role"] ?? "1") == 0 ? 1 : 0)" />
+<input type="hidden" name="openWebSms" id="openWebSms" value="@(ViewData["openWebSms"])" />
+<input type="hidden" name="role" id="role" value="@(ViewData["role"])" />
+<input type="hidden" name="auditSms" id="auditSms" value="@(ViewData["auditSms"])" />
+<input type="hidden" name="appAuditSms" id="appAuditSms" value="@(ViewData["appAuditSms"])" />
+<input type="hidden" name="onlySendChild" id="onlySendChild" value="@(ViewData["onlySendChild"])" />
+<input type="hidden" name="def_receivers" id="def_receivers" value="@(Request["touserid"])" />
+<router-view></router-view>
+<script type="text/html" id="picture-message-editor">
+    <div class="wrapper">
+        <div class="content">
+            <div class="info">
+                <img-editor :imgs="imgs" :maxcnt="maxcnt" :uploadimgs="uploadimgs"></img-editor>
+                <audio-editor :audio="audio" v-show="!!audio"></audio-editor>
+                <div class="textarea" v-html="content.replace('\n','<br>')">
+                </div>
+            </div>
+        </div>
+        <foot :tab="tab" :record="record" :uploadimgs="uploadimgs" :maxcnt="maxcnt"></foot>
+    </div>
+</script>
+
+<script type="text/html"  id="text-message-editor">
+    <div class="wrapper">
+        <div class="content">
+            <div class="info">
+                <div class="textarea">
+                    <textarea placeholder="输入园所通知内容..."  v-model="content" class="needsclick" ></textarea>
+                </div>
+                <audio-editor :audio="audio" v-show="!!audio"></audio-editor>
+                <img-editor :imgs="imgs" :maxcnt="maxcnt" :uploadimgs="uploadimgs"></img-editor>
+            </div>
+        </div>
+        <foot :tab="tab" :record="record" :uploadimgs="uploadimgs" :maxcnt="maxcnt"></foot>
+    </div>
+</script>
+
+<script type="text/html" id="sms-editor">
+    <div class="wrapper ">
+        <div class="content">
+            <div class="info">
+                <div class="textarea">
+                    <textarea placeholder="输入手机短信内容..." v-model="content" class="needsclick" ></textarea>
+            <div class="message-tips">
+                您还可以输入：<span class="blue">{{enablecnt}}</span>个字符 剩余短信：<span class="blue">{{surpluscnt}}</span>条
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="video-message-editor">
+    <div class="wrapper ">
+        <div class="content" >
+            <div class="info">
+                <video-editor :video="video" :uploadvideo="uploadvideo" :del="del"></video-editor>
+                <div class="textarea" v-html="content.replace('\n','<br>')">
+                </div>
+            </div>
+        </div>
+        <foot :tab="tab"></foot>
+    </div>
+</script>
+<script type="text/html" id="foot">
+    <div class="footer">
+        <div class="nav border">
+            <a v-if="tab.audio" v-on:click="record" class="icon-record"></a>
+            <a v-if="tab.word" v-link="'content'" class="icon-word"></a>
+            <a v-if="tab.img" v-on:click="uploadimgs" class="icon-upphoto"></a>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="video-editor">
+    <div>
+        <div class="video">
+            <a v-show="!!video" class="play icon-play" v-on:click="play"></a>
+            <a v-show="!!video" class="del icon-close" v-on:click="del"></a>
+            <p v-show="!!video" class="img_bg"></p>
+            <img v-show="!!video" src="/Content/message/img/alpha.png" :style="{background: 'url('+video+'?vframe/jpg/offset/1) no-repeat center center',backgroundSize:'cover'}"/>
+            <a v-show="!!!video" class="up-video icon-video" v-on:click.stop="uploadvideo"><span>上传视频</span></a>
+        </div>    
+        <confirm :show="confirm.isShow" :info="confirm.info" :yes="yes" :yestext="'确定'" :no="no" :notext="'取消'"></confirm>
+    </div>
+</script>
+
+<script type="text/html" id="img-editor">
+    <div class="photo">
+        <ul>
+            <li v-for="img in imgs">
+                <img :src="img.url" v-on:click="show($index)"/>
+            </li>
+            <li class="upload" v-show="maxcnt>imgs.length"><a class="icon-add" v-on:click="uploadimgs">上传照片</a></li>
+        </ul>
+    </div>
+</script>
+
+<script type="text/html" id="audio-editor">
+    <div>
+        <div class="voice">
+            <p class="arrow-left"></p>
+            <p class="sum" v-on:click="play()">{{{length}}}
+            </p>
+            <p class="sprite" :class="playing ? 'on' : ''"></p>
+            <a class="del icon-close" v-on:click="del"></a>
+            <audio :src="audio" style="display: none;" preload controls v-on:loadedmetadata="loadedmetadata" v-on:ended="ended" v-on:error="loaderror"></audio>
+        </div>
+        <confirm :show="confirm.isShow" :info="confirm.info" :yes="yes" :yestext="'确定'" :no="no" :notext="'取消'"></confirm>
+    </div>
+</script>
+
+<script type="text/html" id="text-editor">
+    <div class="wrapper">
+        <div class="content">
+            <div class="info">
+                <div class="textarea">
+                    <textarea placeholder="输入内容..." v-model="content" class="needsclick" ></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="selector">
+    <div class="wrapper">
+        <div class="tab border">
+            <ul class="swiper-pagination swiper-pagination-h swiper-pagination-clickable swiper-pagination-bullets">
+                <li class="swiper-pagination-bullet" :class="tab=='teachers'?' swiper-pagination-bullet-active':''"
+                    v-on:click="shift('teachers')" v-show="onlysendchild==0">教师<span></span></li>
+                <li class="swiper-pagination-bullet" :class="tab=='students'?' swiper-pagination-bullet-active':''"
+                    v-on:click="shift('students')">家长<span></span></li>
+            </ul>
+        </div>
+        <div class="content">
+            <select-list :groups="teachers" v-show="tab=='teachers'"></select-list>
+            <select-list :groups="students" v-show="tab=='students'"></select-list>
+        </div>
+        <div class="footer">
+            <div class="message-tips">
+                <dl>
+                    <dd class="timing border">
+                        <p class="name icon-timing sizemiddle">定时发送:<span style="color: #FFA500; padding-left: .2rem;">{{time}}</span>
+                        </p>
+                        <p class="sum" v-on:click="settime"><a class="choose" :class="!!time?'on':''"></a></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>    
+    <confirm :show="confirm.isShow" :info="confirm.info" :yes="yes" :yestext="confirm.yesText" :no="no" :notext="confirm.noText"></confirm>
+    <confirm :show="beforeSend.isShow" :info="beforeSend.info" :yes="send" :yestext="beforeSend.yesText" :no="dontSend" :notext="beforeSend.noText"></confirm>
+    <router-view></router-view>
+</script>
+
+<script type="text/html" id="select-list">
+    <div class="people">
+        <dl>
+@*            <dd class="border" v-on:click="selectall">
+                <p class="name">全选</p>
+                <p class="sum">{{selectedcnt}}/{{total}}人
+                    <a class="choose" :class="selectedcnt==(messagetype>0?total:canSmsCount)?'on':''"></a>
+                </p>
+            </dd>*@
+            <dd class="border" v-for="group in groups" v-show="group.isShow">
+                <p class="name" v-on:click="toggle($index)">
+                    <i :class="group.open?'css-downarrow':'css-rightarrow'"></i>{{group.name}}
+                    <span class="t-bz" v-if="group.mobileIllegalCount>0&&messagetype==0">号码无效<em>{{group.mobileIllegalCount}}</em>人</span>
+                </p>
+                <p class="sum" v-on:click.stop="selectgroup($index)">
+                    {{group.selectedcnt||0}}/{{group.member.length||0}}人
+                    <a class="choose" :class="group.selectedcnt==(messagetype>0? group.member.length:group.canSmsCount)&&(messagetype>0? group.member.length:group.canSmsCount)!=0?'on':''"></a>
+                </p>
+                <div v-show="group.open">
+                    <ul>
+                        <li class="border" v-for="p in group.member" v-on:click="select($parent.$index,$index)">
+                            <p class="name">
+                                <span class="vip" v-if="messagetype==0&&p.isvip==1"></span>
+                                <span class="head"><img :src="(p.headpic.indexOf('headphoto.yp.yeyimg.com')>0?p.headpic+'!/sq/100':p.headpic)"/></span>
+                                {{p.username}}
+                                <template v-if="messagetype==0">
+                                    <span class="number" v-if="p.mobile | isMobileIllegal">号码无效</span>
+                                    <template v-else>
+                                        <span class="number" v-if="messagetype==0&&needVip&&p.isvip==0">未开VIP</span>
+                                    </template>
+                                </template>
+                            </p>
+                            <p class="sum">{{p.identity}}<a class="choose" :class="p.selected?'on':''"></a></p>
+                        </li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+    </div>
+</script>
+
+<script type="text/html" id="receipt">
+    
+    <div class="poplayout">
+        <div class="pop-body">
+            <div class="pop">
+                <div class="select-time">
+                    <p class="tips">为了方便您了解通知阅读情况，请选择接收回执时间</p>
+                    <div class="time">
+                        <a class="border" v-on:click="select(1)" :class="receipt==1?'on':''"><span>一小时后</span></a>
+                        <a class="border" v-on:click="select(2)" :class="receipt==2?'on':''"><span>两小时后</span></a>
+                        <a class="border" v-on:click="select(3)" :class="receipt==3?'on':''"><span>三小时后</span></a>
+                        <a class="border" v-on:click="select(4)" :class="receipt==4?'on':''"><span>上午10：00</span></a>
+                    </div>
+                    <div class="btn"><a v-on:click="send">发送</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="black-overlay"></div>
+    </div>
+</script>
+
+<script type="text/html" id="main">
+    <div class="wrapper">
+        <div class="content" style="background: #f1f1f1;">
+            <div class="notice margin">
+                <dl>
+                    <template v-for="item in entrance">
+                        <dd v-if="item.isShow">
+                            <a v-link="{name:item.route}">
+                                <span class="icon" :class="item.icon"></span>
+                                <span class="text sizesmall">{{item.title}}</span>
+                            </a>
+                        </dd>
+                    </template>
+                </dl>
+            </div>
+        </div>
+        <div class="footer" style="background: #f1f1f1;">
+	 	    <p class="see-history"><a v-on:click.stop="history">查看历史消息</a></p>
+	    </div>
+    </div>
+</script>
+
+<script type="text/html" id="confirm">
+    <div class="poplayout" v-show="show">
+        <div class="pop-body">
+            <div class="pop">
+                <div class="confirm">
+                    <div class="text border">{{info}}</div>
+                    <div class="btn"><a class="border yes" v-on:click="no" v-show="!!notext">{{notext}}</a><a v-on:click="yes" v-show="!!yestext">{{yestext}}</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="black-overlay"></div>
+    </div>
+</script> 
+
+    
+    <script src="//cdn.staticfile.org/zepto/1.1.6/zepto.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue/1.0.28/vue.min.js?v=1"></script>
+    <script src="//cdn.staticfile.org/vue-router/0.7.13/vue-router.min.js?v=1"></script>    
+    <script src="/Scripts/lib/tools.min.js?v=1"></script>
+    <script src="/Scripts/lib/zyapp.min.js?v=201610251526"></script>
+    <script src="/Scripts/message/index.min.js?v=201705181706"></script>
+    <script>
+      document.querySelector('.sk-circle').style.display = 'none'
+    </script>
+</body>
+
+</html>

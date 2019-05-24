@@ -1,0 +1,138 @@
+﻿@using com.zgyey.and_smsapp.model
+@{
+    ViewBag.Title = "发通知";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    LoginUser_Info loginuser = ViewData["loginuser"] as LoginUser_Info;
+    IList<Grade_Info> gradelist = ViewData["gradelist"] as IList<Grade_Info>;
+    IList<Teacher_Info> tealist = ViewData["tealist"] as IList<Teacher_Info>;
+    
+    int tousid = int.Parse(ViewData["touid"].ToString());
+    int uid = int.Parse(ViewData["uid"].ToString());
+    string realname = ViewData["realname"].ToString();
+    string srvUrl = com.zgyey.hbapp.common.Setting.HostUrl;
+    Kin_Sms sms = ViewData["sms"] as Kin_Sms;
+}  
+<style>
+    #imgContainer img
+    {
+        height:30px;width:30px;
+    }
+</style>
+<script>
+    function loadComplete() {
+        initView();
+    }
+</script>
+@Html.Hidden("ulist",ViewData["ulist"])
+@Html.Hidden("tlist","")
+@Html.Hidden("usertype",loginuser.usertype)
+@Html.Hidden("person_count",tousid>0?"1人":"")
+@Html.Hidden("type",1)
+@Html.Hidden("kid",ViewData["kid"])
+@Html.Hidden("uid",ViewData["uid"])
+@Html.Hidden("istime",0)
+@Html.Hidden("onlySendChild",loginuser.onlySendChild)
+
+@Html.Hidden("appver",ViewData["appver"])
+@Html.Hidden("client",ViewData["client"])
+@Html.Hidden("img_url","")
+@Html.Hidden("smsLen",loginuser.smsLen)
+@Html.Hidden("appAuditSms",loginuser.appAuditSms)
+@Html.Hidden("auditSms",loginuser.auditSms)
+@Html.Hidden("needAudit",loginuser.appAuditSms)
+@if(loginuser.openWebSms > 0)
+{
+<header class="header ajaxload send_message">
+	<div class="tab">
+        <a id="sendtype1" href="javascript:selectSendType(1);" class="on" style="border-right:1px solid #eee">APP消息<span></span></a>
+        <a id="sendtype2" href="javascript:selectSendType(2);">手机短信<span></span></a>
+    </div>
+</header>
+}
+<section class="section ajaxload send_message">
+	<div class="notice">
+    <dl>
+    <dd class="people" onclick="javascrip:showView(1);">
+    	<p class="p_box"><input id="persons" type="text" placeholder="@(tousid>0?realname:"选择接收用户")" readonly ></p>
+        <span id="personcount" class="sum">@(tousid>0?"1人":"")</span>
+        <a href="javascript:void(0);" class="add_p"></a>
+    </dd>
+    <dd class="con">
+        <p class="n_title"><input type="text"  id="smstitle" name="smstitle" value="@(loginuser.usertype>1?"园所通知":"班级通知")"></p>
+        <p class="n_text"><textarea id="content" name="content" placeholder="请在此输入通知内容！"></textarea></p>
+    </dd>
+    <dd class="up_photo">
+    	<a href="javascript:void(0);" onclick="javascript:uploadPhoto();" class="add_img" >
+            <span id="add_img" class="add_img_text">上传图片</span>
+            <span class="up_img" id="up_img" style="display:none;" >
+                <img id="up_img_url"  src="/content/images/new.png" style="width:60px; height:60px;" />
+            </span>
+    	</a>
+    </dd>
+	<dd class="bz platform hide"><p>您还可以输入:<input id="remLenb" name="remLenb" type="text" value="200" size="3" readonly style="border:0; color:#f00; height:16px;text-align:center ">个字符</p></dd>
+    <dd class="option">
+    	<a href="javascript:void(0);" onclick="javascrip:showView(2);">通知内容模板选择<span class="arrow_left"></span></a>
+        <a href="javascript:timeSendSelected();">定时发送<span id="timesend" class="check"></span></a>
+    </dd>
+    </dl>
+    </div>
+    <div class="notice_btn"><a href="javascript:void(0);" onclick="javascript:sendEvent('@srvUrl',@loginuser.smsLen);">发送</a></div>
+    <p  class="infosum platform hide">本月已发：<span class="red">@sms.sendcount</span> 条；剩余短信：<span class="red">@sms.totalcount</span>条</p>
+    <p class="history"><a href="javascript:void(0);" onclick="javascrip:hisSmsNotice('@srvUrl');">历史消息<span></span></a></p>
+
+</section>
+
+<div id="person" class="ajaxload" style="display:none;">
+    @{
+        ViewDataDictionary person = new ViewDataDictionary();
+        person.Add("loginuser", loginuser);
+        person.Add("gradelist", gradelist);
+        person.Add("tealist", tealist);
+        person.Add("selecttype",ViewData["selecttype"]);
+    }
+    @Html.Partial("SelectPerson", person)
+</div>
+<div id="module" class="ajaxload" style="display:none;">
+    @Html.Partial("Module")
+</div>
+
+<div id="time_send" class="ajaxload" style="display:none;">
+    @Html.Partial("TimeSend", person)
+</div>
+
+<div id="popWin" style="display:none;">
+    <div class="black"></div>
+    <div class="pop">
+        <div class="info">
+            您将使用<i style="color:#F00">50</i>条短信<br>
+		    短信数量不足，请联系客服充值
+        </div>
+        <div class="pop_btn">
+            <a href="javascript:popWin_close();" class="cancel">取消</a>
+            <a href="javascript:;" id="send" class="confirm">确定</a>
+        </div>
+    </div>
+</div>
+
+<div id="msgWin" style="display:none;">
+<div class="black"></div>
+    <div class="pop02">
+    	<h2 class="pop_header">提示</h2>
+    	<p id="msg">您的问题正在处理中</p>
+        <a href="javascript:hideCommonMsg();" id="queding" class='queding02'>确定</a>
+    </div>
+</div>
+
+
+<div class="black" id="poptime_bg" style="display:none;"></div>
+<div class="poptime" id="poptime" style="display:none;">
+    <a href="javascript:poptimeClose();" class="pt_close"></a>
+    <div class="pp2">
+    <p class="text">阅读状态回执自动报告时间</p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',1);">1小时后</a></p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',2);">2小时后</a></p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',3);">3小时后</a></p>
+    <p class="btn"><a href="javascript:sendAppSms('@srvUrl',4);">上午08:00</a></p>
+    </div>
+</div>
+

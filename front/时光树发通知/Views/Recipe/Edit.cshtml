@@ -1,0 +1,51 @@
+﻿@using com.zgyey.and_smsapp.model
+@model com.zgyey.and_smsapp.model.RecipeInfo
+@{
+    ViewBag.Title = "编辑每周食谱";
+    Layout = "~/Views/Shared/_Recipe.cshtml";
+
+    string recipeType = Model.Rec_types;
+    recipeJson rec = Model.GetJson();
+    IList<week_content> week_contents = rec.week_contents;
+}
+
+
+<form id="addForm" name="addForm">
+    @Html.Hidden("kid", ViewData["kid"])
+    @Html.Hidden("recipeType", ViewData["recipeType"])
+    @Html.Hidden("contentid", ViewData["contentid"])
+    @* <a href="javascript:RECIPE.save(1);" class="preserve"></a>*@
+    <div class="mzsp_title">
+        <input id="c00" name="c00" type="text" placeholder="请在这里填写食谱标题" value="@Model.Title"></div>
+    <div class="mzsp">
+        <dl>
+            @foreach (week_content weekContent in week_contents)
+            {
+                int col = 0;
+                <dd>
+                    <p class="title @Html.Raw("week_a" + weekContent.icon_index)"><span class="week">@weekContent.sdate</span><span class="time">@weekContent.sendtimeStr</span></p>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mzsp_table">
+                        @foreach (day_content dayContent in weekContent.day_contents)
+                        {
+                            col++;
+                            <tr>
+                                <td align="center" class="@Html.Raw("week_b" + weekContent.icon_index)">
+                                    @dayContent.eatname
+                                </td>
+                                <td>
+                                    <textarea id="@Html.Raw(string.Format("c{0}{1}", weekContent.icon_index, col))" name="@Html.Raw(string.Format("c{0}{1}", weekContent.icon_index, col))" class="recipeContent">@dayContent.foot</textarea></td>
+                            </tr>
+                        }
+                    </table>
+                </dd>
+            }
+        </dl>
+    </div>
+</form>
+<script src="~/Scripts/js/recipe.js"></script>
+<script src="https://cdn.rawgit.com/florian/cookie.js/master/cookie.min.js"></script>
+<script src="~/Scripts/js/ovgap.js"></script>
+<script src="~/Scripts/browser.js?ver=@(DateTime.Now.Ticks)"></script>
+<script>
+    setTimeout('onDynamicTab({ type: 1, content: "保存", click: "RECIPE.save(1);"})', 50);
+</script>
