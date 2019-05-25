@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>添加观察记录</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+  <link href="/Content/css/styles.css" type="text/css" rel="stylesheet">
+  <link href="/Content/css/iconfont.css" type="text/css" rel="stylesheet">
+  <script src="/Content/js/lib/flexible.js" type="text/javascript"></script>
+  <style>
+    .ieep, .course-record {
+      position: relative;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .course-edit {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background-color: #fff;
+    }
+
+    .voice .sum {
+      text-indent: .2rem;
+      width: inherit;
+      height: inherit;
+      padding-left: 0;
+    }
+
+    body {
+      height: 100%;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="app" style="height:100%">
+    <input type="hidden" id="activity_id" name="activity_id" value="@Request["ids"]" />
+    <router-view></router-view>
+  </div>
+  <script type="text/html" id="main">
+  <div class="ieep">    
+    <router-view v-on:insertAssess="insertAssess"></router-view>
+    <div class="course-record"> 
+      <p class="title red">{{activity}}</p>
+      <div class="top-box">
+        <div class="t-box">
+          	<strong>探究主题</strong> | {{activity}}
+          </div>
+        <div class="t-box">
+        	<strong>观 察 点</strong> | {{viewpoint}}
+        </div>
+        <div class="btn">
+          <ul>
+            <li v-on:click.stop="addContent(0)"><a class="icon-info"></a><span class="text">文字</span></li>
+            <li v-on:click.stop="addImg(0)"><a class="icon-photo"></a><span class="text">图片</span></li>
+            <li v-on:click.stop="addAudio(0)"><a class="icon-record"></a><span class="text">声音</span></li>
+            <li v-on:click.stop="addVideo(0)"><a class="icon-video"></a><span class="text">视频</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="border-bot"></p>
+      <div class="con-box">
+        <div class="box no-con" v-show="assessList.length===0">
+          你还没有添加内容哦~
+        </div>
+        <!--end-->
+        <box v-show="assessList.length>0" v-for="(assess,index) in assessList" :ind="index" :assess="assess" :del="del" v-on:insertAssess="insertAssess"></box>
+      </div>
+      <!--course-arrange end-->
+    </div>
+  </div>
+  </script>
+  <script type="text/html" id="box">
+    <div class="box">
+      <a v-on:click.stop="del(ind)" class="close"></a>
+      <v-content v-if="assess.ctype == 0" :assess="assess"></v-content>
+      <v-img v-if="assess.ctype == 1" :assess="assess"></v-img>
+      <v-audio v-if="assess.ctype == 2" :assess="assess"></v-audio>
+      <v-video v-if="assess.ctype == 3" :assess="assess"></v-video>
+      <p class="add" v-on:click.stop="add" v-show="!isAddListShow"><a class="icon-add">新增</a></p>
+      <p class="add-box" v-show="isAddListShow">
+        <a v-on:click.stop="close" class="icon-close"></a>
+        <a v-on:click.stop="addContent(ind)" class="icon-info"></a>
+        <a v-on:click.stop="addImg(ind)" class="icon-photo"></a>
+        <a v-on:click.stop="addAudio(ind)" class="icon-record"></a>
+        <a v-on:click.stop="addVideo(ind)" class="icon-video"></a>
+      </p>
+    </div>
+  </script>
+  <script type="text/html" id="v-content">
+    <div class="edit">
+      <textarea v-model="assess.body"></textarea>
+    </div>
+  </script>
+  <script type="text/html" id="v-audio">
+    <div class="edit">
+		  <div class="voice" v-on:click.stop="play">
+			  <p class="arrow-left"></p>
+		    <p class="sum">{{length}}</p>
+		    <p class="sprite"></p><!--默认状态去掉on 开始播放加上on-->
+        <audio controls="controls" :src="assess.body" style="display:none;" v-on:loadedmetadata="loadedmetadata" v-on:loaderror="loaderror" v-on:ended="ended"></audio>
+		  </div>
+    </div>
+  </script>
+  <script type="text/html" id="v-img">
+    <div class="edit">
+      <img :src="assess.body+'!/fw/200'" />
+      <textarea v-model="assess.describe"></textarea>
+    </div>
+  </script>
+  <script type="text/html" id="v-video">
+    <div class="edit">
+      <div class="video" v-on:click.stop="play">
+        <a class="play icon-play"></a>
+        <p class="img_bg"></p>
+        <img width="100%" src="/Content/img/alpha.png" :style="{ background: 'url('+assess.body+'?vframe/jpg/offset/1) no-repeat',backgroundSize:'cover'}"/>
+      </div>
+    </div>
+  </script>
+  <script type="text/html" id="e-content">
+    <div class="course-edit">
+      <div class="text">
+    	  <textarea placeholder="输入观察记录..." v-model="assess.body"></textarea>
+      </div>
+    </div>
+  </script>
+  <script type="text/html" id="e-img">
+    <div class="course-edit">
+       	<div class="text" v-show="assess.body">
+       		<a v-on:click.stop="del" class="close p-wz"></a>
+       		<img :src="assess.body+'!/fw/200'"/>
+       		<textarea placeholder="输入图片说明..." style="min-height: 3rem;" v-model="assess.describe"></textarea>
+       	</div>
+       	<a v-on:click.stop="uploadSingleImg" class="bot-btn"><span class="icon-photo"></span></a>
+    </div>
+  </script>
+  <script type="text/html" id="e-audio">    
+    <div class="course-edit">
+    	<div class="box" v-show="assess.body">
+	     	<a v-on:click="del" class="close"></a>
+		    <div class="edit">
+		      <div class="voice" v-on:click.stop="play">
+				    <p class="arrow-left"></p>
+		        <p class="sum">{{length}}</p>
+		        <p class="sprite"></p><!--默认状态去掉on 开始播放加上on-->
+            <audio controls="controls" :src="assess.body" style="display:none;" v-on:loadedmetadata="loadedmetadata" v-on:loaderror="loaderror" v-on:ended="ended"></audio>
+		     	</div>
+		    </div>
+	    </div>
+    	<a class="bot-btn" v-on:click.stop="record"><span class="icon-record"></span></a>
+    </div>
+  </script>
+  <script type="text/html" id="e-video">
+    <div class="course-edit">
+      <div class="box" v-show="assess.body">
+	    	<a v-on:click.stop="del" class="close video-c"></a>
+		    <div class="edit" v-on:click.stop="play">
+		    	<div class="video">
+			      <a class="play icon-play"></a>
+			      <p class="img_bg"></p>
+            <img width="100%" src="/Content/img/alpha.png" :style="{ background: 'url('+assess.body+'?vframe/jpg/offset/1) no-repeat',backgroundSize:'cover'}"/>
+		      </div>
+		    </div>
+	    </div>
+      <a v-on:click="video" class="bot-btn"><span class="icon-video"></span></a>
+    </div>
+  </script>
+
+
+
+  <script>
+    (function () {
+      var autoset = function () {
+        this.style.height = this.style.minHeight
+        this.style.height = this.scrollHeight + 'px'
+      }
+      var autoTextarea = function (el) {
+        el.oninput = el.onpropertychange = el.onfocus = autoset.bind(el)
+        autoset.call(el)
+      }
+      var set = function () {
+        var els = document.querySelectorAll('textarea')
+        for (var i = 0; i < els.length; i++) {
+          autoTextarea(els[i])
+        }
+      }
+      document.addEventListener('DOMNodeInserted', set, false)
+      document.addEventListener('DOMAttrModified', set, false)
+      document.addEventListener('DOMNodeRemoved', set, false)
+    })()
+  </script>
+  <script src="/Scripts/jquery.min.js"></script>
+  <script src="/Scripts/vue.min.js?v=1"></script>
+  <script src="/Scripts/vue-router.min.js?v=1"></script>
+  <script src="/Scripts/zyapp.js?v=201702161552"></script>
+  <script src="/Scripts/courserecord.js?v=201709060933"></script>
+</body>
+</html>

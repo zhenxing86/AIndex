@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://classhealth.zgyey.com/board/index?uid=1606522&kid=28277&cid=116477 -->
+<html data-dpr="1" style="font-size: 43.4783px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>班级看板</title>
+  <script src="./board_files/flexible.js" type="text/javascript"></script>
+  <script src="./board_files/jquery-3.3.1.min.js"></script>
+  <script src="./board_files/director.min.js"></script>
+  <script src="./board_files/jquery_extend.js"></script>
+  <link rel="stylesheet" href="./board_files/common.css">
+  <link rel="stylesheet" href="./board_files/iconfont.css">
+  <link rel="stylesheet" href="./board_files/styles.css">
+
+  <script>
+    $(function () {
+      // $('.mask').css('display', 'none')
+    })
+  </script>
+  <style>
+    .tabs {
+      align-items: baseline;
+    }
+
+      .tabs .tab {
+        height: 100%;
+        overflow: auto;
+      }
+
+      .tabs .title {
+        color: #333;
+        background-color: #99CCFF;
+        font-size: 16px;
+        line-height: 2.4em;
+        padding: 0 0.48rem;
+      }
+
+      .tabs > div {
+        padding: 0 6px;
+      }
+
+        .tabs > div:first-child {
+          padding-left: 12px;
+        }
+
+        .tabs > div:last-child {
+          padding-right: 12px;
+        }
+
+    .list .cell .cell-ft {
+      color: #000;
+    }
+
+    .name {
+      margin-right: 6px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      display: inline-block;
+    }
+
+    body {
+      height: 100%;
+    }
+
+    .mask .dialog {
+      border-radius: 0;
+      max-height: 80%;
+    }
+  </style>
+</head>
+
+<body style="font-size: 16px;">
+
+  <!-- 补检列表 -->
+  <div class="mask" style="display: none;" id="dlg_wcj">
+    <div class="dialog" style="width: 750px;">
+      <div class="dialog-hd">
+        <div class="cell">
+          <div class="cell-bd">补检</div>
+          <div class="cell-ft"><span class="icon icon-close"></span></div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="dialog-bd">
+        <div class="table columns-2">
+            <div class="cell" data-userid="2030456">
+              <div class="cell-bd wordkeep">谢志</div>
+              <div class="cell-ft red ellipsis"><span class="btn btn-yellow btn-sm">补检</span></div>
+            </div>
+            <div class="cell" data-userid="2399181">
+              <div class="cell-bd wordkeep">侯建军</div>
+              <div class="cell-ft red ellipsis"><span class="btn btn-yellow btn-sm">补检</span></div>
+            </div>
+          <div class="placeholder"></div>
+        </div>
+      </div>
+      <div class="dialog-ft">
+        <div class="btn-area" style="justify-content: flex-end;">
+          <span class="btn btn-sm flex-0" data-dismiss="">关闭</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 异常登记 -->
+  <div class="mask" style="display: none;" id="dlg_mcmakeup">
+    <div class="dialog" style="width: 500px;">
+      <div class="dialog-hd">
+        <div class="cell">
+          <div class="cell-bd">晨检补检登记</div>
+          <div class="cell-ft"><span class="icon icon-close"></span></div>
+        </div>
+      </div>
+      <div class="dialog-bd">
+        <input type="hidden" name="userid" value="0">
+        <input type="hidden" name="tw" value="37.2">
+        <div class="cell title">
+          <div class="cell-bd">体温情况</div>
+        </div>
+        <div class="table columns-2">
+          <label class="cell checkbox">
+            <div class="cell-hd">
+              <input type="radio" name="cjtw" id="tw1" value="" checked=""><span class="icon icon-checked"></span>
+            </div>
+            <div class="cell-bd">体温正常<em class="gray" style="font-size: 0.8em;">(不高于37.2℃)</em></div>
+          </label>
+          <label class="cell checkbox">
+            <div class="cell-hd">
+              <input type="radio" name="cjtw" id="tw2" value="1"><span class="icon icon-checked"></span>
+            </div>
+            <div class="cell-bd">体温偏高</div>
+            <div class="cell-ft red"></div>
+          </label>
+        </div>
+        <div class="cell title">
+          <div class="cell-bd">其他异常</div>
+        </div>
+        <div class="table columns-2">
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z2" value="2"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">咳嗽</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z3" value="3"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">喉咙发炎</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z4" value="4"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">流鼻涕</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z5" value="5"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">皮疹</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z6" value="6"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">腹泻</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z7" value="7"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">红眼病</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z8" value="8"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">重点观察</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z9" value="9"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">剪指甲</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z10" value="10"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">服药提醒</div>
+            </label>
+            <label class="cell checkbox">
+              <div class="cell-hd">
+                <input type="checkbox" name="zz" id="z11" value="11"><span class="icon icon-checked"></span>
+              </div>
+              <div class="cell-bd">家长带回</div>
+            </label>
+          <div class="placeholder"></div>
+        </div>
+      </div>
+      <div class="dialog-ft">
+        <div class="btn-area" style="justify-content: flex-end;">
+          <span class="btn btn-sm flex-0" data-dismiss="">关闭</span>
+          <span class="btn btn-sm btn-yellow flex-0" id="mksubmit">晨检登记</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 体温 -->
+  <div class="mask" style="display: none;" id="dlg_tw">
+    <div class="dialog" style="width: 300px;">
+      <div class="dialog-hd">
+        <div class="cell">
+          <div class="cell-bd">体温</div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="dialog-bd">
+        <div class="cell">
+          <div class="cell-bd">
+            <select name="tw" id="" style="font-size: 14px;">
+                <option value="37.3">37.3℃</option>
+                <option value="37.4">37.4℃</option>
+                <option value="37.5">37.5℃</option>
+                <option value="37.6">37.6℃</option>
+                <option value="37.7">37.7℃</option>
+                <option value="37.8">37.8℃</option>
+                <option value="37.9">37.9℃</option>
+                <option value="38">38℃</option>
+                <option value="38.1">38.1℃</option>
+                <option value="38.2">38.2℃</option>
+                <option value="38.3">38.3℃</option>
+                <option value="38.4">38.4℃</option>
+                <option value="38.5">38.5℃</option>
+                <option value="38.6">38.6℃</option>
+                <option value="38.7">38.7℃</option>
+                <option value="38.8">38.8℃</option>
+                <option value="38.9">38.9℃</option>
+                <option value="39">39℃</option>
+                <option value="39.1">39.1℃</option>
+                <option value="39.2">39.2℃</option>
+                <option value="39.3">39.3℃</option>
+                <option value="39.4">39.4℃</option>
+                <option value="39.5">39.5℃</option>
+                <option value="39.6">39.6℃</option>
+                <option value="39.7">39.7℃</option>
+                <option value="39.8">39.8℃</option>
+                <option value="39.9">39.9℃</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="dialog-ft">
+        <div class="btn-area" style="justify-content: flex-end;">
+          <span class="btn btn-sm btn-yellow flex-0">确定</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 关怀问候 -->
+  <div class="mask" style="display: none;" id="dlg_solicitude">
+    <input type="hidden" name="userid" value="2445905">
+    <div class="dialog" style="width: 800px;">
+      <div class="dialog-hd">
+        <div class="cell">
+          <div class="cell-bd">关怀问候</div>
+          <div class="cell-ft"><span class="icon icon-close"></span></div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="dialog-bd" id="contents"><label class="cell checkbox"><div class="cell-hd" style="margin-right: 10px;"><input type="radio" name="contents"><span class="icon icon-checked"></span></div><div class="cell-bd">尊敬的陈艺丹家长，皮疹可能会引起瘙痒，必要时帮宝宝戴上手套睡觉，以防夜间无意识去抓患处，导致伤口感染。祝宝宝早日康复！</div></label><label class="cell checkbox"><div class="cell-hd" style="margin-right: 10px;"><input type="radio" name="contents"><span class="icon icon-checked"></span></div><div class="cell-bd">尊敬的陈艺丹家长，皮疹可能会引起瘙痒，可剪短宝宝指甲，避免抓破患处导致感染。生病期间不要让宝宝吃刺激性的食物。</div></label><label class="cell checkbox"><div class="cell-hd" style="margin-right: 10px;"><input type="radio" name="contents"><span class="icon icon-checked"></span></div><div class="cell-bd">尊敬的陈艺丹家长您好，今天发现宝宝有轻微皮疹症状，在对症下药的同时爸妈们也要尽可能追寻病因，隔绝致敏原，避免再刺激。</div></label><label class="cell checkbox"><div class="cell-hd" style="margin-right: 10px;"><input type="radio" name="contents"><span class="icon icon-checked"></span></div><div class="cell-bd">尊敬的陈艺丹家长您好，皮疹的种类和发病原因较多，宝宝患皮疹了需及时带宝宝就医。祝宝宝早日康复！</div></label></div>
+      <div class="hr"></div>
+      <div class="dialog-ft">
+        <div class="btn-area" style="justify-content: flex-end;">
+          <div class="btn btn-sm flex-0" data-dismiss="">取消</div>
+          <div class="btn btn-sm btn-yellow flex-0" id="send">确定</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="flexbox" style="flex-direction: column; height: 100%;">
+    <div class="tabs" style="width: 100%; margin-bottom: 10px;">
+      <div class="cell title">
+        <div class="cell-bd text-center">幼儿保育管理每日看板</div>
+      </div>
+    </div>
+    <div class="flex-1 flexbox tabs" style="position: relative; flex-direction: row;">
+      <div class="flex-1 tab" id="tb_todo"><div class="cell title">
+  <div class="cell-bd text-center">今日待办事项</div>
+</div>
+<div class="flex-1" style="position: relative;">
+  <div class="list" style="height: 100%;">
+      <div class="cell" data-userid="2235646">
+        <div class="cell-bd">
+          <p><span class="name">钦州叶</span><span class="red">家长带回</span></p>
+          <p class="gray">今日晨检有异常,请老师关注孩子健康状况,给于关怀问候</p>
+        </div>
+        <div class="cell-ft">
+            <span class="btn btn-yellow btn-sm">关怀问候</span>
+        </div>
+      </div>
+      <div class="cell" data-userid="2445905">
+        <div class="cell-bd">
+          <p><span class="name">陈艺丹</span><span class="red">皮疹</span></p>
+          <p class="gray">今日晨检有异常,请老师关注孩子健康状况,给于关怀问候</p>
+        </div>
+        <div class="cell-ft">
+            <span class="btn btn-yellow btn-sm">关怀问候</span>
+        </div>
+      </div>
+      <div class="cell" data-userid="1988312">
+        <div class="cell-bd">
+          <p><span class="name">孙尘博</span><span class="red">流鼻涕</span></p>
+          <p class="gray">今日晨检有异常,请老师关注孩子健康状况,给于关怀问候</p>
+        </div>
+        <div class="cell-ft">
+            <span class="btn btn-yellow btn-sm">关怀问候</span>
+        </div>
+      </div>
+      <div class="cell" data-userid="2319112">
+        <div class="cell-bd">
+          <p><span class="name">李建营</span><span class="red">剪指甲</span></p>
+          <p class="gray">请老师多注意孩子的行为，避免抓伤到其它小朋友</p>
+        </div>
+        <div class="cell-ft">
+            <span class="btn btn-sm" disabled="disabled">已经提醒</span>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+      <div class="flex-1 tab" id="tb_mc"><div class="cell title">
+  <div class="cell-bd text-center">今日晨检情况</div>
+</div>
+<div class="list">
+  <div class="cell">
+    <div class="cell-bd">已晨检</div>
+    <div class="cell-ft">48人</div>
+  </div>
+  <div class="cell">
+    <div class="cell-bd">未晨检</div>
+    <div class="cell-ft red">2人</div>
+  </div>
+  <div class="cell title">
+    <div class="cell-bd">未晨检小朋友</div>
+  </div>
+  <div id="wcj">
+      <div class="table columns-3 table-center table-noborder">
+          <div class="cell">
+            <div class="cell-bd">谢志</div>
+          </div>
+          <div class="cell">
+            <div class="cell-bd">侯建军</div>
+          </div>
+        <div class="placeholder"></div>
+      </div>
+  </div>
+  <div class="cell title">
+    <div class="cell-bd">晨检异常小朋友</div>
+  </div>
+  <div id="cjyc">
+      <div class="cell">
+        <div class="cell-bd">孙尘博</div>
+        <div class="cell-ft red">流鼻涕</div>
+      </div>
+      <div class="cell">
+        <div class="cell-bd">钦州叶</div>
+        <div class="cell-ft red">家长带回</div>
+      </div>
+      <div class="cell">
+        <div class="cell-bd">李建营</div>
+        <div class="cell-ft red">体温偏高,剪指甲</div>
+      </div>
+      <div class="cell">
+        <div class="cell-bd">陈艺丹</div>
+        <div class="cell-ft red">皮疹</div>
+      </div>
+  </div>
+</div>
+</div>
+      <div class="flex-1 tab" id="tb_health">
+        <div class="cell title">
+          <div class="cell-bd text-center">幼儿健康分析</div>
+        </div>
+        <div class="list">
+          <div class="cell title">
+            <div class="cell-bd">肥胖幼儿名单</div>
+          </div>
+            <div class="table columns-3 table-center table-noborder">
+                <div class="cell">
+                  <div class="cell-bd">符安安</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">林钊铃</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">苏一智</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">文希</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">周星豪</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">邹明振</div>
+                </div>
+              <div class="placeholder"></div>
+            </div>
+          <div class="cell title">
+            <div class="cell-bd">重点关怀小朋友</div>
+          </div>
+            <div class="table columns-3 table-center table-noborder">
+                <div class="cell">
+                  <div class="cell-bd">孙尘博</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">钦州叶</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">李建营</div>
+                </div>
+                <div class="cell">
+                  <div class="cell-bd">陈艺丹</div>
+                </div>
+              <div class="placeholder"></div>
+            </div>
+          <div class="cell title">
+            <div class="cell-bd">过敏源情况</div>
+          </div>
+            <div class="cell">
+              <div class="cell-bd">莫凯</div>
+              <div class="cell-ft red">尘螨，室尘</div>
+            </div>
+            <div class="cell">
+              <div class="cell-bd">苏媚</div>
+              <div class="cell-ft red">蛋白，牛奶</div>
+            </div>
+        </div>
+      </div>
+      <div class="flex-1 tab" id="tb_checking"><div class="cell title">
+  <div class="cell-bd text-center">今日出勤情况</div>
+</div>
+<div class="list">
+  <div class="cell">
+    <div class="cell-bd">全班</div>
+    <div class="cell-ft">50人</div>
+  </div>
+  <div class="cell">
+    <div class="cell-bd">实到</div>
+    <div class="cell-ft">50人</div>
+  </div>
+  <div class="cell">
+    <div class="cell-bd">缺勤</div>
+    <div class="cell-ft red">0人</div>
+  </div>
+  <div class="cell">
+    <div class="cell-bd">请假</div>
+    <div class="cell-ft red">0人</div>
+  </div>
+</div>
+</div>
+    </div>
+    <div class="tabs" style="width: 100%; background-color: #99CCFF; padding: 10px">
+      <div class="btn-area" style="justify-content: flex-end;">
+        <div class="btn btn-yellow btn-sm flex-0" style="padding: .4em 1.4em" id="bj">补检</div>
+        <a class="btn btn-yellow btn-sm flex-0" style="padding:.4em 1.4em" href="https://mqj.zgyey.com/checking/index?kid=0&amp;uid=0&amp;cid=0&amp;token=A490DE6D5FA092A4E6165A958C371B22">点名</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    $(function () {
+      var contents = {
+        '发烧': ['尊敬的{{username}}家长，孩子生病期间要保持室内空气流通，预防细菌继发感染。餐后应用温水漱口，口腔有糜烂时可涂鱼肝油，促使糜烂早日愈合。祝宝宝早日康复！',
+            '尊敬的{{username}}家长，小儿手足口病一般为低热或中等度热，可让宝宝多饮温开水，如出现高热，应立即到医院就诊。',
+            '{{username}}小朋友，生病了要好好休息喔！饮食要清淡、易消化，口腔有糜烂时吞咽食物会比较疼，可以吃一些流质食物。',
+            '{{username}}小朋友，身体有没有好点？老师和其他小朋友都在等着你回来！生病期间要保持饮食清淡，多喝温开水有利于病情的恢复哦。'],
+        '感冒': ['{{username}}小朋友，感冒好点了吗？如果是患风热感冒可以喝点萝卜汤或梨汤。快快好起来，老师和同学们都想念你！',
+            '尊敬的{{username}}家长，孩子感冒期间应注意饮食清淡，如果是风寒感冒，服药后可喝些热粥或热汤，以助药力驱散风寒。',
+            '{{username}}小朋友，感冒期间别吃生冷刺激性的食物，如果是着凉感冒可以熬点红糖姜汤喝，快快好起来，老师和同学都想念你！'],
+        '喉咙发炎': ['{{username}}小朋友，喉咙痛要多喝温水、多吃水果蔬菜喔！冰糖雪梨汤可以有效地缓解喉咙发炎。',
+            '尊敬的{{username}}家长，今天发现宝宝喉咙有点红肿。宝宝喉咙疼痛明显的话，可以采取少量多餐的方法，多吃新鲜水果蔬菜',
+            '尊敬的{{username}}家长，今天发现宝宝喉咙有点发炎。喉咙发炎可能会伴随咳嗽、低烧症状，所以在护理宝宝的时候可以消炎止咳同时进行。',
+            '尊敬的{{username}}家长您好，今天发现宝宝喉咙有点红肿，老师会特别留意宝宝的在园情况，请您放心。',
+            '尊敬的{{username}}家长您好，宝宝喉咙好点没呢？在家可以给宝宝适当多吃梨，以增强咽喉的保养作用。祝宝宝早日康复！',
+            '{{username}}小朋友，喉咙好点没，要注意不能喝冷水，也不能吃辛辣的食物哦。好好休息，老师跟同学们都在等着你回来！'],
+        '咳嗽': ['尊敬的{{username}}家长，晨检发现宝宝有点咳嗽。咳嗽要注意饮食，不要让宝宝吃生冷刺激性的食物。祝宝宝早日康复！',
+            '尊敬的{{username}}家长您好，宝宝好像有点咳嗽哦。宝宝咳嗽一定要及时就诊，切莫盲目的使用镇咳药。祝愿宝宝早日康复！',
+            '尊敬的{{username}}家长您好，今天发现宝宝有点咳嗽。咳嗽可适当煮银耳羹，有润肺的功效。祝宝宝早日康复！'],
+        '皮疹': ['尊敬的{{username}}家长，皮疹可能会引起瘙痒，必要时帮宝宝戴上手套睡觉，以防夜间无意识去抓患处，导致伤口感染。祝宝宝早日康复！',
+            '尊敬的{{username}}家长，皮疹可能会引起瘙痒，可剪短宝宝指甲，避免抓破患处导致感染。生病期间不要让宝宝吃刺激性的食物。',
+            '尊敬的{{username}}家长您好，今天发现宝宝有轻微皮疹症状，在对症下药的同时爸妈们也要尽可能追寻病因，隔绝致敏原，避免再刺激。',
+            '尊敬的{{username}}家长您好，皮疹的种类和发病原因较多，宝宝患皮疹了需及时带宝宝就医。祝宝宝早日康复！'],
+        '流鼻涕': ['尊敬的{{username}}家长，宝宝流鼻涕了可以用湿热的毛巾敷于宝宝鼻子根部，使鼻腔通畅，但请您试过温度之后再接触宝宝皮肤，以免烫到宝宝。',
+            '尊敬的{{username}}家长，晨检发现宝宝有点流鼻涕。家长给宝宝擦鼻涕可后用湿热毛巾捂一捂，再涂上一点油脂，防止皮肤龟裂疼痛。',
+            '尊敬的{{username}}家长您好，今天发现宝宝有点流鼻涕。如果是感冒引起的流鼻涕，可以服用999小儿感冒颗粒。',
+            '尊敬的{{username}}家长您好，今天发现宝宝有点流鼻涕，流鼻涕时衣着需厚度适宜，切莫有穿的越多越好的想法。',
+            '尊敬的{{username}}家长您好，宝宝流鼻涕、鼻子不通气时不可滥用滴鼻药，因为滴鼻药含有对宝宝身体有副作用的麻黄素。'],
+        '红眼': ['尊敬的{{username}}家长，宝宝生病期间请注意宝宝的指甲卫生，尽量避免宝宝用手去揉眼睛，可用柔软的纱布帮宝宝擦拭眼屎。',
+            '尊敬的{{username}}家长，在宝宝生病期间，建议孩子使用过的毛巾、手帕和脸盆要煮沸消毒，晒干后再用。期待宝宝早日回园！',
+            '尊敬的{{username}}家长您好，红眼病是极具传染性和流行性的疾病，爸妈们在照顾宝宝的同时也要注意自我预防哦！',
+            '尊敬的{{username}}家长您好，宝宝红眼病期间，如眼睛分泌物多，影响视力，可用冷开水配制盐水，每100毫升水加食盐1g，再用无菌棉球蘸冷盐水冲洗眼睛。',
+            '尊敬的{{username}}家长您好，红眼病是以细菌感染为主，通常使用各种抗菌素眼药水治疗，如氯霉素、利福平、庆大霉素等眼药水。',
+            '尊敬的{{username}}家长您好，宝宝红眼病好点没？告诉宝宝老师跟同学们都盼望着宝宝早日康复，回到班上来。祝宝宝早日康复！'],
+        '剪指甲': ['尊敬的{{username}}家长，过长的指甲容易抓伤宝宝自己，也容易滋生细菌导致宝宝生病，请家长定期帮宝宝修剪指甲。',
+            '尊敬的{{username}}家长您好，晨检的时候留意到宝宝指甲有点长。您可以购买幼儿专用的指甲钳给宝宝修剪指甲，实用又安全。',
+            '尊敬的{{username}}家长您好。宝宝指甲过长容易藏污纳垢，请您及时给宝宝修剪指甲。',
+            '{{username}}小朋友，今天检查到你的小指甲有点长，有没有主动叫爸妈帮你修剪呢？剪完之后要记得洗手呦。',
+            '尊敬的{{username}}家长您好，今天检查到宝宝指甲有点长。指甲的合适长度是：指甲顶端与指顶齐平或稍短一些。请及时修剪！'],
+        '腹泻': ['尊敬的{{username}}家长您好，腹泻病是多病因、多因素引起的一组疾病，爸妈们应在确诊之后给宝宝对症下药。',
+            '尊敬的{{username}}家长您好。蒙托石散与丁桂儿脐贴都是比较常用治疗腹泻的药物，祝宝宝早日康复！',
+            '{{username}}小朋友，腹泻好点没？在家里面可以叫爸妈给你做好吃的苹果泥汤。苹果含有鞣酸，可以帮助你早日战胜病魔！'],
+        '重点观察': ['尊敬的{{username}}家长，今日晨检发现宝宝略有不适，已通知老师特别留意宝宝的状态，有异常老师会及时联系您，请您放心。',
+            '尊敬的{{username}}家长，宝宝今天好像有点不舒服，老师会特别留意宝宝的状态，有异常会及时联系您，请您放心。',
+            '尊敬的{{username}}家长，宝宝今天好像有点不舒服，老师会特别留意宝宝的状态，您也可以随时联系班级老师叮嘱要注意的事项。']
+      }
+      var def_contents = [];
+
+      $('#tb_todo').on('click', '.btn', function () {
+        if ($(this).attr('disabled')) return;
+        $div = $(this).closest('.cell')
+        var name = $div.find('.name').text();
+        $('#dlg_solicitude input[name=userid]').val($div.data().userid)
+        var s = '<label class="cell checkbox"><div class="cell-hd" style="margin-right: 10px;"><input type="radio" name="contents"><span class="icon icon-checked"></span></div><div class="cell-bd">{{text}}</div></label>';
+        var tmp = "";
+        for (var t in contents) {
+          if ($div.find('.red').text().indexOf(t) >= 0) {
+            for (var i = 0; i < contents[t].length; i++) {
+              tmp += s.replace('{{text}}', contents[t][i].replace('{{username}}', name))
+            }
+          }
+        }
+        $('#contents').html(tmp);
+        $('#dlg_solicitude').css('display', '');
+      })
+      $('#send').on('click', function () {
+        var contents = $('#dlg_solicitude input[name=contents]:checked').closest('label').text();
+        if (!contents) {
+          $.alert('请选择问候内容')
+          return
+        }
+        $.submit('正在发送关怀问候',{
+          type: 'POST',
+          url: '/board/sendsolicitude',
+          data: { userid: $('#dlg_solicitude input[name=userid]').val(), contents: $('#dlg_solicitude input[name=contents]:checked').closest('label').text() },
+          success: function (data) {
+            if (data.code == 0) {
+              var loading = $.toast('发送成功', 1000, function () { $('#dlg_solicitude').hide() })
+              var $text = $('#tb_todo div[data-userid=' + $('#dlg_solicitude input[name=userid]').val() + ']').find('.btn').removeClass('btn-yellow').prop('disabled', true)
+              $text.text() == '关怀问候' ? $text.text('已经问候') : $text.text('已经提醒')
+            } else {
+              $.alert(data.info)
+            }
+          },
+          error: function () {
+            $.alert('发送失败，请重试')
+          }
+        })
+      })
+    })
+  </script>
+
+  <script>
+    $(function () {
+      $('#bj').on('click', function () {
+        if (!$('#wcj').find('.cell[data-userid]').length) {
+          $.alert('本班今日没有未晨检的小朋友，无需补检')
+          return
+        }
+        $('#dlg_wcj').show();
+      })
+
+      $('#dlg_wcj .dialog-bd .btn').on('click', function () {
+        $('#dlg_mcmakeup input:radio').eq(0).click();
+        $('#dlg_mcmakeup input[name=zz]').prop('checked', false);
+        $('#dlg_mcmakeup input[name=userid]').val($(this).closest('.cell').data().userid)
+        $('#dlg_mcmakeup').show();
+      })
+
+      $('#tw1').on('click', function () {
+        $('#dlg_mcmakeup input[name=tw]').val(37.2)
+      })
+      $('#tw2').on('click', function () {
+        $('#dlg_tw').show();
+      })
+      $('#dlg_tw .btn').on('click', function () {
+        $('#dlg_mcmakeup input[name=tw]').val($('#dlg_tw select').val())
+        $('#dlg_tw').hide();
+      })
+      $('#mksubmit').on('click', function () {
+        var zz = getZZ();
+        var userid = $('#dlg_mcmakeup input[name=userid]').val();
+        $.submit('提交中', {
+          url: '/board/SaveMcMakeup',
+          data: { userid: userid, tw: $('#dlg_mcmakeup input[name=tw]').val(), zz: zz.zz.join(',') },
+          type: 'POST',
+          success: function (data) {
+            if (data.code == 0) {
+              $.toast('保存成功', 800, function () { $('#dlg_mcmakeup').hide() })
+              refresh()
+              $('#dlg_wcj .cell[data-userid=' + userid + '] .cell-ft').html(zz.zz_text.join(','))
+            } else {
+              $.alert(data.info)
+            }
+          },
+          error: function () {
+            $.alert('网络出错，请重试')
+          }
+        })
+      })
+
+      function getZZ() {
+        var zz = []
+        var zz_text = [];
+        var zz_tw = $('#dlg_mcmakeup input:radio:checked').val()
+        if (zz_tw) {
+          zz.push(zz_tw)
+          zz_text.push('体温偏高')
+        }
+        $('#dlg_mcmakeup input:checkbox').each(function () {
+          if ($(this).prop('checked')) {
+            zz.push($(this).val())
+            zz_text.push($(this).closest('label').text())
+          }
+        })
+        return { zz: zz, zz_text: zz_text };
+      }
+
+      function mcRefresh() {
+        $.ajax({
+          url: '/board/getmctabdata',
+          success: function (data) {
+            $('#tb_mc').html(data)
+          }
+        })
+      }
+      function checkingRefresh() {
+        $.ajax({
+          url: '/board/getcheckingtabdata',
+          success: function (data) {
+            $('#tb_checking').html(data)
+          }
+        })
+      }
+      function todoRefresh() {
+        $.ajax({
+          url: '/board/gettodotabdata',
+          success: function (data) {
+            $('#tb_todo').html(data)
+          }
+        })
+      }
+      function refresh() {
+        mcRefresh()
+        checkingRefresh()
+        todoRefresh()
+      }
+      refresh()
+
+      setInterval(function () {
+        refresh()
+      }, 30000)
+    })
+  </script>
+
+  <script>
+    $(function () {
+      $('.icon-close').on('click', function () {
+        $(this).closest('.mask').hide();
+      })
+      $('.btn[data-dismiss]').on('click', function () {
+        $(this).closest('.mask').hide();
+      })
+
+    })
+  </script>
+
+
+
+</body></html>
