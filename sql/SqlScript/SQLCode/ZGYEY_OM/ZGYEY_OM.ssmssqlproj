@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ZGYEY_OM">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="ActionLogSyn.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ActionLogSyn.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GBDownload_Query.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GBDownload_Query.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GBDownload_Query_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GBDownload_Query_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetVIPIteminfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetVIPIteminfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HBRemarkTemp_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HBRemarkTemp_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HBRemarkTemp_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HBRemarkTemp_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HBRemarkTemp_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HBRemarkTemp_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HBRemarkTemp_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HBRemarkTemp_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HBRemarkTemp_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HBRemarkTemp_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HBRemarkTemp_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HBRemarkTemp_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ImportChildTemp_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ImportChildTemp_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_GetChildDetailInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_GetChildDetailInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_GetChildDetailInfo_history.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_GetChildDetailInfo_history.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_GetClassIDByClassNameAndKID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_GetClassIDByClassNameAndKID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_GetKindergartenByKID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_GetKindergartenByKID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_InitPwd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_InitPwd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_Mobile_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_Mobile_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_QueryChildList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_QueryChildList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_QueryChildList_Main.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_QueryChildList_Main.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_QueryChildList_history.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_QueryChildList_history.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_QuerySmsList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_QuerySmsList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_RestoreChildFromhistory.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_RestoreChildFromhistory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_SMSSeting.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_SMSSeting.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_child_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_child_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_child_Temp_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_child_Temp_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_child_Temp_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_child_Temp_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_child_Temp_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_child_Temp_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_child_Temp_update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_child_Temp_update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_departmentid_GetByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_departmentid_GetByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_staffer_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_staffer_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Manage_user_Exists.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Manage_user_Exists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PayDetail_Query.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PayDetail_Query.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PayDetail_Query_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PayDetail_Query_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PayStat.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PayStat.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PayStat_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PayStat_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMSTemp_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMSTemp_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMSTemp_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMSTemp_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMSTemp_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMSTemp_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMSTemp_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMSTemp_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMSTemp_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMSTemp_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMSTemp_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMSTemp_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMS_Count.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMS_Count.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMS_CountReport.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMS_CountReport.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteAccessCountSyn.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteAccessCountSyn.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteStatusSyn.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteStatusSyn.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Sms_Check_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Sms_Check_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SynBlogheadPic.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SynBlogheadPic.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SynVipDetail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SynVipDetail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SyncFile_GetClassPhotoList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SyncFile_GetClassPhotoList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_lucidaUser_log_delete_refresh.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_lucidaUser_log_delete_refresh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_lucidaUser_log_refresh.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_lucidaUser_log_refresh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_lucidaUser_log_refresh_auto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_lucidaUser_log_refresh_auto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_stafferclass_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_stafferclass_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="datasyn_deal.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>datasyn_deal.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_wisdom_detail_sync.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_wisdom_detail_sync.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetSmsTempListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetSmsTempListByPage.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

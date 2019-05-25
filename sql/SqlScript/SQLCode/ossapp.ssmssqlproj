@@ -1,0 +1,2654 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ossapp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-05-21T09:45:57.8899417+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>ossapp</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="BatchInfo_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BatchInfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="EduApp_GetUserInfoMode_ByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>EduApp_GetUserInfoMode_ByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ExtUserRuleId.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ExtUserRuleId.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserInfoMode_ByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetUserInfoMode_ByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Log_UpKinTime_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Log_UpKinTime_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_DeleteTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Log_UpKinTime_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Log_UpKinTime_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Log_UpKinTime_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Log_UpKinTime_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Log_UpKinTime_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Log_UpKinTime_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMS_Send_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMS_Send_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMS_Auto_Count.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>SMS_Auto_Count.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kininfo_child_teacher_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kininfo_child_teacher_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="userinfo_UpdateMobile.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>userinfo_UpdateMobile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dataimport_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>dataimport_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dataimport_Set.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>dataimport_Set.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dataimport_child_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>dataimport_child_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dataimport_intimeGetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>dataimport_intimeGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deviceinfo_Add.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>deviceinfo_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deviceinfo_Update_byDevid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>deviceinfo_Update_byDevid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_out_excel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_out_excel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deviceinfo_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>deviceinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deviceinfo_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>deviceinfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deviceinfo_Update_byKid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>deviceinfo_Update_byKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="runstatus_GetList_Top100Detail.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>runstatus_GetList_Top100Detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="runstatus_New_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>runstatus_New_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VersionCtrl_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>VersionCtrl_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VersionCtrl_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>VersionCtrl_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VersionCtrl_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>VersionCtrl_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VersionCtrl_Update_State.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>VersionCtrl_Update_State.sql</FullPath>
+        </FileNode>
+        <FileNode Name="VersionInfo_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>VersionInfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="abidbycity.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>abidbycity.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_GetListTag_x.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_GetListTag_x.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_proxysettlement.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_proxysettlement.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_reset.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_reset.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Add.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Add_Excel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Add_Excel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Add_child.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Add_child.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Add_class.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Add_class.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Add_kin.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Add_kin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_state_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_state_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_state_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Excel_state_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Excel_state_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_state_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_state_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_state_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Excel_v2_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_GetListTag_out.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_GetListTag_out.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_Set.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_Excel_v2_Set.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_Excel_v2_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservice_vip_Excel_v2_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_GetListTag_one.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_GetListTag_one.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_GetListTag_v2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_GetListTag_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservice_vip_omlog_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservice_vip_omlog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservicelog_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservicelog_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservicelog_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservicelog_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>addservicelog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservicelog_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="addservicelog_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addservicelog_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentarea_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentarea_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_city.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_city.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_kins.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_kins.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_privint.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_privint.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentbase_waitmoney.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentbase_waitmoney.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentjxs_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>agentjxs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentjxs_DeleteTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>agentjxs_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentjxs_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>agentjxs_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentjxs_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>agentjxs_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentjxs_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>agentjxs_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentlink_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentlink_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="agentpackage_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>agentpackage_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_GetListMasterKin.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_GetListMasterKin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_GetListTag_new0lv1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_GetListTag_new0lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_GetModelByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_GetModelByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollow_UpdateByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollow_UpdateByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="beforefollowremark_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>beforefollowremark_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="config_manage_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>config_manage_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="config_manage_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>config_manage_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dolog_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dolog_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="domain_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>domain_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="feestandard_payinfo_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>feestandard_payinfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getAreabyId.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getAreabyId.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="growthbook_class_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>growthbook_class_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="growthbook_rep_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>growthbook_rep_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="growthbook_rep_GetList_Detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>growthbook_rep_GetList_Detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="growthbook_user_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>growthbook_user_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="infofrombycity.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>infofrombycity.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_del_kinbaseinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_del_kinbaseinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_kinbaseinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_kinbaseinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_remindlog.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_remindlog.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_GetListTagByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_GetListTagByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoice_UpdateState.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoice_UpdateState.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="invoicemanage_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>invoicemanage_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="isnullreturn.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>isnullreturn.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinbaseinfo_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinbaseinfo_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinbaseinfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetListNoTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_GetListNoTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetListNoTag3.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_GetListNoTag3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetListTag1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_GetListTag1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetListTagByids.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_GetListTagByids.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_ReDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinbaseinfo_ReDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinbaseinfo_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_actionlogs_Stat.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_actionlogs_Stat.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinbaseinfo_actionlogs_Stat_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>kinbaseinfo_actionlogs_Stat_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindomain_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindomain_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_ADD_fid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_ADD_fid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_UpdateStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_UpdateStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinfollow_UpdateStatus_End.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinfollow_UpdateStatus_End.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinks_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinks_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinlinkskf_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinlinkskf_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinoutline_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinoutline_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kinoutline_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kinoutline_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="netsetting_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>netsetting_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="nopaykin_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>nopaykin_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="offline_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>offline_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="onsale_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>onsale_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfo_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfo_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_GetListTagByplids.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_GetListTagByplids.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_GetList_x.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_GetList_x.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="payinfolog_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>payinfolog_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="permissionsetting_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>permissionsetting_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="permissionsetting_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>permissionsetting_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="permissionsetting_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>permissionsetting_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_GetListTagByabid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_GetListTagByabid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_GetListTagBypaytimes.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_GetListTagBypaytimes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_GetModelbycity.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_GetModelbycity.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_sum_getpaytimes.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_sum_getpaytimes.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_wait_GetListTagByabid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_wait_GetListTagByabid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_waiting_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_waiting_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="proxysettlement_waitlog_GetListTagBykid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>proxysettlement_waitlog_GetListTagBykid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_ByTime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_ByTime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_ByTime_Kin.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_ByTime_Kin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_ByTime_Kin_Info.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_ByTime_Kin_Info.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_ByTime_Kin_Info_dl.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_ByTime_Kin_Info_dl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_ByTime_Kin_dl.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_ByTime_Kin_dl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_ByTime_dl.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_ByTime_dl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetListTag_v1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetListTag_v1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindlog_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindlog_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindmange_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindmange_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_beforefollowremark.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_beforefollowremark.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_beforefollowremarkV0.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_beforefollowremarkV0.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_beforefollowremark_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_beforefollowremark_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_expiretime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_expiretime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_follow_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_follow_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growingup_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growingup_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_class_checked_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_class_checked_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_photodetail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_photodetail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_photodetail_life.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_photodetail_life.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_photodetail_page_model.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_photodetail_page_model.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_photodetail_user_model.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_photodetail_user_model.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_photodetail_video.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_photodetail_video.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_photodetail_work.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_photodetail_work.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_user_checked_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_growthbook_user_checked_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_area.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_area.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_consum_sum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_consum_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_order_sum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_order_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_readcard_sum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_readcard_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_remind.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_remind.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_remind_List.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_remind_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kinbaseinfo_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kinbaseinfo_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kinurgesinfo_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kinurgesinfo_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kinurgesinfo_list_details.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kinurgesinfo_list_details.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_netpay_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_netpay_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_netregist_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_netregist_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_offline_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_offline_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_parentsfees_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_parentsfees_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_parentsfees_list_details.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_parentsfees_list_details.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_payinfo_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_payinfo_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_payinfo_uid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_payinfo_uid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_remind_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_remind_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_waitpay_list.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_waitpay_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rules_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rules_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rulesbyrid.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rulesbyrid.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_copyright_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_copyright_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_copyright_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_copyright_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_domain_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_domain_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_domain_Default.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_domain_Default.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_domain_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_domain_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_domain_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_domain_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_domain_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_domain_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_domain_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_domain_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_keyword_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_keyword_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_keyword_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_keyword_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsbase_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>smsbase_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="uidbycity.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>uidbycity.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin0lv1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin0lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin0lv2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin0lv2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin0lv3.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin0lv3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin0lv4.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin0lv4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin0lv5.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin0lv5.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin1lv1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin1lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin1lv2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin1lv2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin1lv3.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin1lv3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin1lv4.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin1lv4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin1lv5.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin1lv5.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin2lv1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin2lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin2lv2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin2lv2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin2lv3.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin2lv3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin2lv4.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin2lv4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetListTag_newkin2lv5.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetListTag_newkin2lv5.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="urgesfee_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>urgesfee_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_tokens_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_tokens_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_tokens_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_tokens_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="userinfo_Exist.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>userinfo_Exist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="userinfo_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>userinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>users_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_Exist.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_Exist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>users_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_GetListTag_Bid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_GetListTag_Bid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_GetListTag_duty.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_GetListTag_duty.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>users_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>users_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>users_belong_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_belong_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_belong_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_belong_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_belong_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_belong_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="users_belong_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>users_belong_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="webtempplate_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>webtempplate_Update.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="NGBApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="121.9.242.20:20dba">
+          <Created>2013-09-18T17:21:09.9209674+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>20dba</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="121.9.242.20:zgyey2013">
+          <Created>2013-09-19T15:43:15.6034727+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>zgyey2013</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="CardSet_Constraint.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>CardSet_Constraint.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CellTarget_Edit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>CellTarget_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Diary_Page_Cell.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Diary_Page_Cell.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Diary_page_month_evl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Diary_page_month_evl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Diary_page_month_sec.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Diary_page_month_sec.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Edit_tea_UpPhoto.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Edit_tea_UpPhoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetFamilyInfo.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>GetFamilyInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetGrowthBook.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>GetGrowthBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHomeBook.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>GetHomeBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHomeBookTercher.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>GetHomeBookTercher.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetPageTpl.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>GetPageTpl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Get_qmzp.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Get_qmzp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GrowthBook_Edit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>GrowthBook_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HomeBook_Edit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>HomeBook_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Init_GrowthBook.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Init_GrowthBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Init_HomeBook.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>Init_HomeBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PageTpl_Edit.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PageTpl_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetGrowthBookList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>GetGrowthBookList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHomeBookList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>GetHomeBookList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Transfer_Gbapp_Data.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Transfer_Gbapp_Data.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Transfer_Gbapp_Data_ALL.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Transfer_Gbapp_Data_ALL.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpLoadPic.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpLoadPic.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpLoadPicBatch.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpLoadPicBatch.sql</FullPath>
+        </FileNode>
+        <FileNode Name="diary_Edit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>diary_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="fn_ModuleSet.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>fn_ModuleSet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindergartenDescript_Edit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>kindergartenDescript_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="page_cell_Edit.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:20dba</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>20dba</AssociatedConnUserName>
+          <FullPath>page_cell_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="page_month_evl_Edit.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>page_month_evl_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="page_month_sec_Edit.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>page_month_sec_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="page_public_Edit.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>page_public_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="page_public_tpl_Edit.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>page_public_tpl_Edit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="trg_Cards_orderno.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>trg_Cards_orderno.sql</FullPath>
+        </FileNode>
+        <FileNode Name="trg_HightlightSet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>trg_HightlightSet.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

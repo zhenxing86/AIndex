@@ -1,0 +1,35 @@
+创建表msg_pmid，设置时间默认值  CURRENT_TIMESTAMP
+
+CREATE TABLE `msg_pmid` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `pmid` bigint(20) NOT NULL,
+  `pcid` bigint(20) DEFAULT NULL,
+  `crtdate` datetime DEFAULT NULL,
+  `adddate` datetime DEFAULT NULL,
+  `mysqldate` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `tp` (
+  `id` int(11) DEFAULT NULL,
+  `remark` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `tt` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+存储过程：deletemsg
+1、创建/删除临时表/主键
+DROP TEMPORARY TABLE IF EXISTS tmp_table;
+		
+CREATE TEMPORARY TABLE IF NOT EXISTS tmp_table (ID int NOT NULL auto_increment, CMD VARCHAR(2000), PRIMARY KEY (`ID`));
+
+
+2、自增序列号
+auto_increment
+
+3、连接多个字符串：CONCAT

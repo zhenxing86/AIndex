@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="MsgApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="GetBlogIdByUserId.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetBlogIdByUserId.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserIdByBlogUserId.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetUserIdByBlogUserId.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MsgApp_GetUserInfoMode_ByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>MsgApp_GetUserInfoMode_ByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Msg_Sms_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Msg_Sms_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Msg_Sms_Tigger.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Msg_Sms_Tigger.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserNickName.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserNickName.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_ClassChild_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_ClassChild_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_ClassChild_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_ClassChild_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_ClassTeacher_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_ClassTeacher_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_friend_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_friend_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messageInbox_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messageInbox_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messageboxIn_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messageboxIn_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetAllReadCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetAllReadCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetInBoxByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetInBoxByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetInReadCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetInReadCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetSendBoxByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetSendBoxByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetSendBoxCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetSendBoxCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_GetUnReadCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_GetUnReadCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_InBoxDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_InBoxDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messagebox_SendBoxDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messagebox_SendBoxDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messageboxattach_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messageboxattach_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_messageboxattach_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_messageboxattach_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_user_GetUserInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_user_GetUserInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_zgyey_messagebox_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_zgyey_messagebox_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_zgyey_messagebox_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_zgyey_messagebox_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetClassListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetClassListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetByPageFromBlog.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetByPageFromBlog.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetByPageFromClass.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetByPageFromClass.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetByPageFromKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetByPageFromKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetNewCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetNewCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetNewCountByFromId.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetNewCountByFromId.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetUnReadCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetUnReadCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_ReDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_ReDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_Read.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_Read.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SMS">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="121.9.242.20:zgyey2013">
+          <Created>2013-11-08T14:26:46.1273778+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>zgyey2013</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>AppConfig</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-05-29T16:29:59.6611581+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>ReportApp</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="GetSmsByType.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetSmsByType.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetSmsCategory.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetSmsCategory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetYMSmsList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetYMSmsList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Getisaudit_State.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Getisaudit_State.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsManager.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsManager.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SMS_ReplayToMsgApp.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SMS_ReplayToMsgApp.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetTitleInfoAllList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetTitleInfoAllList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_SMS_Del.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_SMS_Del.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_CurrentMonth_SMS_content_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_CurrentMonth_SMS_content_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_CurrentMonth_SMS_content_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_CurrentMonth_SMS_content_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_SMS_Pass.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_SMS_Pass.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_CurrentMonth_SMS_content_detail.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_CurrentMonth_SMS_content_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_CurrentMonth_SMS_content.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_CurrentMonth_SMS_content.sql</FullPath>
+        </FileNode>
+        <FileNode Name="audit_Send_SMS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>audit_Send_SMS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="delete_SMS_All.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>delete_SMS_All.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_CurrentMonth_SMS_detail_list.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_CurrentMonth_SMS_detail_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_CurrentMonth_SMS_detail.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_CurrentMonth_SMS_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_CurrentMonth_SMS_content_detail.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_CurrentMonth_SMS_content_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_CurrentMonth_SMS_content.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_CurrentMonth_SMS_content.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_CurrentMonth_SMS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_CurrentMonth_SMS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SetReportAudit.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SetReportAudit.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetChildCountByClass.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_GetChildCountByClass.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetChildCountByGrade.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetChildCountByGrade.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetChildListByGrade.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetChildListByGrade.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_department_sms_GetAllList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_department_sms_GetAllList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_ADD_Check.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_sms_ADD_Check.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_ADD_V2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_sms_ADD_V2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_ADD_V2_mobile.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_sms_ADD_V2_mobile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_ADD_delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_sms_ADD_delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetChildByClassID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_sms_GetChildByClassID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetClassListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_sms_GetClassListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetClassListByUserID_lv0.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_sms_GetClassListByUserID_lv0.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetClassListByUserID_lv1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_sms_GetClassListByUserID_lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetGradeList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_sms_GetGradeList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetGradeList_lv1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_sms_GetGradeList_lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetSendNumByUserID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>class_sms_GetSendNumByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetSmsNumByUserID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>class_sms_GetSmsNumByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_sms_GetStafferListByDepartmentid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_sms_GetStafferListByDepartmentid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_user_GetUserInfo_lv1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_user_GetUserInfo_lv1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ismanage_pro.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ismanage_pro.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kindergarten_register_sms_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kindergarten_register_sms_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetChildHistoryRecCountReport.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetChildHistoryRecCountReport.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetChildRecCountReport.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetChildRecCountReport.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetHistorySendReportByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetHistorySendReportByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetHistorySendReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetHistorySendReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetSendReportByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetSendReportByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetSendReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetSendReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetStafferHistorySendCountReport.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetStafferHistorySendCountReport.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_GetStafferSendCountReport.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_GetStafferSendCountReport.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_istimesend.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_istimesend.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_message_Check.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_message_Check.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_message_fail_Check.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_message_fail_Check.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_message_move_201211.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_message_move_201211.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_message_move_201212.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_message_move_201212.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_teacher_GetHistorySendReportByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_teacher_GetHistorySendReportByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_teacher_GetHistorySendReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_teacher_GetHistorySendReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_teacher_GetSendReportByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_teacher_GetSendReportByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_teacher_GetSendReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_teacher_GetSendReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_ym_deal.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>sms_ym_deal.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsapp_smsbase_Add.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>smsapp_smsbase_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="smsapp_smsbase_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>smsapp_smsbase_GetListTag.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

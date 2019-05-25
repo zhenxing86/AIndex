@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="edu_jy">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-07-26T14:58:44.481103+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>edu_jy</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Icms_content_GroupNoticeKin_Index.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Icms_content_GroupNoticeKin_Index.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Icms_content_Sava.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Icms_content_Sava.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Icms_content_GroupNoticeInformation_notice.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Icms_content_GroupNoticeInformation_notice.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Icms_content_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Icms_content_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetGartenActivityList_Delete.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetGartenActivityList_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="MsgTeacher_GetListkinByaids.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>MsgTeacher_GetListkinByaids.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UI_GartenText_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>UI_GartenText_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UI_GartenText_UpdateTop.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>UI_GartenText_UpdateTop.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_gartenlist.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>init_gartenlist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="group_user_GetListBydid_kin.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>group_user_GetListBydid_kin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="group_user_GetListBydid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>group_user_GetListBydid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UI_GartenText_GetListModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>UI_GartenText_GetListModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UI_gartenlist_GetGartenActivityList_State.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>UI_gartenlist_GetGartenActivityList_State.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_cms_content.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>init_cms_content.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_lxq.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>init_lxq.sql</FullPath>
+        </FileNode>
+        <FileNode Name="sms_message_yx_upGetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>sms_message_yx_upGetList.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

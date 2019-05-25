@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="GBApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-06-25T10:58:38.1748308+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>fmcapp</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="ArchivesApply_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_AddList_By_Kid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_AddList_By_Kid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_AddList_By_Kidandvip.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_AddList_By_Kidandvip.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_AddModel_By_UserId.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_AddModel_By_UserId.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_GetList_By_Gbid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_GetList_By_Gbid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_GetList_By_Status.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_GetList_By_Status.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesApply_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesApply_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesErrorLog_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesErrorLog_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ArchivesPay_GetModel_By_Kid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ArchivesPay_GetModel_By_Kid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ChangeCellset.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ChangeCellset.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ChangeModuleset.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ChangeModuleset.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ChildInfoRefresh.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ChildInfoRefresh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassInfoRefresh.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ClassInfoRefresh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassPhotos_GetFilePathInfoByNet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ClassPhotos_GetFilePathInfoByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassVideo_DelVideoTempByNet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ClassVideo_DelVideoTempByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassVideo_GetInvalidVideoByNet.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ClassVideo_GetInvalidVideoByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassVideo_SetInvalidData.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ClassVideo_SetInvalidData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassVideo_SetInvalidVideoByNet.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ClassVideo_SetInvalidVideoByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="CmsContentAttachs_SetInvalidDataByNet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>CmsContentAttachs_SetInvalidDataByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GBVideo_GetPathByNet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GBVideo_GetPathByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GBVideo_Update_FileSize.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GBVideo_Update_FileSize.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GbErrorLog_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GbErrorLog_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GbLifePhoto_GetPathByNet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GbLifePhoto_GetPathByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GbWorkPhoto_GetPathByNet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GbWorkPhoto_GetPathByNet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetClassTeacherInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetClassTeacherInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetGBRefreshTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetGBRefreshTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHBRemarkTempListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetHBRemarkTempListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHBTermWordRemarkTempListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetHBTermWordRemarkTempListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HomeBookSet.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HomeBookSet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="InitHomebook_V2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>InitHomebook_V2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Init_GB_DemoData.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Init_GB_DemoData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Init_LifePhoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Init_LifePhoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PermissionSetting_GetCount_By_Kid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PermissionSetting_GetCount_By_Kid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassVideo_GetList_By.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ClassVideo_GetList_By.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SmSNoticeGBDownload.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SmSNoticeGBDownload.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SpitString.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SpitString.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SpitString2.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SpitString2.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpdateGBRefreshTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpdateGBRefreshTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpdateGartenInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpdateGartenInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserBaseInfo_GetListTag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>UserBaseInfo_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserBaseInfo_GetList_By_KName.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserBaseInfo_GetList_By_KName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserBaseInfo_GetList_By_Kid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserBaseInfo_GetList_By_Kid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="classid_temp_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>classid_temp_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deletegrowthbook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>deletegrowthbook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="deletehomebook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>deletehomebook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getclassinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getclassinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getgbinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getgbinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getgrwothbook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getgrwothbook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="gethomebook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>gethomebook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getkininfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getkininfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="homebookrefresh.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>homebookrefresh.sql</FullPath>
+        </FileNode>
+        <FileNode Name="homebookrefreshByClassID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>homebookrefreshByClassID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_notebookReportByuserid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_notebookReportByuserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="inithomebook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>inithomebook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_homebook_weekByhomebookid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_homebook_weekByhomebookid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="userid_temp_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>userid_temp_ADD.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

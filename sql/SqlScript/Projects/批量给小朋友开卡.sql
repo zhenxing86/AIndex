@@ -1,0 +1,110 @@
+select *From mcapp..cardinfo where kid= 24170 and usest=0 order by card  and  1407104905 1407104904
+
+select *From basicdata..class where kid= 24170
+
+   --stuinfo_AutoSet_OneCard 24170,'98824',3,1407104905,1407104933,134
+   
+    stuinfo_AutoSet_OneCard_test 24170,'98824',3,1407104905,1407104933,134
+
+select *from BasicData..User_Child where kid= 24170 and name in('陈烨嘉','黎镇玮','吕依诺','钱晴')
+
+
+userid not in (875227,875286,875307,875559,875573,875331,875337,875341,875450,875460,875463,875466,875472,875484)
+
+  select uc.cname,uc.name,c.card,c.*    
+    from CardInfo  c
+    inner join basicdata..User_Child uc
+     on c.userid=uc.userid     
+    where usest = 1      
+     and uc.kid = 24170       
+     and CardType = 1 
+     and CAST(cardno as bigint)>=1407104820
+     and CAST(cardno as bigint)<=1407105172
+     order by uc.cname,c.card
+     
+
+15028
+
+cardinfo_BatchSet
+
+
+
+
+
+
+
+
+
+
+
+
+---------------
+
+98824	24170	小1班
+98827	24170	小2班
+98828	24170	小3班
+98829	24170	小4班
+98830	24170	小5班
+
+98825	24170	中1班
+98831	24170	中2班
+98832	24170	中3班
+98833	24170	中4班
+
+98826	24170	大1班
+98834	24170	大2班
+98835	24170	大3班
+
+小1班	30	29 (1407104905-1407104933)
+小2班	30	30 (1407104934-1407104963)
+小3班	31	29 (1407104964-1407104992)
+小4班	29	27 (1407104993-1407105019)
+小5班	31	30 (1407105020-1407105049)
+
+中1班	32	32 (1407105050-1407105081)
+中2班	32	32 (1407105082-1407105113)
+中3班	32	30 (1407105114-1407105143)
+中4班	33	29 (1407105144-1407105172)
+
+大1班	30	30 (1407104820-1407104849)
+大2班	29	29 (1407104850-1407104878) 
+大3班	28	26 (1407104879-1407104904)
+
+--stuinfo_AutoSet_OneCard 24170,'98824',3,1407104905,1407104933,134
+stuinfo_AutoSet_OneCard_test 24170,'98824',3,1407104905,1407104933,134
+
+--stuinfo_AutoSet_OneCard 24170,'98827',3,1407104934,1407104963,134
+stuinfo_AutoSet_OneCard_test 24170,'98827',3,1407104934,1407104963,134
+
+--stuinfo_AutoSet_OneCard 24170,'98828',3,1407104964,1407104992,134
+stuinfo_AutoSet_OneCard_test 24170,'98828',3,1407104964,1407104992,134
+
+--stuinfo_AutoSet_OneCard 24170,'98829',3,1407104993,1407105019,134
+stuinfo_AutoSet_OneCard_test 24170,'98829',3,1407104993,1407105019,134
+
+--stuinfo_AutoSet_OneCard 24170,'98830',3,1407105020,1407105049,134
+stuinfo_AutoSet_OneCard_test 24170,'98830',3,1407105020,1407105049,134
+
+--中班
+--stuinfo_AutoSet_OneCard 24170,'98825',3,1407105050,1407105081,134
+stuinfo_AutoSet_OneCard_test 24170,'98825',3,1407105050,1407105081,134
+
+--stuinfo_AutoSet_OneCard 24170,'98831',3,1407105082,1407105113,134
+stuinfo_AutoSet_OneCard_test 24170,'98831',3,1407105082,1407105113,134
+
+--stuinfo_AutoSet_OneCard 24170,'98832',3,1407105114,1407105143,134
+stuinfo_AutoSet_OneCard_test 24170,'98832',3,1407105114,1407105143,134
+
+--stuinfo_AutoSet_OneCard 24170,'98833',3,1407105144,1407105172,134
+stuinfo_AutoSet_OneCard_test 24170,'98833',3,1407105144,1407105172,134
+
+
+--大班
+--stuinfo_AutoSet_OneCard 24170,'98826',3,1407104820,1407104849,134
+stuinfo_AutoSet_OneCard_test 24170,'98826',3,1407104820,1407104849,134
+
+--stuinfo_AutoSet_OneCard 24170,'98834',3,1407104850,1407104878,134
+stuinfo_AutoSet_OneCard_test 24170,'98834',3,1407104850,1407104878,134
+
+--stuinfo_AutoSet_OneCard 24170,'98835',3,1407104879,1407104904,134
+stuinfo_AutoSet_OneCard_test 24170,'98835',3,1407104879,1407104904,134

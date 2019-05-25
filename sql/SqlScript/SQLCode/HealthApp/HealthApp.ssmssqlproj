@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="HealthApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="121.9.242.20:mh5992">
+          <Created>2014-12-16T09:17:54.502753+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>mh5992</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="121.9.242.20:zgyey2009">
+          <Created>2013-05-22T14:52:10.8093146+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>zgyey2009</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>HealthApp</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-06-15T17:35:53.0656215+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>AppConfig</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="addException.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>addException.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getCheck.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getCheck.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getTerm.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getTerm.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getTerm_New.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>getTerm_New.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getzzlist.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>getzzlist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="initBaseInfo.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>initBaseInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="initData.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>initData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="initExceptionCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>initExceptionCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="initExceptionCount_v2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>initExceptionCount_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="queryBaseInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>queryBaseInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="queryBid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>queryBid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="queryItemCheck.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>queryItemCheck.sql</FullPath>
+        </FileNode>
+        <FileNode Name="queryItemCheck_v2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>queryItemCheck_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="queryUser.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>queryUser.sql</FullPath>
+        </FileNode>
+        <FileNode Name="updatePhoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>updatePhoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="updateheight.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>updateheight.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

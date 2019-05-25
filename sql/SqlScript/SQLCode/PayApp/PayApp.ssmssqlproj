@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="PayApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="BuyDraw.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BuyDraw.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Create_Order.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Create_Order.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetCurrentBeanCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetCurrentBeanCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetCurrentBookBeanCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetCurrentBookBeanCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetCurrentUserInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetCurrentUserInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetMyConsumCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetMyConsumCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetMyConsumList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetMyConsumList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetMyOrderDetail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetMyOrderDetail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetMyOrderList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetMyOrderList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetPayItemList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetPayItemList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetVIPIteminfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetVIPIteminfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrderCheck.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrderCheck.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrderStat.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrderStat.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PurchaseBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PurchaseBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PurchaseReadCard.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PurchaseReadCard.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpdateOrderStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpdateOrderStatus.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

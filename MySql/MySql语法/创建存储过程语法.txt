@@ -1,0 +1,12 @@
+--删除
+存储过程：deletemsg
+
+
+--新增
+存储过程：deletemsg
+
+--查询
+存储过程：deletemsg
+
+--修改
+存储过程：deletemsg

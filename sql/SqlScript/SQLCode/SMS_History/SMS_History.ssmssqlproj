@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SMS_History">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="121.9.242.20:zgyey2009">
+          <Created>2013-05-23T11:21:21.0188478+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>zgyey2009</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="58.63.227.54:sa">
+          <Created>2013-05-23T11:18:44.9732267+08:00</Created>
+          <Type>SQL</Type>
+          <Server>58.63.227.54</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="rep_HistoryMonth_SMS.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:58.63.227.54:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>58.63.227.54</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_HistoryMonth_SMS.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_HistoryMonth_SMS_detail.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:58.63.227.54:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>58.63.227.54</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_HistoryMonth_SMS_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_HistoryMonth_SMS_detail_list.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:58.63.227.54:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>58.63.227.54</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_HistoryMonth_SMS_detail_list.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_sms_daystatus_D.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>rep_sms_daystatus_D.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_sms_daystatus_M.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>rep_sms_daystatus_M.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_sms_monthstatus_D.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>rep_sms_monthstatus_D.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_sms_monthstatus_M.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2009</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2009</AssociatedConnUserName>
+          <FullPath>rep_sms_monthstatus_M.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

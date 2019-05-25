@@ -1,0 +1,8 @@
+DELIMITER $$
+CREATE DEFINER=`zgyey_20`@`%` FUNCTION `comp`(`dt` date) RETURNS bigint(20)
+BEGIN
+	#Routine body goes here...
+  
+	RETURN TO_DAYS(NOW()) - TO_DAYS(`dt`);
+END$$
+DELIMITER ;

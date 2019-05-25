@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ReportApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="121.9.242.20:zgyey2013">
+          <Created>2013-11-01T10:21:19.1140916+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>zgyey2013</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>ReportApp</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-05-22T15:30:33.6478931+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>mcapp</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="ExtkindergartenBygidkid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ExtkindergartenBygidkid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetClassListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetClassListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetGradeListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetGradeListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHomeBookReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetHomeBookReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHomeBookReportListByKID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetHomeBookReportListByKID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetNoteBookReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetNoteBookReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetNoteBookReportListByName.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetNoteBookReportListByName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetNoteBookReportListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetNoteBookReportListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetNoteBookReportNameCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetNoteBookReportNameCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetPermissionsetting.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetPermissionsetting.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetPlantBookReportCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetPlantBookReportCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetPlantBookReportListByKID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetPlantBookReportListByKID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetkindergartenBygid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetkindergartenBygid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="InitializeHomeBookPlantBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>InitializeHomeBookPlantBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Kid_Child_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Kid_Child_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Kid_Teachar_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Kid_Teachar_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RepAutoExeRepData.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RepAutoExeRepData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RepSyn_HomeBook.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>RepSyn_HomeBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RepSyn_NoteBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RepSyn_NoteBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RepSyn_PlanBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RepSyn_PlanBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ReportApp_GetUserInfoMode_ByUserID.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ReportApp_GetUserInfoMode_ByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuangzhang_Summary_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuangzhang_Summary_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_CLass_Child_Info_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>yuanzhang_rep_CLass_Child_Info_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_department_Info_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_department_Info_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_Grade_Info_GetList_Teacher.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_Grade_Info_GetList_Teacher.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_Teacher_Info_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_Teacher_Info_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_mc_kindergarten_GetDetail.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_mc_kindergarten_GetDetail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_mc_kindergarten_leavecount.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_mc_kindergarten_leavecount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_mc_kindergarten_leavereason.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_mc_kindergarten_leavereason.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_mc_kindergarten_enrollmentcount.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_mc_kindergarten_enrollmentcount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_mc_kindergarten_enrollmentreason.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_mc_kindergarten_enrollmentreason.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ValidateUserExistsByUsertype.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ValidateUserExistsByUsertype.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_activitycount_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_activitycount_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_hb_homebook.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>init_hb_homebook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_hb_homebookV2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_hb_homebookV2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_hb_homebookV3.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_hb_homebookV3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_homebook_Byhomebookid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_homebook_Byhomebookid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_homebook_ByhomebookidV2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_homebook_ByhomebookidV2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_newhomebook_Byhomebookid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_newhomebook_Byhomebookid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_notebook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_notebook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_notebookReportByuserid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_notebookReportByuserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_growthbook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_growthbook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_growthbook_class.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_growthbook_class.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_classapp_class_album.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_classapp_class_album.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_classapp_class_notice.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_classapp_class_notice.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_classapp_class_noticeByid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_classapp_class_noticeByid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_classapp_class_photos.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_classapp_class_photos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_ebook_hb_homebook_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_ebook_hb_homebook_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_kwebcms_cms_content.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_kwebcms_cms_content.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mobile_kwebcms_cms_contentByid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mobile_kwebcms_cms_contentByid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Class_Info_Report.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Class_Info_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Class_Info_Report_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Class_Info_Report_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_CellSetting.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_CellSetting.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_ChildrenInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_ChildrenInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_ChildrenInfo_UpFile.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_ChildrenInfo_UpFile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_GrowthBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_GrowthBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_advcelllist.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_advcelllist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_advforeword.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_advforeword.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_advsummary.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_advsummary.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_celllist.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_celllist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_classinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_classinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_classinfo_UpPhoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_classinfo_UpPhoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_classinfo_UpWord.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_classinfo_UpWord.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_familyinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_familyinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_familyinfo_UpPhoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_familyinfo_UpPhoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_familyinfo_UpWord.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_familyinfo_UpWord.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_foreword.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_foreword.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_lifephoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_lifephoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_pworkphoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_pworkphoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_summary.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_GBApp_summary.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_GBApp_tworkphoto.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_GBApp_tworkphoto.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_PlanBook_week_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_PlanBook_week_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Teachar_Age_Report.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Teachar_Age_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Teachar_Age_Report_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Teachar_Age_Report_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Teachar_Education_Report.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Teachar_Education_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Teachar_Education_Report_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Teachar_Education_Report_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Teachar_Job_Report.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Teachar_Job_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Teachar_Job_Report_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_Teachar_Job_Report_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_Token_Mobile.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_Token_Mobile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_child_add_delete_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_child_add_delete_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_growthbook_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_growthbook_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_homebook_weekByhomebookid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_homebook_weekByhomebookid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_homebook_week_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_homebook_week_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_homebook_week_Report_Class.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_homebook_week_Report_Class.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_homebook_week_Report_ClassGetTime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_homebook_week_Report_ClassGetTime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_bean_sum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_bean_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_notebook_week_Report.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_notebook_week_Report.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_notebook_week_Report_All.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_notebook_week_Report_All.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_notebook_week_Report_List.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_notebook_week_Report_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_notebook_week_Report_ListByTime.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_notebook_week_Report_ListByTime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_notebook_week_Report_List_Article.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_notebook_week_Report_List_Article.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_notebook_week_Report_List_Img.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_notebook_week_Report_List_Img.sql</FullPath>
+        </FileNode>
+        <FileNode Name="syn_czkid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>syn_czkid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="syn_hzkid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>syn_hzkid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="syn_sdkid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>syn_sdkid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_Child_Info_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_Child_Info_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_Child_Info_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_Child_Info_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_Grade_Info_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_Grade_Info_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="yuanzhang_rep_department_Teacher_Info_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>yuanzhang_rep_department_Teacher_Info_GetList.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

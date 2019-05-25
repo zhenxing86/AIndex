@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="EBook">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="GetCurrentBeanCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetCurrentBeanCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHBRemarkTempListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetHBRemarkTempListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetHBTermWordRemarkTempListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetHBTermWordRemarkTempListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetReApplyStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetReApplyStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Init_NoteBookData.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Init_NoteBookData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PayGrowthbookBean.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PayGrowthbookBean.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SP_HBSetting_SET.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SP_HBSetting_SET.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SmSNoticeGBDownload.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SmSNoticeGBDownload.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SpitString.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SpitString.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_ChapterRemark_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_ChapterRemark_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_ChapterRemark_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_ChapterRemark_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_ChapterRemark_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_ChapterRemark_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_ChapterRemark_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_ChapterRemark_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_ChapterRemark_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_ChapterRemark_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_ChapterRemark_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_ChapterRemark_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TNB_Chapter_Exquisite.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TNB_Chapter_Exquisite.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpdateUserBaseInfoToEBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpdateUserBaseInfoToEBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UpdateUserBaseSetToEBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UpdateUserBaseSetToEBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="classid_temp_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>classid_temp_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="confirmdownloadapply.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>confirmdownloadapply.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getTNB_Books.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getTNB_Books.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getTNB_Books_ByChapterId.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getTNB_Books_ByChapterId.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getTNB_Books_List.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getTNB_Books_List.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getdownloadapplystatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getdownloadapplystatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="getdownloadurl.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>getdownloadurl.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ib_setting.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ib_setting.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_homebook_Byhomebookid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_homebook_Byhomebookid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="mb_setting.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>mb_setting.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_homebook_weekByhomebookid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_homebook_weekByhomebookid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="submitdownloadapply.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>submitdownloadapply.sql</FullPath>
+        </FileNode>
+        <FileNode Name="userid_temp_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>userid_temp_ADD.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

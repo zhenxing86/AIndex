@@ -1,0 +1,1172 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ClassApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-06-21T09:28:20.4652355+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>AppConfig</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="AspNet_SqlCachePollingStoredProcedure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AspNet_SqlCachePollingStoredProcedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="AspNet_SqlCacheQueryRegisteredTablesStoredProcedure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AspNet_SqlCacheQueryRegisteredTablesStoredProcedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="AspNet_SqlCacheRegisterTableStoredProcedure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AspNet_SqlCacheRegisterTableStoredProcedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="AspNet_SqlCacheUnRegisterTableStoredProcedure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AspNet_SqlCacheUnRegisterTableStoredProcedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="AspNet_SqlCacheUpdateChangeIdStoredProcedure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AspNet_SqlCacheUpdateChangeIdStoredProcedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_GetGradeListByKID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_GetGradeListByKID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_GetGradeListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_GetGradeListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ClassApp_GetUserInfoMode_ByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ClassApp_GetUserInfoMode_ByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetAllClassByGradeID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetAllClassByGradeID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetAllClassByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetAllClassByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetClassBackgroundmusicCountByClassid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetClassBackgroundmusicCountByClassid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetClassBackgroundmusicCountBykid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetClassBackgroundmusicCountBykid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetRightUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetRightUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Get_StrArrayLength.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Get_StrArrayLength.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Get_StrArrayStrOfIndex.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Get_StrArrayStrOfIndex.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsAllowDeleteClassNote.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsAllowDeleteClassNote.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsAllowDeleteOrEditClassAlbum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsAllowDeleteOrEditClassAlbum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsAllowDeleteOrEditClassMusic.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsAllowDeleteOrEditClassMusic.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsAllowDeleteOrEditClassSchedule.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsAllowDeleteOrEditClassSchedule.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsAllowDeleteOrEditClassVideo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsAllowDeleteOrEditClassVideo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsAllowDeletePotot.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsAllowDeletePotot.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsBirthday.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsBirthday.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsManager.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsManager.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsNewAlbum.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsNewAlbum.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsNewAlbum1.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsNewAlbum1.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsNewPhoto.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsNewPhoto.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsRead.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsRead.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="NewArticleAttachDatetime.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>NewArticleAttachDatetime.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="NewAttachDatetime.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>NewAttachDatetime.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="PhotoMoveToAuthorAlbum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>PhotoMoveToAuthorAlbum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="T_Kindergarten_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>T_Kindergarten_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_dntuserGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_dntuserGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_dntuser_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_dntuser_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_dntuser_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_dntuser_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_kmpuserGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_kmpuserGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="child_GetIsVIP.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>child_GetIsVIP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetClassListByKindergartenID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetClassListByKindergartenID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetClassListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetClassListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetClassVideoListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetClassVideoListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetClassVideoListCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetClassVideoListCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetIsClassTeacher.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetIsClassTeacher.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetIsClassUser.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetIsClassUser.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetIsKindergartenTeacher.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetIsKindergartenTeacher.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetKindergartenGuestOpen.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetKindergartenGuestOpen.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetKindergartenInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetKindergartenInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetPopedomByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetPopedomByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetStat.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetStat.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_IsKindergartenManager.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_IsKindergartenManager.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_accessheadpic_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_accessheadpic_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_accesslogs_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_accesslogs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_actionlogs_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_actionlogs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_actionlogs_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_actionlogs_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_actionlogs_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_actionlogs_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_actionlogs_GetList_v2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_actionlogs_GetList_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_qt_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_qt_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_qt_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_qt_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_album_qt_GetListByPageGB.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_album_qt_GetListByPageGB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_albummanage_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_albummanage_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_albummanage_GetCountByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_albummanage_GetCountByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_albummanage_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_albummanage_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_albummanage_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_albummanage_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_albumphoto_GetAllCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_albumphoto_GetAllCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_article_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_article_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_article_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_article_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_article_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_article_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_article_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_article_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_article_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_article_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_article_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_article_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articleattachs_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articleattachs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articleattachs_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articleattachs_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articleattachs_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articleattachs_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlecomments_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlecomments_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlecomments_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlecomments_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlecomments_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlecomments_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlecomments_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlecomments_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlesmastercomment_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlesmastercomment_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlesmastercomment_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlesmastercomment_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_articlesmastercomment_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_articlesmastercomment_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_ADD_v2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_ADD_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_backgroundmusic_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_backgroundmusic_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_bbzx_video_GetUserid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_bbzx_video_GetUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_childheadpic_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_childheadpic_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_class_GetListByGrade.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_class_GetListByGrade.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_class_GetListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_class_GetListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_diycategory_GetModelById.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_diycategory_GetModelById.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_Approve.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_Approve.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetBlogPostsModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetBlogPostsModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetBlogPostscommentsByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetBlogPostscommentsByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetBlogPostscommentsCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetBlogPostscommentsCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetReplyCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetReplyCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_GetReplyListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_GetReplyListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_ReplyUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_ReplyUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_GetReplyCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_GetReplyCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_GetReplyListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_GetReplyListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_forum_teacher_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_forum_teacher_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_getclassinfobyclassid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_getclassinfobyclassid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_kindergarten_getstatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_kindergarten_getstatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_mastercomment_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_mastercomment_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_mastercomment_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_mastercomment_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_mastercomment_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_mastercomment_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_GetCountByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_GetCountByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_notice_getclass.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_notice_getclass.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_permissionsetting_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_permissionsetting_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photocomments_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photocomments_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photocomments_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photocomments_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photocomments_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photocomments_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photocomments_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photocomments_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_ADD_v2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_ADD_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_GetFlashShow.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_GetFlashShow.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_UpdateIsCover.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_UpdateIsCover.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_UpdateIsFlashShow.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_UpdateIsFlashShow.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_UpdateIsFlashShow_V2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_UpdateIsFlashShow_V2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_photos_ordernoUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_photos_ordernoUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_readlogs_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_readlogs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetCountByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_GetCountByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetListByKid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_schedule_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetListByPage_V2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_schedule_GetListByPage_V2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedule_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedule_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_scheduleattach_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_scheduleattach_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_scheduleattach_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_scheduleattach_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedulecomments_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedulecomments_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedulecomments_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedulecomments_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedulecomments_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedulecomments_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_schedulecomments_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_schedulecomments_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_teacherheadpic_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_teacherheadpic_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_theme_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_theme_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_user_GetUserInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_user_GetUserInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_user_UserLogin.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_user_UserLogin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_ADD_v2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_ADD_v2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_GetCountByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_GetCountByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_GetListByPageGB.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_GetListByPageGB.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_video_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_video_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_videocomments_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_videocomments_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_videocomments_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_videocomments_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_videocomments_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_videocomments_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_videocomments_GetListByPage.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_videocomments_GetListByPage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="classdatadelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>classdatadelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="classdatamove.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>classdatamove.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kmp_Get_Kindergarten_Xxt.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kmp_Get_Kindergarten_Xxt.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_docattachs_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_docattachs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="v_album.View.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>v_album.View.sql</FullPath>
+        </FileNode>
+        <FileNode Name="v_newforumpost.View.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>v_newforumpost.View.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

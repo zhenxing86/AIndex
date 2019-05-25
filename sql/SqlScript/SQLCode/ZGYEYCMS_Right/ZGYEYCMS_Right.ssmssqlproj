@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ZGYEYCMS_Right">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="CreateUserRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>CreateUserRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgCheck.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgCheck.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgGetBind.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgGetBind.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgGetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgGetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgGetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgGetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgJudge.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgJudge.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="OrgUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>OrgUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightGetBind.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightGetBind.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightGetListById.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightGetListById.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightGetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightGetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightSel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightSel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RightUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RightUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleGetByOrg.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleGetByOrg.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleGetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleGetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleGetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleGetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleRightAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleRightAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleRightDel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleRightDel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleRightDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleRightDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleRightList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleRightList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleUserDel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleUserDel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RoleUserList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RoleUserList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteDel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteDel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteGetBind.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteGetBind.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteGetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteGetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInsGetBind.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInsGetBind.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceBind.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceBind.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceGetBySite.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceGetBySite.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceGetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceGetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceGetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceGetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceOrg.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceOrg.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteInstanceUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteInstanceUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteRightList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteRightList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteRoleList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteRoleList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SiteUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SiteUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Test.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Test.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserDelete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserDelete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserGetByOrg.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserGetByOrg.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserGetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserGetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserGetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserGetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserGetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserGetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserInfoUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserInfoUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserPasswdUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserPasswdUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserPwdUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserPwdUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserRightList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserRightList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserRoleDel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserRoleDel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserRoleInfoList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserRoleInfoList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserRoleList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserRoleList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetParameters.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetParameters.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetStoredprocedure.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetStoredprocedure.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetStoredprocedureModelInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetStoredprocedureModelInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetStoredprocedures.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetStoredprocedures.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetStoredproceduresNeedResultSchema.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetStoredproceduresNeedResultSchema.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetTable.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetTable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_GetTables.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_GetTables.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_SaveStoredProcedureVersion.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_SaveStoredProcedureVersion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="coder_SaveStoredProcedureWithResultSchemaInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>coder_SaveStoredProcedureWithResultSchemaInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_CreateRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_CreateRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_CreateUserRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_CreateUserRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_DelUserRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_DelUserRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_DeleteRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_DeleteRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_EditRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_EditRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_GetAllUserRole.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_GetAllUserRole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_GetCurrentUserRightList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_GetCurrentUserRightList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_GetCurrentUserRoles.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_GetCurrentUserRoles.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_GetRoleRightList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_GetRoleRightList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_GetRoleUserList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_GetRoleUserList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_GetRolesList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_GetRolesList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_UserLogin.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_UserLogin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_addRoleRight.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_addRoleRight.sql</FullPath>
+        </FileNode>
+        <FileNode Name="right_delRoleRight.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>right_delRoleRight.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightAdd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightAdd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightDel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightDel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightInstance.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightInstance.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightJudge.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightJudge.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightLeaf.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightLeaf.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightNoList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightNoList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightSingleInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightSingleInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_rightUpright.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_rightUpright.sql</FullPath>
+        </FileNode>
+        <FileNode Name="role_singleInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>role_singleInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_checkByName.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_checkByName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_instanceCheck.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_instanceCheck.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

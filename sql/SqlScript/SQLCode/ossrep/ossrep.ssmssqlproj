@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ossrep">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-06-15T17:30:42.6598673+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>AppConfig</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="AreaCaptionFromID.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AreaCaptionFromID.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetKinArea.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetKinArea.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetKinAreaStr.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetKinAreaStr.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_beforefollowremark_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_beforefollowremark_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_ebook_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_ebook_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_kin_composite.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_kin_composite.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_kin_payinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_kin_payinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_teaching_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_teaching_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_vip_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_vip_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_vip_payinfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_vip_payinfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_wisdom_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_wisdom_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_rep_wisdom_sum.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_rep_wisdom_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_DeleteTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_DeleteTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_GetListTag.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_GetListTag.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="keylog_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>keylog_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_composite_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_composite_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_composite_detail_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_composite_detail_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_composite_detail_one.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_composite_detail_one.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_composite_one.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_composite_one.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_consum_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_consum_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_consum_sum.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_kin_consum_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_detail_index.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_detail_index.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_order_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_order_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_order_sum.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_kin_order_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_payinfo_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_payinfo_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_payinfo_GetList_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_payinfo_GetList_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_readcard_detail.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_kin_readcard_detail.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_kin_readcard_sum.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>rep_kin_readcard_sum.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_detail_index.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_detail_index.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_detail_index_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_detail_index_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_detail_index_new.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_detail_index_new.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_detail_index_outline.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_detail_index_outline.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_detail_index_payment.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_detail_index_payment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_new.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_new.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_new_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_new_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_outline.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_outline.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_outline_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_outline_all.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_payment.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_payment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="rep_vip_payinfo_pro_payment_all.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>rep_vip_payinfo_pro_payment_all.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

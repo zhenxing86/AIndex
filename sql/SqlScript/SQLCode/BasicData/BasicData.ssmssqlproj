@@ -1,0 +1,956 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BasicData">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="121.9.242.20:zgyey2013">
+          <Created>2013-10-14T18:21:15.1820165+08:00</Created>
+          <Type>SQL</Type>
+          <Server>121.9.242.20</Server>
+          <UserName>zgyey2013</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>AppConfig</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="192.168.0.29:sa">
+          <Created>2013-05-21T16:14:55.2762708+08:00</Created>
+          <Type>SQL</Type>
+          <Server>192.168.0.29</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>BasicData</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - 查询</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="AreaCaptionFromID.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>AreaCaptionFromID.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasciData_UserClass_GetListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasciData_UserClass_GetListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_ChildUserClassShengHe_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_ChildUserClassShengHe_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_ChildUserClass_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_ChildUserClass_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_Class_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_Class_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_Class_GetUserClass.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_Class_GetUserClass.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_SearchClass_GetListByCID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_SearchClass_GetListByCID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_SearchClass_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_SearchClass_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_SearchClass_GetModelByCid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_SearchClass_GetModelByCid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_TemChildUserClass_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_TemChildUserClass_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_TemUserClassChild_Add.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>BasicData_TemUserClassChild_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_TemUserClass_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_TemUserClass_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_UserClass_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_UserClass_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_UserClass_GetUserClassName.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_UserClass_GetUserClassName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_UserKinderten_GetKidName.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>BasicData_UserKinderten_GetKidName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_User_Add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_User_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_User_Exists.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_User_Exists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_kindergarten_Add.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>BasicData_kindergarten_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_search_kindergarten_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_search_kindergarten_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_search_kindergarten_GetListByKeyWord.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>BasicData_search_kindergarten_GetListByKeyWord.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ChildDetails_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ChildDetails_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ChildDetails_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>ChildDetails_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Chile_BaseInfo_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Chile_BaseInfo_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Dict_GetByCatalog.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Dict_GetByCatalog.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetBlogIDbyUserid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetBlogIDbyUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetGroupUserModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetGroupUserModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetSiteConfigModelBySiteid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetSiteConfigModelBySiteid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetUserModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserModelByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetUserModelByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserModelByKids.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetUserModelByKids.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserModelByKids_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetUserModelByKids_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserType.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetUserType.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetVipStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetVipStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="HasOpenStoryBook.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>HasOpenStoryBook.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ISOweek.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ISOweek.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsManager.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsManager.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="KWebCMS_SiteUser_Exists.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>KWebCMS_SiteUser_Exists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetUserTypeKwebcms.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>GetUserTypeKwebcms.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_Class_Delete.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>BasicData_Class_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_Grade_GType.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>BasicData_Grade_GType.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicData_UserClass_Exists.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>BasicData_UserClass_Exists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="viprole.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>viprole.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_tips_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_tips_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_tips_Delete.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_tips_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_tips_Add.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_tips_Add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserVIPServer_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>UserVIPServer_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_CallBackUser.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_CallBackUser.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildByCid_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildByCid_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildCountByCid_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildCountByCid_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildCountByNameAndUserid_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildCountByNameAndUserid_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildListByCid_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildListByCid_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildListByNameAndUserid_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildListByNameAndUserid_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetCountByName_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetCountByName_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetListByName_leave.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetListByName_leave.sql</FullPath>
+        </FileNode>
+        <FileNode Name="varify_resetPossword.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>varify_resetPossword.sql</FullPath>
+        </FileNode>
+        <FileNode Name="varify_SendVerifyCode.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>varify_SendVerifyCode.sql</FullPath>
+        </FileNode>
+        <FileNode Name="varify_validFindPwdCode.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>varify_validFindPwdCode.sql</FullPath>
+        </FileNode>
+        <FileNode Name="verify_GetUser.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>verify_GetUser.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_Delete_ly.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_Delete_ly.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TeacherDetails_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>TeacherDetails_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TeacherDetails_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TeacherDetails_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Teacher_BaseInfo_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Teacher_BaseInfo_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Teacher_Baseinfo_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Teacher_Baseinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Teacher_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Teacher_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserSettingInfo_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserSettingInfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="UserSetting_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>UserSetting_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ValidateUserExists.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ValidateUserExists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ValidateUserExistsByUsertype.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ValidateUserExistsByUsertype.sql</FullPath>
+        </FileNode>
+        <FileNode Name="checkpwd.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>checkpwd.sql</FullPath>
+        </FileNode>
+        <FileNode Name="child_Baseinfo_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>child_Baseinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetListByGidAndKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetListByGidAndKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetListByGidAndUserid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetListByGidAndUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetListByUserid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_GetListByUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetListByUserid_hbid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetListByUserid_hbid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_Rise.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_Rise.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>class_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_child_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_child_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_order_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_order_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_permissionsetting_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_permissionsetting_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>department_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>department_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_GetList.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>department_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_GetListByFirst.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>department_GetListByFirst.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>department_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>department_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="department_order_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>department_order_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_Area.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_Area.sql</FullPath>
+        </FileNode>
+        <FileNode Name="dict_Area_model.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>dict_Area_model.sql</FullPath>
+        </FileNode>
+        <FileNode Name="f_split.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>f_split.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="fn_WeekList.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>fn_WeekList.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="get_department_subsid.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>get_department_subsid.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="grade_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>grade_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="grade_GetListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>grade_GetListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="grade_GetListByUserid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>grade_GetListByUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_Baseinfo_distinct_userid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_Baseinfo_distinct_userid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_Baseinfo_do.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_Baseinfo_do.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_Baseinfo_do_second.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_Baseinfo_do_second.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_Classinfo_do.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_Classinfo_do.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_EbookTNB_do.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_EbookTNB_do.sql</FullPath>
+        </FileNode>
+        <FileNode Name="init_Ebook_do.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>init_Ebook_do.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kmp_getarealist.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kmp_getarealist.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remindsms_GetNewCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>remindsms_GetNewCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="site_config_update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>site_config_update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_AuditJoinKindergarten.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_AuditJoinKindergarten.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_CheckAccountExists.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_CheckAccountExists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_Delete.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildByCid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildByCid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildCountByCid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildCountByCid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildCountByNameAndUserid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildCountByNameAndUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildListByCid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildListByCid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildListByNameAndUserid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildListByNameAndUserid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetChildModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildToExcel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetChildToExcel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildToExcelV2.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetChildToExcelV2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildToExcel_v0.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetChildToExcel_v0.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChildToExceledu.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetChildToExceledu.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChild_PhotoByCid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetChild_PhotoByCid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetChild_PhotoByCid_mobile.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetChild_PhotoByCid_mobile.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetCountByName.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetCountByName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetJoinKindergartenCountByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetJoinKindergartenCountByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetJoinKindergartenListByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_GetJoinKindergartenListByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetListByName.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetListByName.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetModel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherByDid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherByDid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherCountByDid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherCountByDid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherDid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherDid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherListByDid.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherListByDid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherToExcel.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherToExcel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherToExcelV2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherToExcelV2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherToExcel_v0.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherToExcel_v0.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_GetTeacherToExceledu.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_GetTeacherToExceledu.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_Login.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_Login.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_Update.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:121.9.242.20:False:zgyey2013</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>121.9.242.20</AssociatedConnSrvName>
+          <AssociatedConnUserName>zgyey2013</AssociatedConnUserName>
+          <FullPath>user_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_UpdateTeacherDid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_UpdateTeacherDid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_add_new.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_add_new.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_add_new_teacher.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_add_new_teacher.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_baseinfo_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_baseinfo_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_baseinfo_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_baseinfo_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_blog_new.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_blog_new.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_class_ADD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:192.168.0.29:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>192.168.0.29</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>user_class_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_class_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_class_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_class_Exists.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_class_Exists.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_docapp_new.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_docapp_new.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_kindergarten_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_kindergarten_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_kindergarten_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_kindergarten_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_kwebcms_right_add.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_kwebcms_right_add.sql</FullPath>
+        </FileNode>
+        <FileNode Name="user_password_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>user_password_Update.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>

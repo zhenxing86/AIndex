@@ -1,0 +1,187 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AppConfig", "AppConfig\AppConfig.ssmssqlproj", "{59955FA2-315B-4BA7-9812-B3253953C356}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "BasicData", "BasicData\BasicData.ssmssqlproj", "{88273057-7050-4DA8-B1B0-8BEF17AD045A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "BlogApp", "BlogApp\BlogApp.ssmssqlproj", "{ACC70AE4-7F2F-4A1D-A7B6-BF3C731840D5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ClassApp", "ClassApp\ClassApp.ssmssqlproj", "{26486519-5B65-49B6-B4F3-58967D9775A6}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DocApp", "DocApp\DocApp.ssmssqlproj", "{E4DC50F8-A584-417D-9B11-E761E28E7EF0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DrawApp", "DrawApp\DrawApp.ssmssqlproj", "{EE93A55C-6C4B-41C3-93E1-E9EC7BF6342D}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "EBook", "EBook\EBook.ssmssqlproj", "{CD31B224-0CC1-42D2-92F2-4D4A55CB403A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "GameApp", "GameApp\GameApp.ssmssqlproj", "{5649702B-0C6C-4DDB-9BD2-E18DFD8710C7}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "GBApp", "GBApp\GBApp.ssmssqlproj", "{865AC752-B70C-43BC-A1E5-36EB0F70EB71}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "HealthApp", "HealthApp\HealthApp.ssmssqlproj", "{D57197F8-000E-4C0A-87E0-D1320AE07039}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "KWebCMS", "KWebCMS\KWebCMS.ssmssqlproj", "{C9EFC22A-D00E-4E87-AA91-B14E998AC4C2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "KWebCMSRight", "KWebCMSRight\KWebCMSRight.ssmssqlproj", "{EF48B414-BF85-47E1-8381-0B85D2351579}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "mcapp", "mcapp\mcapp.ssmssqlproj", "{87E2C151-1942-4947-AD2C-DED2AD9E2C72}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "MsgApp", "MsgApp\MsgApp.ssmssqlproj", "{85444D12-C658-4D60-BF07-B6AAE93FFEA4}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ossapp", "ossapp\ossapp.ssmssqlproj", "{9B647138-D92C-4137-945E-0884AB5F4375}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ossrep", "ossrep\ossrep.ssmssqlproj", "{011640E7-E817-45DE-8893-7BE7005FD3B7}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "PayApp", "PayApp\PayApp.ssmssqlproj", "{F65C286F-3F47-4D17-AAD0-776C9B6BA8D0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ReportApp", "ReportApp\ReportApp.ssmssqlproj", "{BB673AEF-F59E-4D58-90F8-D100886B76BB}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SMS", "SMS\SMS.ssmssqlproj", "{192E67CD-D903-4E76-B531-737E802505E2}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ZGYEY_OM", "ZGYEY_OM\ZGYEY_OM.ssmssqlproj", "{5426978B-CF05-4C1C-A356-DA43D41896E0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ZGYEYCMS_Right", "ZGYEYCMS_Right\ZGYEYCMS_Right.ssmssqlproj", "{9F31154C-4D93-4346-8996-4CDDD6F6F735}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SMS_History", "SMS_History\SMS_History.ssmssqlproj", "{C09F5347-2226-41B2-8739-701B914A2EBF}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "fmcapp", "fmcapp\fmcapp.ssmssqlproj", "{C90A18B4-2F04-4439-8616-0E1629E7B581}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SqlAgentDB", "SqlAgentDB\SqlAgentDB.ssmssqlproj", "{93D57BEC-4F8C-4C36-8F67-34A986311D16}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "AndroidApp", "AndroidApp\AndroidApp.ssmssqlproj", "{6CE91FCB-66A0-4B5B-8850-D75794A5ADCB}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "edu_jy", "edu_jy\edu_jy.ssmssqlproj", "{E7E986EC-A374-494A-A4BB-746EB015E6EB}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SBApp", "SBApp\SBApp.ssmssqlproj", "{A2148C73-E295-4C5E-85FB-177A17152B56}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "NGBApp", "NGBApp\NGBApp.ssmssqlproj", "{EDB4E606-CE5B-4F4F-931D-4AD701FE80EE}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 29
+		SccProjectName0 = \u0022$/SQLCode.root/SQLCode\u0022,\u0020TQGAAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = AppConfig\\AppConfig.ssmssqlproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = AppConfig\\
+		SccProjectUniqueName2 = BlogApp\\BlogApp.ssmssqlproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = BlogApp\\
+		SccProjectUniqueName3 = BasicData\\BasicData.ssmssqlproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = BasicData\\
+		SccProjectUniqueName4 = HealthApp\\HealthApp.ssmssqlproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = HealthApp\\
+		SccProjectUniqueName5 = DocApp\\DocApp.ssmssqlproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = DocApp\\
+		SccProjectUniqueName6 = ClassApp\\ClassApp.ssmssqlproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = ClassApp\\
+		SccProjectUniqueName7 = KWebCMS\\KWebCMS.ssmssqlproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = KWebCMS\\
+		SccProjectUniqueName8 = GBApp\\GBApp.ssmssqlproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = GBApp\\
+		SccProjectUniqueName9 = DrawApp\\DrawApp.ssmssqlproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = DrawApp\\
+		SccProjectUniqueName10 = EBook\\EBook.ssmssqlproj
+		SccLocalPath10 = .
+		SccProjectFilePathRelativizedFromConnection10 = EBook\\
+		SccProjectUniqueName11 = GameApp\\GameApp.ssmssqlproj
+		SccLocalPath11 = .
+		SccProjectFilePathRelativizedFromConnection11 = GameApp\\
+		SccProjectUniqueName12 = ossapp\\ossapp.ssmssqlproj
+		SccLocalPath12 = .
+		SccProjectFilePathRelativizedFromConnection12 = ossapp\\
+		SccProjectUniqueName13 = KWebCMSRight\\KWebCMSRight.ssmssqlproj
+		SccLocalPath13 = .
+		SccProjectFilePathRelativizedFromConnection13 = KWebCMSRight\\
+		SccProjectUniqueName14 = mcapp\\mcapp.ssmssqlproj
+		SccLocalPath14 = .
+		SccProjectFilePathRelativizedFromConnection14 = mcapp\\
+		SccProjectUniqueName15 = MsgApp\\MsgApp.ssmssqlproj
+		SccLocalPath15 = .
+		SccProjectFilePathRelativizedFromConnection15 = MsgApp\\
+		SccProjectUniqueName16 = ZGYEYCMS_Right\\ZGYEYCMS_Right.ssmssqlproj
+		SccLocalPath16 = .
+		SccProjectFilePathRelativizedFromConnection16 = ZGYEYCMS_Right\\
+		SccProjectUniqueName17 = ZGYEY_OM\\ZGYEY_OM.ssmssqlproj
+		SccLocalPath17 = .
+		SccProjectFilePathRelativizedFromConnection17 = ZGYEY_OM\\
+		SccProjectUniqueName18 = ReportApp\\ReportApp.ssmssqlproj
+		SccLocalPath18 = .
+		SccProjectFilePathRelativizedFromConnection18 = ReportApp\\
+		SccProjectUniqueName19 = PayApp\\PayApp.ssmssqlproj
+		SccLocalPath19 = .
+		SccProjectFilePathRelativizedFromConnection19 = PayApp\\
+		SccProjectUniqueName20 = ossrep\\ossrep.ssmssqlproj
+		SccLocalPath20 = .
+		SccProjectFilePathRelativizedFromConnection20 = ossrep\\
+		SccProjectUniqueName21 = SMS\\SMS.ssmssqlproj
+		SccLocalPath21 = .
+		SccProjectFilePathRelativizedFromConnection21 = SMS\\
+		SccProjectUniqueName22 = SMS_History\\SMS_History.ssmssqlproj
+		SccLocalPath22 = .
+		SccProjectFilePathRelativizedFromConnection22 = SMS_History\\
+		SccProjectUniqueName23 = fmcapp\\fmcapp.ssmssqlproj
+		SccLocalPath23 = .
+		SccProjectFilePathRelativizedFromConnection23 = fmcapp\\
+		SccProjectUniqueName24 = SqlAgentDB\\SqlAgentDB.ssmssqlproj
+		SccLocalPath24 = .
+		SccProjectFilePathRelativizedFromConnection24 = SqlAgentDB\\
+		SccProjectUniqueName25 = AndroidApp\\AndroidApp.ssmssqlproj
+		SccLocalPath25 = .
+		SccProjectFilePathRelativizedFromConnection25 = AndroidApp\\
+		SccProjectUniqueName26 = edu_jy\\edu_jy.ssmssqlproj
+		SccLocalPath26 = .
+		SccProjectFilePathRelativizedFromConnection26 = edu_jy\\
+		SccProjectUniqueName27 = SBApp\\SBApp.ssmssqlproj
+		SccLocalPath27 = .
+		SccProjectFilePathRelativizedFromConnection27 = SBApp\\
+		SccProjectUniqueName28 = NGBApp\\NGBApp.ssmssqlproj
+		SccLocalPath28 = .
+		SccProjectFilePathRelativizedFromConnection28 = NGBApp\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		默认值|Default = 默认值|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59955FA2-315B-4BA7-9812-B3253953C356}.默认值|Default.ActiveCfg = 默认值
+		{88273057-7050-4DA8-B1B0-8BEF17AD045A}.默认值|Default.ActiveCfg = 默认值
+		{ACC70AE4-7F2F-4A1D-A7B6-BF3C731840D5}.默认值|Default.ActiveCfg = 默认值
+		{26486519-5B65-49B6-B4F3-58967D9775A6}.默认值|Default.ActiveCfg = 默认值
+		{E4DC50F8-A584-417D-9B11-E761E28E7EF0}.默认值|Default.ActiveCfg = 默认值
+		{EE93A55C-6C4B-41C3-93E1-E9EC7BF6342D}.默认值|Default.ActiveCfg = 默认值
+		{CD31B224-0CC1-42D2-92F2-4D4A55CB403A}.默认值|Default.ActiveCfg = 默认值
+		{5649702B-0C6C-4DDB-9BD2-E18DFD8710C7}.默认值|Default.ActiveCfg = 默认值
+		{865AC752-B70C-43BC-A1E5-36EB0F70EB71}.默认值|Default.ActiveCfg = 默认值
+		{D57197F8-000E-4C0A-87E0-D1320AE07039}.默认值|Default.ActiveCfg = 默认值
+		{C9EFC22A-D00E-4E87-AA91-B14E998AC4C2}.默认值|Default.ActiveCfg = 默认值
+		{EF48B414-BF85-47E1-8381-0B85D2351579}.默认值|Default.ActiveCfg = 默认值
+		{87E2C151-1942-4947-AD2C-DED2AD9E2C72}.默认值|Default.ActiveCfg = 默认值
+		{85444D12-C658-4D60-BF07-B6AAE93FFEA4}.默认值|Default.ActiveCfg = 默认值
+		{9B647138-D92C-4137-945E-0884AB5F4375}.默认值|Default.ActiveCfg = 默认值
+		{011640E7-E817-45DE-8893-7BE7005FD3B7}.默认值|Default.ActiveCfg = 默认值
+		{F65C286F-3F47-4D17-AAD0-776C9B6BA8D0}.默认值|Default.ActiveCfg = 默认值
+		{BB673AEF-F59E-4D58-90F8-D100886B76BB}.默认值|Default.ActiveCfg = 默认值
+		{192E67CD-D903-4E76-B531-737E802505E2}.默认值|Default.ActiveCfg = 默认值
+		{5426978B-CF05-4C1C-A356-DA43D41896E0}.默认值|Default.ActiveCfg = 默认值
+		{9F31154C-4D93-4346-8996-4CDDD6F6F735}.默认值|Default.ActiveCfg = 默认值
+		{C09F5347-2226-41B2-8739-701B914A2EBF}.默认值|Default.ActiveCfg = 默认值
+		{C90A18B4-2F04-4439-8616-0E1629E7B581}.默认值|Default.ActiveCfg = 默认值
+		{93D57BEC-4F8C-4C36-8F67-34A986311D16}.默认值|Default.ActiveCfg = 默认值
+		{6CE91FCB-66A0-4B5B-8850-D75794A5ADCB}.默认值|Default.ActiveCfg = 默认值
+		{E7E986EC-A374-494A-A4BB-746EB015E6EB}.默认值|Default.ActiveCfg = 默认值
+		{A2148C73-E295-4C5E-85FB-177A17152B56}.默认值|Default.ActiveCfg = 默认值
+		{EDB4E606-CE5B-4F4F-931D-4AD701FE80EE}.默认值|Default.ActiveCfg = 默认值
+		{00000000-0000-0000-0000-000000000000}.默认值|Default.ActiveCfg = 默认值
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

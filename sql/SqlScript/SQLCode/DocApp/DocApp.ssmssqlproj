@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DocApp">
+  <Items>
+    <LogicalFolder Name="连接" Type="2" Sorted="true">
+      <Items />
+    </LogicalFolder>
+    <LogicalFolder Name="查询" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="DocApp_GetUserInfoMode_ByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>DocApp_GetUserInfoMode_ByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="GetAllClassByKid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>GetAllClassByKid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="IsManager.UserDefinedFunction.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>IsManager.UserDefinedFunction.sql</FullPath>
+        </FileNode>
+        <FileNode Name="blog_user_GetUserInfo.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>blog_user_GetUserInfo.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_GetClassListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_GetClassListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="class_user_GetClassListByUserID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>class_user_GetClassListByUserID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="docapp_init_documentcount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>docapp_init_documentcount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_GetListByParentid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_GetListByParentid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_Init.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_Init.sql</FullPath>
+        </FileNode>
+        <FileNode Name="kin_doc_category_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>kin_doc_category_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_GetParentList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_GetParentList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_GetParentListByCategoryID.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_GetParentListByCategoryID.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_categories_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_categories_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_docattachs_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_docattachs_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_docattachs_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_docattachs_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_docattachs_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_docattachs_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_doccomment_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_doccomment_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_doccomment_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_doccomment_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_doccomment_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_doccomment_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_doccomment_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_doccomment_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_AproveGetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_AproveGetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_AproveUpdate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_AproveUpdate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetCountByKinDocCategoryid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetCountByKinDocCategoryid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetCountByKinDocCategoryidByTime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetCountByKinDocCategoryidByTime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetCountByYear.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetCountByYear.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetCountBytime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetCountBytime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetDate.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetList.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListByAprove.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListByAprove.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListByDisplayStatus.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListByDisplayStatus.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListByKinDocCategoryid.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListByKinDocCategoryid.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListByKintime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListByKintime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListByPublishDisplay.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListByPublishDisplay.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListByYear.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListByYear.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetListBytime.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetListBytime.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetModel.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetModel.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_GetYeyDocCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_GetYeyDocCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_PublishDisplayGetCount.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_PublishDisplayGetCount.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_Update.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_Update.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_documents_kindisplay.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_documents_kindisplay.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_mastercomment_ADD.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_mastercomment_ADD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_mastercomment_Delete.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_mastercomment_Delete.sql</FullPath>
+        </FileNode>
+        <FileNode Name="thelp_mastercomment_GetList.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>thelp_mastercomment_GetList.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="杂项" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+  <SccProjectName>"$/SQLCode.root/SQLCode", TQGAAAAA</SccProjectName>
+  <SccAuxPath />
+  <SccLocalPath>..</SccLocalPath>
+  <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+</SqlWorkbenchSqlProject>
