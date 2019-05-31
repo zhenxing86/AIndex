@@ -1,0 +1,189 @@
+ajax 提交数组 泛型集合
+2015年12月31日 14:26:29 正怒月神 阅读数:15162
+转载:http://blog.csdn.net/lingxyd_0/article/details/10428785
+
+ 
+
+ 
+
+在项目上用到了批量删除与批量更改状态，前台使用了EasyUI的DataGrid，用到了批量更改数据状态功能。
+
+在前台可以获取每条数据的ID，但是如何通过数组方式传递给后台?
+
+通过昨晚的各种方式的调试，终于得出了答案! 在此作为备忘。
+
+目前有两种方式可行:
+
+方式一
+
+前台代码:
+
+ 
+
+ 
+
+ 
+
+// 方式一
+var _list = {};
+for (var i = 0; i < checkedRow.length; i++) {
+_list["selectedIDs[" + i + "]"] = checkedRow[i].ID;
+}
+$.ajax({
+url: '@Url.Action("SetCallBackStatus")',
+//data: { "selectedIDs": _list },
+data: _list,
+dataType: "json",
+type: "POST",
+//traditional: true,
+success: function (responseJSON) {
+// your logic
+alert('Ok');
+}
+}); 
+ 
+
+注意:
+
+ 
+
+1、_list 是一个对象
+
+2、_list中的属性需要结合后台参数名称,例如”selectedIDs“，组合成类似:selectedIDs[0]，selectedIDs[1]...等Request.Params
+
+这里是最重要的，否则后台认不出来。这种方式也可以传递自定义类的数组。组合方式就是selectedIDs[0].FirstName，selectedIDs[0].LastName，selectedIDs[1].FirstName，selectedIDs[1].LastName...
+
+3、ajax的data参数直接指定为_list
+
+ 
+
+ 
+
+后台代码:
+
+public ActionResult SetCallBackStatus(List<int> selectedIDs)
+{
+string result = "ok";
+string errMsg = "";
+return this.JsonFormat(new { result = result, errMsg = errMsg });
+}
+
+方式二
+
+ 
+
+前台代码:
+
+ 
+
+ 
+
+ 
+
+var _list = [];
+for (var i = 0; i < checkedRow.length; i++) {
+_list[i] = checkedRow[i].ID;
+}
+$.ajax({
+url: '@Url.Action("SetCallBackStatus")',
+data: { "selectedIDs": _list },
+//data: _list,
+dataType: "json",
+type: "POST",
+traditional: true,
+success: function (responseJSON) {
+// your logic
+alert('Ok');
+}
+}); 
+
+注意:
+
+ 
+
+ 
+
+1、_list 是一个数组。
+
+2、ajax参数中data为{“selectedIDs”:_list}
+
+3、这种方式比较重要的 traditional:true。或者将2、中的 _list参数转换一下$.param(_list,true)。这里其实就是将_list作为传统的方式传递给后台。Jquery默认是做了转换的。据说是为了使用PHP。。。。后台语言而做的。其实也就是自动在参数后面追加了”[]“。
+
+ 
+
+ 
+
+ 
+
+ 
+
+针对自定义的类，也可以通过方式一jquery ajax传递给后台
+
+例如:
+
+ 
+
+// 自定义Person类
+public class Person
+{
+public string FirstName { get; set; }
+public string LastName { get; set; }
+} 
+ 
+
+// 后台Action
+public ActionResult SetCallBackStatus(List<Person> selectedIDs)
+{
+string result = "ok";
+string errMsg = "";
+return this.JsonFormat(new { result = result, errMsg = errMsg });
+} 
+
+此时前台js可以这样写:
+
+ 
+
+ var pprds = [];
+for (var i = 0; i < rows.length; i++) {
+var pprd={
+"FirstName":rows[i].FirstName
+"LastName":rows[i].LastName
+};
+pprds[i]=pprd;
+}
+$.ajax({
+type: "Post",
+url: '../api/PO_PPR/UpdatePPPRD_Amount',
+contentType: "application/json; charset=utf-8",
+data:JSON.stringify(pprds),
+beforeSend: function () {
+layer.load();
+},
+complete: function () {
+layer.close(layer.load());
+},
+success: function (d) {
+}
+});
+ 
+
+或者:
+
+ 
+
+var _list = {};
+for (var i = 0; i < checkedRow.length; i++) {
+_list["selectedIDs[" + i + "].FirstName"] = checkedRow[i].FirstName;
+_list["selectedIDs[" + i + "].LastName"] = checkedRow[i].LastName;
+}
+$.ajax({
+url: '@Url.Action("SetCallBackStatus")',
+data: _list,
+dataType: "json",
+type: "POST",
+success: function (responseJSON) {
+// your logic
+alert('Ok');
+}
+}); 
+ 
